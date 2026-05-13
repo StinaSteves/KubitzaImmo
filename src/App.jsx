@@ -44,6 +44,19 @@ function App() {
   }
 
   useEffect(() => {
+    const hideMenuOnScroll = () => {
+      clearHideTimer()
+      setMenuVisible(false)
+    }
+
+    window.addEventListener('scroll', hideMenuOnScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener('scroll', hideMenuOnScroll)
+    }
+  }, [])
+
+  useEffect(() => {
     heroTimer.current = setTimeout(() => {
       setHeroActive(true)
       textTimer.current = setTimeout(() => {
