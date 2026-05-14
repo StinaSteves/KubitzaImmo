@@ -105,7 +105,7 @@
 }
 
 .projectButton:hover {
-  color: #666;
+  color: #00c2ff;
 }
 
 @media (max-width: 900px) {
@@ -199,7 +199,7 @@
 }
 
 .menuItems a:hover {
-  color: #ffd700;
+  color: #00c2ff;
 }
 
 @keyframes fadeIn {

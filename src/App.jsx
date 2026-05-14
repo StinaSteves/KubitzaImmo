@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import HeroVideo from '../public/video/230719_Bottrop-KUB.mp4'
 import Logo from '../public/Logo_arktikgrau.jpeg'
-import LogoWP from '../public/Logo_WP.jpeg'
+import LogoWP from '../public/Logo_WP_klein.jpeg'
 import Projects from './components/Projects'
 import './App.css'
 
