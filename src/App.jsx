@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import HeroVideo from '../public/video/230719_Bottrop-KUB.mp4'
 import Logo from '../public/Logo_arktikgrau.jpeg'
+import LogoWP from '../public/Logo_WP.jpeg'
 import Projects from './components/Projects'
 import './App.css'
 
@@ -48,7 +49,10 @@ function App() {
   <div>
     <div className='animatedLogo'>
       <div className='logoWrapper' onMouseEnter={showMenu} onMouseLeave={hideMenuDelayed}>
-        <img src={Logo} alt="Logo" className={`logo ${menuVisible ? 'menu-open' : ''}`} />
+        <div className={`logoFlip ${menuVisible ? 'menu-open' : ''}`}>
+          <img src={Logo} alt="Logo" className='logo logoFront' />
+          <img src={LogoWP} alt="Logo WP" className='logo logoBack' />
+        </div>
         <nav className={`menuItems ${menuVisible ? 'visible' : ''}`}>
           <a href='#about'>Business</a>
           <a href='#projekte'>Aktuelle Projekte</a>

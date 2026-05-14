@@ -211,22 +211,39 @@
   }
 }
 
-.logo{
+.logoFlip {
+  position: relative;
+  display: grid;
   width: 100px;
-  height: auto;
   z-index: 10;
-  animation: pulsate 3s ease-in-out infinite 5s;
+  transform-style: preserve-3d;
+  animation: logoFlip 5s ease-in-out infinite 5s;
 }
 
-.logo.menu-open {
+.logoFlip.menu-open {
   animation-play-state: paused;
 }
 
-@keyframes pulsate {
-  0%, 100% {
-    transform: scale(1);
+.logo {
+  grid-area: 1 / 1;
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  backface-visibility: hidden;
+}
+
+.logoBack {
+  transform: rotateY(180deg);
+}
+
+@keyframes logoFlip {
+  0%, 35% {
+    transform: perspective(900px) rotateY(0deg);
   }
-  50% {
-    transform: scale(1.08);
+  55%, 80% {
+    transform: perspective(900px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(900px) rotateY(360deg);
   }
 }
