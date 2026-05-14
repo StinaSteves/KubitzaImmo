@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import HeroVideo from '../public/video/230719_Bottrop-KUB.mp4'
-import Logo from '../public/Logo_grau.png'
+import Logo from '../public/Logo_grau.jpeg'
 import Projects from './components/Projects'
 import './App.css'
 
