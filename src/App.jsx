@@ -54,9 +54,9 @@ function App() {
           <img src={LogoWP} alt="Logo WP" className='logo logoBack' />
         </div>
         <nav className={`menuItems ${menuVisible ? 'visible' : ''}`}>
-          <a href='#about'>Business</a>
           <a href='#projekte'>Aktuelle Projekte</a>
           <a href='#contact'>Referenzen</a>
+          <a href='#about'>Business</a>
         </nav>
       </div>
     </div>
