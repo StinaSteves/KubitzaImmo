@@ -217,7 +217,7 @@
   width: 100px;
   z-index: 10;
   transform-style: preserve-3d;
-  animation: logoFlip 5s ease-in-out infinite 5s;
+  animation: logoFlip 9s ease-in-out infinite 5s;
 }
 
 .logoFlip.menu-open {
@@ -237,10 +237,10 @@
 }
 
 @keyframes logoFlip {
-  0%, 35% {
+  0%, 32% {
     transform: perspective(900px) rotateY(0deg);
   }
-  55%, 80% {
+  52%, 78% {
     transform: perspective(900px) rotateY(180deg);
   }
   100% {
