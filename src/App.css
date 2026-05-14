@@ -28,7 +28,7 @@
 
 .projectsTitle {
   margin: 0 0 40px;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
   font-size: clamp(2rem, 4vw, 4rem);
   font-weight: 200;
   text-align: left;
@@ -170,6 +170,7 @@
 
 .menuItems a {
   color: #fff;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
