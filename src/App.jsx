@@ -1,11 +1,16 @@
 import { useRef, useState, useEffect } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HeroVideo from '../public/video/230719_Bottrop-KUB.mp4'
 import Logo from '../public/Logo_arktikgrau.jpeg'
 import LogoWP from '../public/Logo_WP_klein.jpeg'
-import Projects from './components/Projects'
+import Reverenzen from './components/Reverenzen.jsx'
+import Projects from './components/Projects.jsx'
+import AktuelleProjekte from './Pages/AktuelleProjekte.jsx'
 import './App.css'
 
-function App() {
+const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+function Home() {
   const [menuVisible, setMenuVisible] = useState(false)
   const hideTimer = useRef(null)
 
@@ -67,7 +72,20 @@ function App() {
 </div>
 </div>
 <Projects />
+<Reverenzen />
+
 </div>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter basename={routerBasename}>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/aktuelle-projekte/:projectSlug' element={<AktuelleProjekte />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -1,10 +1,9 @@
 
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 import '../App.css'
-import projectsData from './projectsData'
+import reverenzData from './data'
 
-function Projects({ projects = projectsData }) {
+function Reverenzen({ projects = reverenzData }) {
   const sectionRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -37,44 +36,32 @@ function Projects({ projects = projectsData }) {
       className={`projects ${isVisible ? 'visible' : ''}`}
       ref={sectionRef}
     >
-      <h1 className='projectsTitle'>Aktuelle Projekte</h1>
+      <h1 className='projectsTitle'>Reverenzen</h1>
 
-      <div className='currentProjectsList'>
+      <div className='projectsGrid'>
         {projects.map((project, index) => {
           const title = project.title || project.headline || project.heading
 
           return (
             <article
-              className='currentProjectCard'
+              className='projectCard'
               key={`${title}-${index}`}
               style={{ transitionDelay: isVisible ? `${0.35 + index * 0.16}s` : '0s' }}
             >
               {project.image && (
-                <div className='currentProjectMedia'>
-                  <img
-                    className='currentProjectImage'
-                    src={project.image}
-                    alt={project.alt || title || 'Projektbild'}
-                  />
-                  {project.hoverImage && (
-                    <img
-                      className='currentProjectHoverImage'
-                      src={project.hoverImage}
-                      alt=''
-                      aria-hidden='true'
-                    />
-                  )}
-                </div>
+                <img
+                  className='projectImage'
+                  src={project.image}
+                  alt={project.alt || title || 'Projektbild'}
+                />
               )}
 
-              <div className='currentProjectContent'>
+              <div className='projectContent'>
                 {title && <h2>{title}</h2>}
-                <Link
-                  className='projectButton projectButtonLink'
-                  to={`/aktuelle-projekte/${project.slug}`}
-                >
+                {project.text && <p>{project.text}</p>}
+                <button className='projectButton' type='button'>
                   mehr lesen
-                </Link>
+                </button>
               </div>
             </article>
           )
@@ -84,4 +71,4 @@ function Projects({ projects = projectsData }) {
   )
 }
 
-export default Projects
+export default Reverenzen

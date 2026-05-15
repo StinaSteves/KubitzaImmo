@@ -63,6 +63,63 @@
   transform: translateY(0);
 }
 
+.currentProjectsList {
+  display: grid;
+  gap: 72px;
+  justify-items: center;
+}
+
+.currentProjectCard {
+  width: 80vw;
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.projects.visible .currentProjectCard {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.currentProjectMedia {
+  position: relative;
+  width: 80vw;
+  height: min(32vw, 420px);
+  overflow: hidden;
+}
+
+.currentProjectImage,
+.currentProjectHoverImage {
+  display: block;
+  width: 80vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.currentProjectHoverImage {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.currentProjectMedia:hover .currentProjectHoverImage {
+  opacity: 1;
+}
+
+.currentProjectContent {
+  padding-top: 24px;
+}
+
+.currentProjectContent h2 {
+  margin: 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 300;
+}
+
 .projectImage {
   display: block;
   width: 100%;
@@ -89,6 +146,7 @@
 }
 
 .projectButton {
+  display: inline-block;
   margin-top: 24px;
   padding: 12px 0;
   border: 0;
@@ -104,8 +162,146 @@
   cursor: pointer;
 }
 
+.projectButtonLink {
+  text-decoration: none;
+}
+
 .projectButton:hover {
   color: #00c2ff;
+}
+
+.projectDetailPage {
+  min-height: 100vh;
+  color: #111;
+}
+
+.projectDetailContent {
+  padding: 56px 40px 72px;
+}
+
+.projectDetailContent h1 {
+  margin: 40px 0;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  font-weight: 200;
+}
+
+.houseSwitch {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(110px, 1fr));
+  border: 1px solid #111;
+  margin-bottom: 56px;
+}
+
+.houseSwitchButton {
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #111;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.houseSwitchButton + .houseSwitchButton {
+  border-left: 1px solid #111;
+}
+
+.houseSwitchButton:hover,
+.houseSwitchButton.active {
+  background: #111;
+  color: #00c2ff;
+}
+
+.houseDetails {
+  display: grid;
+  gap: 32px;
+  max-width: 980px;
+}
+
+.houseDetails p {
+  max-width: 760px;
+  margin: 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.7;
+}
+
+.houseDetailImage {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.houseFactsTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.houseFactsTable th,
+.houseFactsTable td {
+  padding: 18px 0;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: left;
+}
+
+.houseFactsTable th {
+  width: 42%;
+  font-weight: 400;
+  color: #555;
+}
+
+.houseFactsTable td {
+  font-weight: 500;
+}
+
+.projectDownloads {
+  display: grid;
+  gap: 14px;
+  max-width: 360px;
+}
+
+.projectDownloadButton {
+  padding: 16px 0;
+  border-bottom: 1px solid currentColor;
+  color: #111;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.projectDownloadButton:hover {
+  color: #00c2ff;
+}
+
+.projectBackLink {
+  display: inline-block;
+  margin-top: 72px;
+  color: #111;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.projectBackLink:hover {
+  color: #00c2ff;
+}
+
+.projectDetailImage {
+  display: block;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (max-width: 900px) {
