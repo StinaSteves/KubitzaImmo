@@ -1,44 +1,10 @@
 
-import { useEffect, useRef, useState } from 'react'
 import '../App.css'
 import reverenzData from './data'
+import useScrollReveal from './useScrollReveal'
 
 function Reverenzen({ projects = reverenzData }) {
-  const sectionRef = useRef(null)
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    const section = sectionRef.current
-
-    if (!section) {
-      return undefined
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      {
-        threshold: 0.25,
-      },
-    )
-
-    const resetAnimationAtTop = () => {
-      if (window.scrollY <= 5) {
-        setIsVisible(false)
-      }
-    }
-
-    observer.observe(section)
-    window.addEventListener('scroll', resetAnimationAtTop, { passive: true })
-
-    return () => {
-      observer.disconnect()
-      window.removeEventListener('scroll', resetAnimationAtTop)
-    }
-  }, [])
+  const { sectionRef, isVisible } = useScrollReveal()
 
   return (
     <section

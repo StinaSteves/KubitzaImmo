@@ -1,45 +1,11 @@
 
-import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
 import projectsData from './projectsData'
+import useScrollReveal from './useScrollReveal'
 
 function Projects({ projects = projectsData }) {
-  const sectionRef = useRef(null)
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    const section = sectionRef.current
-
-    if (!section) {
-      return undefined
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      {
-        threshold: 0.25,
-      },
-    )
-
-    const resetAnimationAtTop = () => {
-      if (window.scrollY <= 5) {
-        setIsVisible(false)
-      }
-    }
-
-    observer.observe(section)
-    window.addEventListener('scroll', resetAnimationAtTop, { passive: true })
-
-    return () => {
-      observer.disconnect()
-      window.removeEventListener('scroll', resetAnimationAtTop)
-    }
-  }, [])
+  const { sectionRef, isVisible } = useScrollReveal()
 
   return (
     <section
@@ -59,6 +25,15 @@ function Projects({ projects = projectsData }) {
                 className='currentProjectCard'
                 style={{ transitionDelay: isVisible ? `${0.35 + index * 0.16}s` : '0s' }}
               >
+                <div className='currentProjectContent'>
+                  {title && <h2>{title}</h2>}
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+                    <br />
+                    Sed diam nonumy eirmod tempor invidunt ut labore.
+                  </p>
+                </div>
+
                 {project.image && (
                   <div className='currentProjectMedia'>
                     <img
@@ -77,20 +52,12 @@ function Projects({ projects = projectsData }) {
                   </div>
                 )}
 
-                <div className='currentProjectContent'>
-                  {title && <h2>{title}</h2>}
-                  <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                    <br />
-                    Sed diam nonumy eirmod tempor invidunt ut labore.
-                  </p>
-                  <Link
-                    className='projectButton projectButtonLink'
-                    to={`/aktuelle-projekte/${project.slug}`}
-                  >
-                    zum Projekt
-                  </Link>
-                </div>
+                <Link
+                  className='projectButton projectButtonLink'
+                  to={`/aktuelle-projekte/${project.slug}`}
+                >
+                  zum Projekt
+                </Link>
               </article>
               {index < projects.length - 1 && (
                 <div
