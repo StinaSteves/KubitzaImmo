@@ -16,17 +16,27 @@ function Reverenzen({ projects = reverenzData }) {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting)
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
       },
       {
         threshold: 0.25,
       },
     )
 
+    const resetAnimationAtTop = () => {
+      if (window.scrollY <= 5) {
+        setIsVisible(false)
+      }
+    }
+
     observer.observe(section)
+    window.addEventListener('scroll', resetAnimationAtTop, { passive: true })
 
     return () => {
       observer.disconnect()
+      window.removeEventListener('scroll', resetAnimationAtTop)
     }
   }, [])
 

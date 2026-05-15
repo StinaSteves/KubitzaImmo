@@ -17,17 +17,27 @@ function Projects({ projects = projectsData }) {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting)
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
       },
       {
         threshold: 0.25,
       },
     )
 
+    const resetAnimationAtTop = () => {
+      if (window.scrollY <= 5) {
+        setIsVisible(false)
+      }
+    }
+
     observer.observe(section)
+    window.addEventListener('scroll', resetAnimationAtTop, { passive: true })
 
     return () => {
       observer.disconnect()
+      window.removeEventListener('scroll', resetAnimationAtTop)
     }
   }, [])
 
@@ -44,39 +54,51 @@ function Projects({ projects = projectsData }) {
           const title = project.title || project.headline || project.heading
 
           return (
-            <article
-              className='currentProjectCard'
-              key={`${title}-${index}`}
-              style={{ transitionDelay: isVisible ? `${0.35 + index * 0.16}s` : '0s' }}
-            >
-              {project.image && (
-                <div className='currentProjectMedia'>
-                  <img
-                    className='currentProjectImage'
-                    src={project.image}
-                    alt={project.alt || title || 'Projektbild'}
-                  />
-                  {project.hoverImage && (
+            <div className='currentProjectItem' key={`${title}-${index}`}>
+              <article
+                className='currentProjectCard'
+                style={{ transitionDelay: isVisible ? `${0.35 + index * 0.16}s` : '0s' }}
+              >
+                {project.image && (
+                  <div className='currentProjectMedia'>
                     <img
-                      className='currentProjectHoverImage'
-                      src={project.hoverImage}
-                      alt=''
-                      aria-hidden='true'
+                      className='currentProjectImage'
+                      src={project.image}
+                      alt={project.alt || title || 'Projektbild'}
                     />
-                  )}
-                </div>
-              )}
+                    {project.hoverImage && (
+                      <img
+                        className='currentProjectHoverImage'
+                        src={project.hoverImage}
+                        alt=''
+                        aria-hidden='true'
+                      />
+                    )}
+                  </div>
+                )}
 
-              <div className='currentProjectContent'>
-                {title && <h2>{title}</h2>}
-                <Link
-                  className='projectButton projectButtonLink'
-                  to={`/aktuelle-projekte/${project.slug}`}
-                >
-                  mehr lesen
-                </Link>
-              </div>
-            </article>
+                <div className='currentProjectContent'>
+                  {title && <h2>{title}</h2>}
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+                    <br />
+                    Sed diam nonumy eirmod tempor invidunt ut labore.
+                  </p>
+                  <Link
+                    className='projectButton projectButtonLink'
+                    to={`/aktuelle-projekte/${project.slug}`}
+                  >
+                    zum Projekt
+                  </Link>
+                </div>
+              </article>
+              {index < projects.length - 1 && (
+                <div
+                  className='currentProjectDivider'
+                  style={{ transitionDelay: isVisible ? `${0.55 + index * 0.16}s` : '0s' }}
+                />
+              )}
+            </div>
           )
         })}
       </div>
