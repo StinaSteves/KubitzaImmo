@@ -5,6 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>immo</title>
+    <script>
+      ;(() => {
+        const redirectPath = new URLSearchParams(window.location.search).get('redirect')
+
+        if (redirectPath) {
+          const basePath = window.location.pathname.replace(/\/$/, '')
+          window.history.replaceState(null, '', `${basePath}${redirectPath}`)
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>
