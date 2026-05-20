@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import '../App.css'
+import Footer from '../components/Footer'
 import projectsData from '../components/projectsData'
 
 function AktuelleProjekte() {
@@ -22,75 +23,93 @@ function AktuelleProjekte() {
   const activeHouse = project.houses?.[activeHouseIndex]
 
   return (
-    <main className='projectDetailPage'>
-      {project.image && (
-        <img
-          className='projectDetailImage'
-          src={project.image}
-          alt={project.alt || project.title}
-        />
-      )}
-      <div className='projectDetailContent'>
-        <h1>{project.title}</h1>
-
-        {project.houses?.length > 0 && (
-          <div className='houseSwitch' aria-label='Haus auswaehlen'>
-            {project.houses.map((house, index) => (
-              <button
-                className={`houseSwitchButton ${index === activeHouseIndex ? 'active' : ''}`}
-                type='button'
-                key={house.id}
-                onClick={() => setActiveHouseIndex(index)}
-              >
-                {house.label}
-              </button>
-            ))}
-          </div>
+    <>
+      <main className='projectDetailPage'>
+        {project.image && (
+          <img
+            className='projectDetailImage'
+            src={project.image}
+            alt={project.alt || project.title}
+          />
         )}
+        <div className='projectDetailContent'>
+          <h1>{project.title}</h1>
 
-        {activeHouse && (
-          <section className='houseDetails'>
-            <img
-              className='houseDetailImage'
-              src={activeHouse.introImage}
-              alt={`${activeHouse.label} Ansicht`}
-            />
-            <p>{activeHouse.introText}</p>
-
-            <img
-              className='houseDetailImage'
-              src={activeHouse.tableImage}
-              alt={`${activeHouse.label} Lage`}
-            />
-            <table className='houseFactsTable'>
-              <tbody>
-                {activeHouse.facts.map(([label, value]) => (
-                  <tr key={label}>
-                    <th scope='row'>{label}</th>
-                    <td>{value}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-
-            <p>{activeHouse.closingText}</p>
-
-            <div className='projectDownloads'>
-              <a className='projectDownloadButton' href={activeHouse.exposeUrl} download>
-                Expose herunterladen
-              </a>
-              <a className='projectDownloadButton' href={activeHouse.lageplanUrl} download>
-                Lageplan herunterladen
-              </a>
+          {project.houses?.length > 1 && (
+            <div className='houseSwitch' aria-label='Haus auswaehlen'>
+              {project.houses.map((house, index) => (
+                <button
+                  className={`houseSwitchButton ${index === activeHouseIndex ? 'active' : ''}`}
+                  type='button'
+                  key={house.id}
+                  onClick={() => setActiveHouseIndex(index)}
+                >
+                  {house.label}
+                </button>
+              ))}
             </div>
-          </section>
-        )}
+          )}
 
-        <Link className='projectBackLink' to='/'>
-          zurück
-        </Link>
-      </div>
-    </main>
+          {activeHouse && (
+            <section className='houseDetails'>
+              {activeHouse.apartments?.length > 0 && (
+                <div className='apartmentsTableWrap'>
+                  <table className='apartmentsTable'>
+                    <tbody>
+                      {activeHouse.apartments.map((apartment) => (
+                        <tr key={`${activeHouse.id}-${apartment.number}`}>
+                          <td>{apartment.type}</td>
+                          <td>{apartment.number}</td>
+                          <td>{apartment.location}</td>
+                          <td>{apartment.rooms}</td>
+                          <td>{apartment.area}</td>
+                          <td>{apartment.price}</td>
+                          <td>
+                            <a
+                              className='tableDownloadButton'
+                              href={apartment.exposeUrl}
+                              download
+                            >
+                              Expose herunterladen
+                            </a>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              <img
+                className='houseDetailImage'
+                src={activeHouse.introImage}
+                alt={`${activeHouse.label} Ansicht`}
+              />
+              <p>{activeHouse.introText}</p>
+
+              <img
+                className='houseDetailImage'
+                src={activeHouse.tableImage}
+                alt={`${activeHouse.label} Lage`}
+              />
+
+              <p>{activeHouse.closingText}</p>
+
+              <div className='projectDownloads'>
+                <a className='projectDownloadButton' href={activeHouse.lageplanUrl} download>
+                  Lageplan herunterladen
+                </a>
+              </div>
+            </section>
+          )}
+
+          <Link className='projectBackLink' to='/'>
+            zurück
+          </Link>
+        </div>
+      </main>
+      <Footer />
+    </>
   )
 }
 

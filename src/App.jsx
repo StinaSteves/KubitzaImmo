@@ -5,6 +5,7 @@ import Logo from '../public/Logo_arktikgrau.jpeg'
 import LogoWP from '../public/Logo_WP_klein.jpeg'
 import Reverenzen from './components/Reverenzen.jsx'
 import Projects from './components/Projects.jsx'
+import Footer from './components/Footer.jsx'
 import AktuelleProjekte from './Pages/AktuelleProjekte.jsx'
 import './App.css'
 
@@ -73,6 +74,7 @@ function Home() {
 </div>
 <Projects />
 <Reverenzen />
+<Footer />
 
 </div>
   )

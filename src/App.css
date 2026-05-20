@@ -226,31 +226,38 @@
 .houseSwitch {
   display: inline-grid;
   grid-template-columns: repeat(2, minmax(110px, 1fr));
-  border: 1px solid #111;
+  gap: 42px;
   margin-bottom: 56px;
 }
 
 .houseSwitchButton {
-  padding: 14px 24px;
+  padding: 15px 28px;
   border: 0;
   border-radius: 0;
-  background: transparent;
+  background: #f5f5f5;
   color: #111;
   font-family: 'Trebuchet MS', Arial, sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   cursor: pointer;
-}
-
-.houseSwitchButton + .houseSwitchButton {
-  border-left: 1px solid #111;
+  box-shadow: 8px 8px 18px rgba(17, 17, 17, 0.12), -8px -8px 18px rgba(255, 255, 255, 0.95);
+  transition: color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .houseSwitchButton:hover,
 .houseSwitchButton.active {
-  background: #111;
   color: #00c2ff;
+}
+
+.houseSwitchButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 10px 10px 22px rgba(17, 17, 17, 0.14), -10px -10px 22px rgba(255, 255, 255, 1);
+}
+
+.houseSwitchButton.active {
+  transform: translateY(0);
+  box-shadow: inset 5px 5px 12px rgba(17, 17, 17, 0.12), inset -5px -5px 12px rgba(255, 255, 255, 0.95);
 }
 
 .houseDetails {
@@ -275,27 +282,48 @@
   object-position: center;
 }
 
-.houseFactsTable {
+.apartmentsTableWrap {
+  width: min(100%, 1180px);
+  overflow-x: auto;
+}
+
+.apartmentsTable {
   width: 100%;
   border-collapse: collapse;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.92rem;
+  white-space: nowrap;
 }
 
-.houseFactsTable th,
-.houseFactsTable td {
-  padding: 18px 0;
+.apartmentsTable td {
+  padding: 18px 18px 18px 0;
   border-bottom: 1px solid #d9d9d9;
   text-align: left;
 }
 
-.houseFactsTable th {
-  width: 42%;
-  font-weight: 400;
-  color: #555;
+.apartmentsTable td:first-child {
+  letter-spacing: 0.08em;
 }
 
-.houseFactsTable td {
-  font-weight: 500;
+.apartmentsTable td:nth-child(2) {
+  width: 48px;
+}
+
+.tableDownloadButton {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid currentColor;
+  color: #111;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.tableDownloadButton:hover {
+  background: #111;
+  color: #00c2ff;
 }
 
 .projectDownloads {
@@ -482,5 +510,74 @@
   }
   100% {
     transform: perspective(900px) rotateY(360deg);
+  }
+}
+
+.siteFooter {
+  background: #fff;
+  color: #111;
+  border-top: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.siteFooterInner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 56px 40px;
+}
+
+.footerContact {
+  display: grid;
+  gap: 10px;
+}
+
+.footerLabel {
+  margin: 0 0 8px;
+  color: #777;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.footerPhone {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-weight: 200;
+}
+
+.siteFooter a {
+  color: #111;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.siteFooter a:hover {
+  color: #00c2ff;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.footerLinks a {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .siteFooterInner {
+    display: grid;
+    gap: 36px;
+    padding: 44px 20px;
+  }
+
+  .footerLinks {
+    display: grid;
+    gap: 16px;
   }
 }
