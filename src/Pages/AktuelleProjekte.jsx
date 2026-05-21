@@ -52,6 +52,21 @@ function AktuelleProjekte() {
 
           {activeHouse && (
             <section className='houseDetails'>
+              <img
+                className='houseDetailImage'
+                src={activeHouse.introImage}
+                alt={`${activeHouse.label} Ansicht`}
+              />
+              <p>{activeHouse.introText}</p>
+
+              <img
+                className='houseDetailImage'
+                src={activeHouse.tableImage}
+                alt={`${activeHouse.label} Lage`}
+              />
+
+              <p>{activeHouse.closingText}</p>
+
               {activeHouse.apartments?.length > 0 && (
                 <div className='apartmentsTableWrap'>
                   <table className='apartmentsTable'>
@@ -64,6 +79,13 @@ function AktuelleProjekte() {
                           <td>{apartment.rooms}</td>
                           <td>{apartment.area}</td>
                           <td>{apartment.price}</td>
+                          <td>
+                            {apartment.status && (
+                              <span className={`apartmentStatus ${apartment.status}`}>
+                                {apartment.status}
+                              </span>
+                            )}
+                          </td>
                           <td>
                             <a
                               className='tableDownloadButton'
@@ -79,21 +101,6 @@ function AktuelleProjekte() {
                   </table>
                 </div>
               )}
-
-              <img
-                className='houseDetailImage'
-                src={activeHouse.introImage}
-                alt={`${activeHouse.label} Ansicht`}
-              />
-              <p>{activeHouse.introText}</p>
-
-              <img
-                className='houseDetailImage'
-                src={activeHouse.tableImage}
-                alt={`${activeHouse.label} Lage`}
-              />
-
-              <p>{activeHouse.closingText}</p>
 
               <div className='projectDownloads'>
                 <a className='projectDownloadButton' href={activeHouse.lageplanUrl} download>

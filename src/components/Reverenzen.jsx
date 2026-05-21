@@ -8,7 +8,7 @@ function Reverenzen({ projects = reverenzData }) {
 
   return (
     <section
-      id='projekte'
+      id='referenzen'
       className={`projects ${isVisible ? 'visible' : ''}`}
       ref={sectionRef}
     >

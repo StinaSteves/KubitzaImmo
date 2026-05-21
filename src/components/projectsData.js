@@ -20,6 +20,7 @@ const apartmentRows = [
     rooms: '3,5 Raum',
     area: '94,36 qm',
     price: 'KP 433.112,- €',
+    status: 'reserviert',
   },
   {
     type: 'WOHNUNG',
@@ -44,6 +45,7 @@ const apartmentRows = [
     rooms: '3,5 Raum',
     area: '96,92 qm',
     price: 'KP 484.503,- €',
+    status: 'verkauft',
   },
   {
     type: 'WOHNUNG',
@@ -76,6 +78,7 @@ const apartmentRows = [
     rooms: '2,5 Raum',
     area: '88,20 qm',
     price: 'KP 449.820,- €',
+    status: 'reserviert',
   },
   {
     type: 'WOHNUNG',
