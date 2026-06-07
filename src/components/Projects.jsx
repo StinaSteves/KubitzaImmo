@@ -27,11 +27,16 @@ function Projects({ projects = projectsData }) {
               >
                 <div className='currentProjectContent'>
                   {title && <h2>{title}</h2>}
-                  <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                    <br />
-                    Sed diam nonumy eirmod tempor invidunt ut labore.
-                  </p>
+                  {project.description && (
+                    <p>
+                      {project.description.map((line, lineIndex) => (
+                        <span key={line}>
+                          {line}
+                          {lineIndex < project.description.length - 1 && <br />}
+                        </span>
+                      ))}
+                    </p>
+                  )}
                 </div>
 
                 {project.image && (

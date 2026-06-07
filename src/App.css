@@ -125,6 +125,7 @@
   position: absolute;
   inset: 0;
   height: 100%;
+  background: #fff;
   opacity: 0;
   transition: opacity 0.45s ease;
 }
@@ -290,40 +291,48 @@
   text-align: left;
 }
 
-.apartmentsTable td:first-child {
-  letter-spacing: 0.08em;
+.apartmentIdentityCell {
+  position: relative;
+  min-width: 170px;
 }
 
-.apartmentsTable td:nth-child(2) {
-  width: 48px;
+.apartmentIdentityCell.hasStatus {
+  padding-top: 58px;
+}
+
+.apartmentIdentity {
+  display: grid;
+  grid-template-columns: minmax(100px, max-content) 32px;
+  gap: 18px;
+  letter-spacing: 0.08em;
 }
 
 .apartmentStatus {
-  display: inline-block;
-  min-width: 112px;
-  padding: 9px 16px;
-  position: relative;
-  isolation: isolate;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 118px;
+  padding: 9px 16px 16px;
   color: #fff;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-align: center;
   text-transform: uppercase;
-  transform: skewX(-10deg);
-  box-shadow: 0 8px 18px rgba(17, 17, 17, 0.12);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), 50% 100%, 0 calc(100% - 8px));
+  filter: drop-shadow(0 6px 8px rgba(17, 17, 17, 0.16));
 }
 
 .apartmentStatus::before {
   content: '';
   position: absolute;
-  inset: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  z-index: -1;
-}
-
-.apartmentStatus::first-letter {
-  text-transform: uppercase;
+  top: 5px;
+  right: 5px;
+  bottom: 12px;
+  left: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  clip-path: inherit;
 }
 
 .apartmentStatus.reserviert {
@@ -334,41 +343,32 @@
   background: linear-gradient(135deg, #9d1111, #d93232);
 }
 
+.tableDownloadButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 112px);
+  gap: 8px;
+}
+
 .tableDownloadButton {
-  display: inline-block;
-  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 8px 10px;
   border: 1px solid currentColor;
   color: #111;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  font-size: 0.66rem;
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: normal;
 }
 
 .tableDownloadButton:hover {
-  color: #00c2ff;
-}
-
-.projectDownloads {
-  display: grid;
-  gap: 14px;
-  justify-items: start;
-}
-
-.projectDownloadButton {
-  display: inline-block;
-  padding: 10px 14px;
-  border: 1px solid currentColor;
-  color: #111;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.projectDownloadButton:hover {
   color: #00c2ff;
 }
 
@@ -394,6 +394,77 @@
   object-position: center;
 }
 
+.legalPage {
+  min-height: 100vh;
+  padding: 180px 40px 96px;
+  color: #111;
+  background: #fff;
+}
+
+.legalPageInner {
+  width: min(100%, 980px);
+  margin: 0 auto;
+}
+
+.legalEyebrow {
+  margin: 0 0 18px;
+  color: #777;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.legalPage h1 {
+  margin: 0 0 72px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  font-weight: 200;
+}
+
+.legalSection {
+  max-width: 760px;
+  padding: 0 0 48px;
+  margin: 0 0 48px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.legalSection h2 {
+  margin: 0 0 22px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-weight: 400;
+}
+
+.legalSection p,
+.legalSection address {
+  margin: 0 0 20px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.75;
+}
+
+.legalSection a {
+  color: #111;
+  text-underline-offset: 4px;
+  transition: color 0.25s ease;
+}
+
+.legalSection a:hover,
+.legalBackLink:hover {
+  color: #00c2ff;
+}
+
+.legalBackLink {
+  color: #111;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
 @media (max-width: 900px) {
   .projectsGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -411,6 +482,14 @@
 
   .currentProjectDivider {
     margin-left: -20px;
+  }
+
+  .legalPage {
+    padding: 150px 20px 72px;
+  }
+
+  .legalPage h1 {
+    margin-bottom: 52px;
   }
 
 }
@@ -528,20 +607,33 @@
 }
 
 .siteFooterInner {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 56px 40px;
+  display: grid;
+  grid-template-columns: minmax(150px, 1.3fr) repeat(3, minmax(150px, 1fr));
+  gap: 56px;
+  padding: 64px 40px 52px;
 }
 
-.footerContact {
+.footerBrand {
+  justify-self: start;
+  align-self: start;
+  width: 112px;
+}
+
+.footerBrand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.footerColumn {
   display: grid;
-  gap: 10px;
+  align-content: start;
+  justify-items: start;
+  gap: 12px;
 }
 
 .footerLabel {
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   color: #777;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.78rem;
@@ -549,14 +641,11 @@
   text-transform: uppercase;
 }
 
-.footerPhone {
-  font-size: clamp(1.5rem, 3vw, 3rem);
-  font-weight: 200;
-}
-
 .siteFooter a {
   color: #111;
   font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.5;
   text-decoration: none;
   transition: color 0.25s ease;
 }
@@ -565,27 +654,39 @@
   color: #00c2ff;
 }
 
-.footerLinks {
-  display: flex;
-  gap: 28px;
-  align-items: center;
+.footerBottom {
+  padding: 20px 40px;
+  border-top: 1px solid rgba(17, 17, 17, 0.1);
 }
 
-.footerLinks a {
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.footerBottom p {
+  margin: 0;
+  color: #777;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .siteFooterInner {
-    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .siteFooterInner {
+    grid-template-columns: 1fr;
     gap: 36px;
-    padding: 44px 20px;
+    padding: 48px 20px 40px;
   }
 
-  .footerLinks {
-    display: grid;
-    gap: 16px;
+  .footerBrand {
+    justify-self: start;
+    width: 96px;
+  }
+
+  .footerBottom {
+    padding: 18px 20px;
   }
 }

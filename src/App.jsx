@@ -4,7 +4,10 @@ import Reverenzen from './components/Reverenzen.jsx'
 import Projects from './components/Projects.jsx'
 import Footer from './components/Footer.jsx'
 import Navigation from './components/Navigation.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
 import AktuelleProjekte from './Pages/AktuelleProjekte.jsx'
+import Datenschutz from './Pages/Datenschutz.jsx'
+import Impressum from './Pages/Impressum.jsx'
 import './App.css'
 
 const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '')
@@ -32,10 +35,13 @@ function Home() {
 function App() {
   return (
     <BrowserRouter basename={routerBasename}>
+      <ScrollToTop />
       <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/aktuelle-projekte/:projectSlug' element={<AktuelleProjekte />} />
+        <Route path='/datenschutz' element={<Datenschutz />} />
+        <Route path='/impressum' element={<Impressum />} />
       </Routes>
     </BrowserRouter>
   )

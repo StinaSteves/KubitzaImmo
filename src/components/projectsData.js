@@ -1,8 +1,9 @@
 const recklinghausenImage = `${import.meta.env.BASE_URL}recklinghausen/recklinghausen_luftbild.jpg`
 const recklinghausenLageplan = `${import.meta.env.BASE_URL}recklinghausen/recklinghausen_lageplan.png`
-const testhaus1 = `${import.meta.env.BASE_URL}recklinghausen/testhaus1.jpg`
-const testhaus2 = `${import.meta.env.BASE_URL}recklinghausen/testhaus2.jpg`
-const hofImage = `${import.meta.env.BASE_URL}immoPictures/2_Hof_Web.jpg`
+const haus1StreetImage = `${import.meta.env.BASE_URL}recklinghausen/1_Straße_Web.jpg`
+const haus1GardenImage = `${import.meta.env.BASE_URL}recklinghausen/1_Garten_V2.jpg`
+const haus2StreetImage = `${import.meta.env.BASE_URL}recklinghausen/2_Straße_Web.jpg`
+const haus2GardenImage = `${import.meta.env.BASE_URL}recklinghausen/2_Garten_V2.jpg`
 
 const apartmentRows = [
   {
@@ -110,10 +111,9 @@ const recklinghausenHouses = [
   {
     id: 'haus-1',
     label: 'Haus 1',
-    introImage: testhaus1,
-    introText:
-      'Haus 1 verbindet klare Architektur mit durchdachten Grundrissen und hellen Wohnbereichen. Die Angaben dienen aktuell als Platzhalter und koennen spaeter projektgenau ersetzt werden.',
-    tableImage: recklinghausenLageplan,
+    introImage: haus1StreetImage,
+    introText: 'Exklusive Stadtvilla mit 8 Wohneinheiten',
+    tableImage: haus1GardenImage,
     facts: [
       ['Wohnflaeche', 'ca. 142 m2'],
       ['Zimmer', '5'],
@@ -122,20 +122,19 @@ const recklinghausenHouses = [
     ],
     apartments: apartmentRows.map((apartment) => ({
       ...apartment,
-      exposeUrl: testhaus1,
+      exposeUrl: haus1StreetImage,
     })),
     closingText:
-      'Weitere Informationen, Grundrisse und Ausstattungsdetails werden im Expose zusammengefasst.',
-    exposeUrl: testhaus1,
+      '8 Seniorengerechte Wohnungen mit Aufzug und Tiefgarage, an der Prof.- Schulte- Straße. Zufahrt Tiefgarage, vom Westerholter Weg. Das Projekt wird ein Klimafreundlicher Neubau und im KFW 40 Standard errichtet. Sichern Sie sich bis zu 150.000,- € zinsverbilligte Kredite von der KFW.',
+    exposeUrl: haus1StreetImage,
     lageplanUrl: recklinghausenLageplan,
   },
   {
     id: 'haus-2',
     label: 'Haus 2',
-    introImage: testhaus2,
-    introText:
-      'Haus 2 ist als eigenstaendiges Wohnhaus auf demselben Grundstueck geplant. Auch diese Inhalte sind Platzhalter und koennen spaeter individuell angepasst werden.',
-    tableImage: hofImage,
+    introImage: haus2StreetImage,
+    introText: 'Exklusive Stadtvilla mit 8 Wohneinheiten',
+    tableImage: haus2GardenImage,
     facts: [
       ['Wohnflaeche', 'ca. 128 m2'],
       ['Zimmer', '4'],
@@ -144,11 +143,11 @@ const recklinghausenHouses = [
     ],
     apartments: apartmentRows.map((apartment) => ({
       ...apartment,
-      exposeUrl: testhaus2,
+      exposeUrl: haus2StreetImage,
     })),
     closingText:
-      'Die Detailunterlagen stehen spaeter als separate Downloads fuer Haus 2 zur Verfuegung.',
-    exposeUrl: testhaus2,
+      '8 Exklusive Seniorengerechte Wohnungen mit Aufzug und Tiefgarage, an der Prof.- Schulte- Straße. Zufahrt Tiefgarage, vom Westerholter Weg. Das Projekt wird ein Klimafreundlicher Neubau und im KFW 40 Standard errichtet. Sichern Sie sich bis zu 150.000,- € zinsverbilligte Kredite von der KFW.',
+    exposeUrl: haus2StreetImage,
     lageplanUrl: recklinghausenLageplan,
   },
 ]
@@ -159,13 +158,21 @@ const projectsData = [
     image: recklinghausenImage,
     hoverImage: recklinghausenLageplan,
     title: 'Recklinghausen',
+    description: [
+      'Quartiersentwicklung St. Markus Wohnbebauung an der Prof.- Schulte-Straße',
+      '2 Demenz-WG und eine Intensivpflege am Westerholter-Weg Kirche/Kita',
+    ],
     houses: recklinghausenHouses,
   },
   {
     slug: 'EINGANGSTOR ZUM STADTKERN ALTENESSEN-MITTE',
-    image: testhaus1,
-    hoverImage: testhaus2,
+    image: haus1StreetImage,
+    hoverImage: haus2StreetImage,
     title: 'EINGANGSTOR ZUM STADTKERN ALTENESSEN-MITTE',
+    description: [
+      'Edeka-Markt mit 90 Stellplätzen und 38 sozialgeförderte sowie 10 freifinanzierte Wohnungen inkl. Tiefgarage',
+      'Neubauprojekt an der Wilhelm-Nieswandt-Allee',
+    ],
     houses: [
       {
         ...recklinghausenHouses[0],

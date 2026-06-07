@@ -73,27 +73,45 @@ function AktuelleProjekte() {
                     <tbody>
                       {activeHouse.apartments.map((apartment) => (
                         <tr key={`${activeHouse.id}-${apartment.number}`}>
-                          <td>{apartment.type}</td>
-                          <td>{apartment.number}</td>
-                          <td>{apartment.location}</td>
-                          <td>{apartment.rooms}</td>
-                          <td>{apartment.area}</td>
-                          <td>{apartment.price}</td>
-                          <td>
+                          <td
+                            className={`apartmentIdentityCell ${
+                              apartment.status ? 'hasStatus' : ''
+                            }`}
+                            colSpan='2'
+                          >
                             {apartment.status && (
                               <span className={`apartmentStatus ${apartment.status}`}>
                                 {apartment.status}
                               </span>
                             )}
+                            <span className='apartmentIdentity'>
+                              <span>{apartment.type}</span>
+                              <span>{apartment.number}</span>
+                            </span>
                           </td>
+                          <td>{apartment.location}</td>
+                          <td>{apartment.rooms}</td>
+                          <td>{apartment.area}</td>
+                          <td>{apartment.price}</td>
                           <td>
-                            <a
-                              className='tableDownloadButton'
-                              href={apartment.exposeUrl}
-                              download
-                            >
-                              Expose herunterladen
-                            </a>
+                            <div className='tableDownloadButtons'>
+                              <a
+                                className='tableDownloadButton'
+                                href={apartment.exposeUrl}
+                                download
+                              >
+                                <span>Expose</span>
+                                <span>herunterladen</span>
+                              </a>
+                              <a
+                                className='tableDownloadButton'
+                                href={activeHouse.lageplanUrl}
+                                download
+                              >
+                                <span>Lageplan</span>
+                                <span>herunterladen</span>
+                              </a>
+                            </div>
                           </td>
                         </tr>
                       ))}
@@ -101,12 +119,6 @@ function AktuelleProjekte() {
                   </table>
                 </div>
               )}
-
-              <div className='projectDownloads'>
-                <a className='projectDownloadButton' href={activeHouse.lageplanUrl} download>
-                  Lageplan herunterladen
-                </a>
-              </div>
             </section>
           )}
 

@@ -1,35 +1,35 @@
-const imageBasePath = `${import.meta.env.BASE_URL}immoPictures/2_Hof_Web.jpg`
+const referenceBasePath = `${import.meta.env.BASE_URL}reverence/`
 
 const projectsData = [
   {
-    image: imageBasePath,
-    title: 'Hofansicht',
-    text: 'Ein Immobilienprojekt mit klarer Architektur, hochwertiger Ausfuehrung und einem besonderen Blick fuer Details.',
+    image: `${referenceBasePath}Recklinghausen-Mitte.jpg`,
+    title: 'Recklinghausen-Mitte',
+    text: '9 EXKLUSIVE EIGENTUMSWOHNUNGEN IN RECKLINGHAUSEN-MITTE RHEINLANDSTR. 5',
   },
-    {
-    image: imageBasePath,
-    title: 'Hofansicht',
-    text: 'Ein Immobilienprojekt mit klarer Architektur, hochwertiger Ausfuehrung und einem besonderen Blick fuer Details.',
+  {
+    image: `${referenceBasePath}Kirchhellen-Grafenwald.jpg`,
+    title: 'Kirchhellen-Mitte',
+    text: '24 EIGENTUMSWOHNUNGEN PLUS 3 LAGERHALLEN IN KIRCHHELLEN-GRAFENWALD GIESENHEIDE 2 - 8',
   },
-      {
-    image: imageBasePath,
-    title: 'Hofansicht',
-    text: 'Ein Immobilienprojekt mit klarer Architektur, hochwertiger Ausfuehrung und einem besonderen Blick fuer Details.',
+  {
+    image: `${referenceBasePath}Bootrop-Ostring.jpeg`,
+    title: 'Bottrop-Ostring',
+    text: '4 EIGENTUMSWOHNUNGEN, 3 MODERNE REIHENHÄUSER UND ZWEI DOPPELHAUSHÄLFTEN OSTRING 82 IN BOTTROP',
   },
-      {
-    image: imageBasePath,
-    title: 'Hofansicht',
-    text: 'Ein Immobilienprojekt mit klarer Architektur, hochwertiger Ausfuehrung und einem besonderen Blick fuer Details.',
+  {
+    image: `${referenceBasePath}Scharnhölzfeld.jpeg`,
+    title: 'Scharnhölzfeld',
+    text: '9 EXKLUSIVE EIGENTUMSWOHNUNGEN AM SCHARNHÖLZFELD 3 IN BOTTROP',
   },
-      {
-    image: imageBasePath,
-    title: 'Hofansicht',
-    text: 'Ein Immobilienprojekt mit klarer Architektur, hochwertiger Ausfuehrung und einem besonderen Blick fuer Details.',
+  {
+    image: `${referenceBasePath}Tappenhof.jpeg`,
+    title: 'Tappenhof',
+    text: 'KERNSANIERTE EIGENTUMSWOHNUNGEN, TAPPENHOF 18 IN BOTTROP-KIRCHHELLEN',
   },
-      {
-    image: imageBasePath,
-    title: 'Hofansicht',
-    text: 'Ein Immobilienprojekt mit klarer Architektur, hochwertiger Ausfuehrung und einem besonderen Blick fuer Details.',
+  {
+    image: `${referenceBasePath}Sandgrube.jpg`,
+    title: 'Sandgrube',
+    text: 'EXKLUSIVE EIGENTUMSWOHNUNGEN, AN DER SANDGRUBE 19 IN BOTTROP-KIRCHHELLEN',
   },
 ]
 

@@ -12,7 +12,7 @@ function Reverenzen({ projects = reverenzData }) {
       className={`projects ${isVisible ? 'visible' : ''}`}
       ref={sectionRef}
     >
-      <h1 className='projectsTitle'>Reverenzen</h1>
+      <h1 className='projectsTitle'>Referenzen</h1>
 
       <div className='projectsGrid'>
         {projects.map((project, index) => {
@@ -35,9 +35,6 @@ function Reverenzen({ projects = reverenzData }) {
               <div className='projectContent'>
                 {title && <h2>{title}</h2>}
                 {project.text && <p>{project.text}</p>}
-                <button className='projectButton' type='button'>
-                  mehr lesen
-                </button>
               </div>
             </article>
           )

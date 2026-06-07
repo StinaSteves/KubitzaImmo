@@ -1,22 +1,36 @@
+import { Link, useLocation } from 'react-router-dom'
 import Logo from '../../public/logoKubitza.jpeg'
 import LogoWP from '../../public/logoWP.jpeg'
 
 function Navigation() {
-  const basePath = import.meta.env.BASE_URL
+  const { pathname } = useLocation()
+
+  const scrollToSection = (sectionId) => {
+    if (pathname !== '/') return
+
+    const section = document.getElementById(sectionId)
+
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
 
   return (
     <header className='siteNavigation'>
       <div className='logoWrapper'>
-        <a className='logoHomeLink' href={basePath} aria-label='Zur Startseite'>
-        <div className='logoFlip'>
-          <img src={LogoWP} alt='Logo WP' className='logo logoFront' />
-          <img src={Logo} alt='Kubitza Logo' className='logo logoBack' />
-        </div>
-        </a>
+        <Link className='logoHomeLink' to='/' aria-label='Zur Startseite'>
+          <div className='logoFlip'>
+            <img src={LogoWP} alt='Logo WP' className='logo logoFront' />
+            <img src={Logo} alt='Kubitza Logo' className='logo logoBack' />
+          </div>
+        </Link>
         <nav className='menuItems' aria-label='Hauptnavigation'>
-          <a href={`${basePath}#projekte`}>Aktuelle Projekte</a>
-          <a href={`${basePath}#referenzen`}>Referenzen</a>
-          <a href={`${basePath}#about`}>Business</a>
+          <Link to='/#projekte' onClick={() => scrollToSection('projekte')}>
+            Aktuelle Projekte
+          </Link>
+          <Link to='/#referenzen' onClick={() => scrollToSection('referenzen')}>
+            Referenzen
+          </Link>
         </nav>
       </div>
     </header>
