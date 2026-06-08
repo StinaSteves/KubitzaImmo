@@ -57,7 +57,7 @@ function AktuelleProjekte() {
                 src={activeHouse.introImage}
                 alt={`${activeHouse.label} Ansicht`}
               />
-              <p>{activeHouse.introText}</p>
+              {activeHouse.introText && <p>{activeHouse.introText}</p>}
 
               <img
                 className='houseDetailImage'
@@ -65,7 +65,7 @@ function AktuelleProjekte() {
                 alt={`${activeHouse.label} Lage`}
               />
 
-              <p>{activeHouse.closingText}</p>
+              {activeHouse.closingText && <p>{activeHouse.closingText}</p>}
 
               {activeHouse.apartments?.length > 0 && (
                 <div className='apartmentsTableWrap'>

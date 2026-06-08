@@ -180,6 +180,11 @@ const projectsData = [
         ...recklinghausenHouses[0],
         id: 'altenessen-mitte',
         label: 'Altenessen-Mitte',
+        introImage: altenessenImage,
+        introText:
+          'In Abstimmung mit der Stadt Essen erstellen wir aktuell einen Bebauungsplan für dieses Projekt.',
+        tableImage: altenessenLageplan,
+        closingText: '',
         apartments: [],
       },
     ],
