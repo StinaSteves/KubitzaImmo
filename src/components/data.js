@@ -41,6 +41,26 @@ const projectsData = [
     title: 'Osterfelderstraße',
     text: '7 EXKLUSIVE EIGENTUMSWOHNUNGEN, OSTERFELDERSTRASSE 68',
   },
+  {
+    image: `${referenceBasePath}Neustrasse.jpeg`,
+    title: 'Neustraße',
+    text: '14 EXKLUSIVE EIGENTUMSWOHNUNGEN, NEUSTRASSE 17A',
+  },
+  {
+    image: `${referenceBasePath}Maxschwarzeweg.jpg`,
+    title: 'Max-Schwarze-Weg',
+    text: '4-FAMILIENHAUS, MAX-SCHWARZE-WEG 1 IN BOTTROP',
+  },
+  {
+    image: `${referenceBasePath}Hackfurthstr.53.jpg`,
+    title: 'Hackfurthstraße',
+    text: '20 SENIORENWOHNUNGEN, HACKFURTHSTR. 51–53 IN BOTTROP-KIRCHHELLEN',
+  },
+  {
+    image: `${referenceBasePath}Hackfurthstr.43.jpeg`,
+    title: 'Hackfurthstraße 43',
+    text: '11 MIETWOHNUNGEN PLUS EIN ZAHNARZTZENTRUM IN KIRCHHELLEN-MITTE, HACKFURTHSTR. 43',
+  },
 ]
 
 export default projectsData
