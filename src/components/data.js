@@ -1,65 +1,90 @@
-const referenceBasePath = `${import.meta.env.BASE_URL}reverence/`
+const referenceBasePath = `${import.meta.env.BASE_URL}reverence/web/`
 
 const projectsData = [
-    {
-    image: `${referenceBasePath}Ratingen.jpeg`,
+  {
+    image: `${referenceBasePath}ratingen.jpg`,
     title: 'Ratingen-Mitte',
     text: '10 EXKLUSIVE EIGENTUMSWOHNUNGEN IN RATINGEN-MITTE, IM LÖRCHEN 6',
   },
   {
-    image: `${referenceBasePath}Recklinghausen-Mitte.jpg`,
+    image: `${referenceBasePath}recklinghausen-mitte.jpg`,
     title: 'Recklinghausen-Mitte',
     text: '9 EXKLUSIVE EIGENTUMSWOHNUNGEN IN RECKLINGHAUSEN-MITTE RHEINLANDSTR. 5',
   },
-    {
-    image: `${referenceBasePath}Hackfurthstr.53.jpg`,
+  {
+    image: `${referenceBasePath}hackfurthstrasse-51-53.jpg`,
     title: 'Hackfurthstraße',
     text: '20 SENIORENWOHNUNGEN, HACKFURTHSTR. 51–53 IN BOTTROP-KIRCHHELLEN',
   },
-    {
-    image: `${referenceBasePath}Neustrasse.jpeg`,
+  {
+    image: `${referenceBasePath}neustrasse.jpg`,
     title: 'Neustraße',
     text: '14 EXKLUSIVE EIGENTUMSWOHNUNGEN, NEUSTRASSE 17A',
   },
-    {
+  {
     image: `${referenceBasePath}osterfelderstrasse.jpg`,
     title: 'Osterfelderstraße',
     text: '7 EXKLUSIVE EIGENTUMSWOHNUNGEN, OSTERFELDERSTRASSE 68',
   },
   {
-    image: `${referenceBasePath}Kirchhellen-Grafenwald.jpg`,
+    image: `${referenceBasePath}kirchhellen-grafenwald.jpg`,
     title: 'Kirchhellen-Mitte',
     text: '24 EIGENTUMSWOHNUNGEN PLUS 3 LAGERHALLEN IN KIRCHHELLEN-GRAFENWALD GIESENHEIDE 2 - 8',
   },
   {
-    image: `${referenceBasePath}Bootrop-Ostring.jpeg`,
+    image: `${referenceBasePath}bottrop-ostring.jpg`,
     title: 'Bottrop-Ostring',
     text: '4 EIGENTUMSWOHNUNGEN, 3 MODERNE REIHENHÄUSER UND ZWEI DOPPELHAUSHÄLFTEN OSTRING 82 IN BOTTROP',
   },
   {
-    image: `${referenceBasePath}Scharnhoelzfeld.jpeg`,
+    image: `${referenceBasePath}scharnhoelzfeld.jpg`,
     title: 'Scharnhölzfeld',
     text: '9 EXKLUSIVE EIGENTUMSWOHNUNGEN AM SCHARNHÖLZFELD 3 IN BOTTROP',
   },
   {
-    image: `${referenceBasePath}Tappenhof.jpeg`,
+    image: `${referenceBasePath}tappenhof.jpg`,
     title: 'Tappenhof',
     text: 'KERNSANIERTE EIGENTUMSWOHNUNGEN, TAPPENHOF 18 IN BOTTROP-KIRCHHELLEN',
   },
   {
-    image: `${referenceBasePath}Sandgrube.jpg`,
+    image: `${referenceBasePath}sandgrube.jpg`,
     title: 'Sandgrube',
     text: 'EXKLUSIVE EIGENTUMSWOHNUNGEN, AN DER SANDGRUBE 19 IN BOTTROP-KIRCHHELLEN',
   },
   {
-    image: `${referenceBasePath}Maxschwarzeweg.jpg`,
+    image: `${referenceBasePath}max-schwarze-weg.jpg`,
     title: 'Max-Schwarze-Weg',
     text: '4-FAMILIENHAUS, MAX-SCHWARZE-WEG 1 IN BOTTROP',
   },
   {
-    image: `${referenceBasePath}Hackfurthstr.43.jpeg`,
+    image: `${referenceBasePath}hackfurthstrasse-43.jpg`,
     title: 'Hackfurthstraße 43',
     text: '11 MIETWOHNUNGEN PLUS EIN ZAHNARZTZENTRUM IN KIRCHHELLEN-MITTE, HACKFURTHSTR. 43',
+  },
+  {
+    image: `${referenceBasePath}scharnhoelzstrasse.jpg`,
+    title: 'Scharnhölzstraße',
+    text: '9 ÖFFENTLICH GEFÖRDERTE WOHNEINHEITEN IN BOTTROP',
+  },
+  {
+    image: `${referenceBasePath}gladbecker-strasse.jpg`,
+    title: 'Gladbecker Straße',
+    text: '10 SENIORENGERECHTE MIETWOHNUNGEN',
+  },
+  {
+    image: `${referenceBasePath}liebrechtstrasse.jpg`,
+    title: 'Liebrechtstraße',
+    text: '2 DOPPELHAUSHÄLFTEN',
+  },
+  {
+    image: `${referenceBasePath}vitusstrasse.jpg`,
+    title: 'Vitusstraße',
+    text: '15 ÖFFENTLICH GEFÖRDERTE MIETWOHNUNGEN IN BOTTROP',
+  },
+  {
+    image: `${referenceBasePath}verwaltungsgebaeude.jpg`,
+    title: 'Verwaltungsgebäude',
+    text: 'VERWALTUNGSGEBÄUDE AM WIESENBUSCH IN GLADBECK-RENTFORT',
   },
 ]
 

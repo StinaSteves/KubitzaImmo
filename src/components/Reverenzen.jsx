@@ -12,10 +12,8 @@ function Reverenzen({ projects = reverenzData }) {
 
   const handleVisibleProjects = () => {
     if (isCollapsing) {
-      const nextCount = Math.max(6, visibleCount - 3)
-
-      setVisibleCount(nextCount)
-      setIsCollapsing(nextCount > 6)
+      setVisibleCount(6)
+      setIsCollapsing(false)
       return
     }
 
