@@ -1,9 +1,11 @@
 const recklinghausenImage = `${import.meta.env.BASE_URL}recklinghausen/recklinghausen_luftbild.jpg`
 const recklinghausenLageplan = `${import.meta.env.BASE_URL}recklinghausen/recklinghausen_lageplan.png`
-const haus1StreetImage = `${import.meta.env.BASE_URL}recklinghausen/1_Straße_Web.jpg`
+const haus1StreetImage = `${import.meta.env.BASE_URL}recklinghausen/1_Strasse_Web.jpg`
 const haus1GardenImage = `${import.meta.env.BASE_URL}recklinghausen/1_Garten_V2.jpg`
-const haus2StreetImage = `${import.meta.env.BASE_URL}recklinghausen/2_Straße_Web.jpg`
+const haus2StreetImage = `${import.meta.env.BASE_URL}recklinghausen/2_Strasse_Web.jpg`
 const haus2GardenImage = `${import.meta.env.BASE_URL}recklinghausen/2_Garten_V2.jpg`
+const altenessenImage = `${import.meta.env.BASE_URL}altenessen/PerspektiveAltenessen.jpg`
+const altenessenLageplan = `${import.meta.env.BASE_URL}altenessen/LageplanAltenessen.jpg`
 
 const apartmentRows = [
   {
@@ -159,15 +161,15 @@ const projectsData = [
     hoverImage: recklinghausenLageplan,
     title: 'Recklinghausen',
     description: [
-      'Quartiersentwicklung St. Markus Wohnbebauung an der Prof.- Schulte-Straße',
+      'Quartiersentwicklung St. Markus mit einer Wohnbebauung an der Prof.- Schulte-Straße',
       '2 Demenz-WG und eine Intensivpflege am Westerholter-Weg Kirche/Kita',
     ],
     houses: recklinghausenHouses,
   },
   {
     slug: 'EINGANGSTOR ZUM STADTKERN ALTENESSEN-MITTE',
-    image: haus1StreetImage,
-    hoverImage: haus2StreetImage,
+    image: altenessenImage,
+    hoverImage: altenessenLageplan,
     title: 'EINGANGSTOR ZUM STADTKERN ALTENESSEN-MITTE',
     description: [
       'Edeka-Markt mit 90 Stellplätzen und 38 sozialgeförderte sowie 10 freifinanzierte Wohnungen inkl. Tiefgarage',

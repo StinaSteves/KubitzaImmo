@@ -1,12 +1,20 @@
 import { Link } from 'react-router-dom'
 import Logo from '../../public/logoKubitza.jpeg'
+import LogoWP from '../../public/logoWP.jpeg'
 
 function Footer() {
   return (
     <footer className='siteFooter'>
       <div className='siteFooterInner'>
         <Link className='footerBrand' to='/' aria-label='Kubitza Immobilien Startseite'>
-          <img src={Logo} alt='Kubitza Immobilien GmbH' />
+          <span className='footerLogoFlip'>
+            <img src={LogoWP} alt='WP Wohnbau und Projektsteuerung GmbH' />
+            <img
+              className='footerLogoBack'
+              src={Logo}
+              alt='Kubitza Immobilien GmbH'
+            />
+          </span>
         </Link>
 
         <div className='footerColumn'>

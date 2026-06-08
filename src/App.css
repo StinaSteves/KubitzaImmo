@@ -617,12 +617,27 @@
   justify-self: start;
   align-self: start;
   width: 112px;
+  perspective: 900px;
 }
 
-.footerBrand img {
+.footerLogoFlip {
+  display: grid;
+  width: 100%;
+  transform-style: preserve-3d;
+  animation: logoFlip 9s ease-in-out infinite 5s;
+}
+
+.footerLogoFlip img {
+  grid-area: 1 / 1;
   display: block;
   width: 100%;
   height: auto;
+  object-fit: contain;
+  backface-visibility: hidden;
+}
+
+.footerLogoBack {
+  transform: rotateY(180deg);
 }
 
 .footerColumn {
