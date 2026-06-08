@@ -208,6 +208,17 @@
   color: #00c2ff;
 }
 
+.referencesActions {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+.referencesToggle {
+  margin-top: 0;
+}
+
 .projectDetailPage {
   min-height: 100vh;
   color: #111;

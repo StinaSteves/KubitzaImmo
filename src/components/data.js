@@ -1,10 +1,30 @@
 const referenceBasePath = `${import.meta.env.BASE_URL}reverence/`
 
 const projectsData = [
+    {
+    image: `${referenceBasePath}Ratingen.jpeg`,
+    title: 'Ratingen-Mitte',
+    text: '10 EXKLUSIVE EIGENTUMSWOHNUNGEN IN RATINGEN-MITTE, IM LÖRCHEN 6',
+  },
   {
     image: `${referenceBasePath}Recklinghausen-Mitte.jpg`,
     title: 'Recklinghausen-Mitte',
     text: '9 EXKLUSIVE EIGENTUMSWOHNUNGEN IN RECKLINGHAUSEN-MITTE RHEINLANDSTR. 5',
+  },
+    {
+    image: `${referenceBasePath}Hackfurthstr.53.jpg`,
+    title: 'Hackfurthstraße',
+    text: '20 SENIORENWOHNUNGEN, HACKFURTHSTR. 51–53 IN BOTTROP-KIRCHHELLEN',
+  },
+    {
+    image: `${referenceBasePath}Neustrasse.jpeg`,
+    title: 'Neustraße',
+    text: '14 EXKLUSIVE EIGENTUMSWOHNUNGEN, NEUSTRASSE 17A',
+  },
+    {
+    image: `${referenceBasePath}osterfelderstrasse.jpg`,
+    title: 'Osterfelderstraße',
+    text: '7 EXKLUSIVE EIGENTUMSWOHNUNGEN, OSTERFELDERSTRASSE 68',
   },
   {
     image: `${referenceBasePath}Kirchhellen-Grafenwald.jpg`,
@@ -32,29 +52,9 @@ const projectsData = [
     text: 'EXKLUSIVE EIGENTUMSWOHNUNGEN, AN DER SANDGRUBE 19 IN BOTTROP-KIRCHHELLEN',
   },
   {
-    image: `${referenceBasePath}Ratingen.jpeg`,
-    title: 'Ratingen-Mitte',
-    text: '10 EXKLUSIVE EIGENTUMSWOHNUNGEN IN RATINGEN-MITTE, IM LÖRCHEN 6',
-  },
-  {
-    image: `${referenceBasePath}osterfelderstrasse.jpg`,
-    title: 'Osterfelderstraße',
-    text: '7 EXKLUSIVE EIGENTUMSWOHNUNGEN, OSTERFELDERSTRASSE 68',
-  },
-  {
-    image: `${referenceBasePath}Neustrasse.jpeg`,
-    title: 'Neustraße',
-    text: '14 EXKLUSIVE EIGENTUMSWOHNUNGEN, NEUSTRASSE 17A',
-  },
-  {
     image: `${referenceBasePath}Maxschwarzeweg.jpg`,
     title: 'Max-Schwarze-Weg',
     text: '4-FAMILIENHAUS, MAX-SCHWARZE-WEG 1 IN BOTTROP',
-  },
-  {
-    image: `${referenceBasePath}Hackfurthstr.53.jpg`,
-    title: 'Hackfurthstraße',
-    text: '20 SENIORENWOHNUNGEN, HACKFURTHSTR. 51–53 IN BOTTROP-KIRCHHELLEN',
   },
   {
     image: `${referenceBasePath}Hackfurthstr.43.jpeg`,

@@ -1,10 +1,29 @@
-
+import { useState } from 'react'
 import '../App.css'
 import reverenzData from './data'
 import useScrollReveal from './useScrollReveal'
 
 function Reverenzen({ projects = reverenzData }) {
   const { sectionRef, isVisible } = useScrollReveal()
+  const [visibleCount, setVisibleCount] = useState(6)
+  const [isCollapsing, setIsCollapsing] = useState(false)
+  const visibleProjects = projects.slice(0, visibleCount)
+  const hasMoreThanSixProjects = projects.length > 6
+
+  const handleVisibleProjects = () => {
+    if (isCollapsing) {
+      const nextCount = Math.max(6, visibleCount - 3)
+
+      setVisibleCount(nextCount)
+      setIsCollapsing(nextCount > 6)
+      return
+    }
+
+    const nextCount = Math.min(projects.length, visibleCount + 3)
+
+    setVisibleCount(nextCount)
+    setIsCollapsing(nextCount === projects.length)
+  }
 
   return (
     <section
@@ -14,8 +33,8 @@ function Reverenzen({ projects = reverenzData }) {
     >
       <h1 className='projectsTitle'>Referenzen</h1>
 
-      <div className='projectsGrid'>
-        {projects.map((project, index) => {
+      <div className='projectsGrid' id='referencesGrid'>
+        {visibleProjects.map((project, index) => {
           const title = project.title || project.headline || project.heading
 
           return (
@@ -40,6 +59,20 @@ function Reverenzen({ projects = reverenzData }) {
           )
         })}
       </div>
+
+      {hasMoreThanSixProjects && (
+        <div className='referencesActions'>
+          <button
+            className='projectButton referencesToggle'
+            type='button'
+            onClick={handleVisibleProjects}
+            aria-controls='referencesGrid'
+            aria-expanded={visibleCount > 6}
+          >
+            {isCollapsing ? 'Weniger anzeigen' : 'Mehr anzeigen'}
+          </button>
+        </div>
+      )}
     </section>
   )
 }
