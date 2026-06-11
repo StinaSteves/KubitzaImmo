@@ -28,23 +28,23 @@ const projectsData = [
   },
   {
     image: `${referenceBasePath}hegestrasse-69.jpg`,
-    title: 'Kirchhellen-Mitte',
+    title: 'KIRCHHELLEN-GRAFENWALD',
     text: '24 EIGENTUMSWOHNUNGEN PLUS 3 LAGERHALLEN IN KIRCHHELLEN-GRAFENWALD GIESENHEIDE 2 - 8',
   },
-  {
-    image: `${referenceBasePath}bottrop-ostring.jpg`,
-    title: 'Bottrop-Ostring',
-    text: '4 EIGENTUMSWOHNUNGEN, 3 MODERNE REIHENHÄUSER UND ZWEI DOPPELHAUSHÄLFTEN OSTRING 82 IN BOTTROP',
+    {
+    image: `${referenceBasePath}vitusstrasse.jpg`,
+    title: 'Vitusstraße',
+    text: '15 ÖFFENTLICH GEFÖRDERTE MIETWOHNUNGEN IN HERTEN, VITUSSTR. 15',
   },
   {
     image: `${referenceBasePath}scharnhoelzfeld.jpg`,
     title: 'Scharnhölzfeld',
     text: '9 EXKLUSIVE EIGENTUMSWOHNUNGEN AM SCHARNHÖLZFELD 3 IN BOTTROP',
   },
-  {
-    image: `${referenceBasePath}tappenhof.jpg`,
-    title: 'Tappenhof',
-    text: 'KERNSANIERTE EIGENTUMSWOHNUNGEN, TAPPENHOF 18 IN BOTTROP-KIRCHHELLEN',
+    {
+    image: `${referenceBasePath}rheinstahlstrasse-23.jpg`,
+    title: 'Rheinstahlstraße',
+    text: '7 EXKLUSIVE EIGENTUMSWOHNUNGEN IN BOTTROP-MITTE, RHEINSTAHLSTR. 23',
   },
   {
     image: `${referenceBasePath}sandgrube.jpg`,
@@ -77,9 +77,9 @@ const projectsData = [
     text: '2 DOPPELHAUSHÄLFTEN IN BOTTROP, LIEBRECHTSTR. 1 UND 1A',
   },
   {
-    image: `${referenceBasePath}vitusstrasse.jpg`,
-    title: 'Vitusstraße',
-    text: '15 ÖFFENTLICH GEFÖRDERTE MIETWOHNUNGEN IN HERTEN, VITUSSTR. 15',
+    image: `${referenceBasePath}bottrop-ostring.jpg`,
+    title: 'Bottrop-Ostring',
+    text: '4 EIGENTUMSWOHNUNGEN, 3 MODERNE REIHENHÄUSER UND ZWEI DOPPELHAUSHÄLFTEN OSTRING 82 IN BOTTROP',
   },
   {
     image: `${referenceBasePath}verwaltungsgebaeude.jpg`,
@@ -92,9 +92,9 @@ const projectsData = [
     text: '6 DOPPELHAUSHÄLFTEN IN GLADBECK, TAUNUSSTRASSE 114A–F',
   },
   {
-    image: `${referenceBasePath}rheinstahlstrasse-23.jpg`,
-    title: 'Rheinstahlstraße',
-    text: '7 EXKLUSIVE EIGENTUMSWOHNUNGEN IN BOTTROP-MITTE, RHEINSTAHLSTR. 23',
+    image: `${referenceBasePath}tappenhof.jpg`,
+    title: 'Tappenhof',
+    text: 'KERNSANIERTE EIGENTUMSWOHNUNGEN, TAPPENHOF 18 IN BOTTROP-KIRCHHELLEN',
   },
   {
     image: `${referenceBasePath}kirchhellener-strasse-142.jpg`,

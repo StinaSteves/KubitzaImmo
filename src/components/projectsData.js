@@ -181,7 +181,16 @@ const projectsData = [
   {
     slug: 'EINGANGSTOR ZUM STADTKERN ALTENESSEN-MITTE',
     image: altenessenImage,
-    hoverImage: altenessenLageplan,
+    galleryImages: [
+      {
+        src: altenessenImage,
+        alt: 'Perspektivansicht des Projekts Altenessen-Mitte',
+      },
+      {
+        src: altenessenLageplan,
+        alt: 'Lageplan des Projekts Altenessen-Mitte',
+      },
+    ],
     title: 'EINGANGSTOR ZUM STADTKERN ALTENESSEN-MITTE',
     description: [
       'Edeka-Markt mit 90 Stellplätzen und 38 sozialgeförderte sowie 10 freifinanzierte Wohnungen inkl. Tiefgarage',

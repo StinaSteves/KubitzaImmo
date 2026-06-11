@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
 import projectsData from './projectsData'
@@ -8,6 +8,24 @@ import useScrollReveal from './useScrollReveal'
 function ProjectGallery({ images, title }) {
   const [activeIndex, setActiveIndex] = useState(0)
   const lastIndex = images.length - 1
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches
+
+    if (prefersReducedMotion || images.length < 2) {
+      return undefined
+    }
+
+    const timer = window.setTimeout(() => {
+      setActiveIndex((currentIndex) =>
+        currentIndex === lastIndex ? 0 : currentIndex + 1,
+      )
+    }, 5000)
+
+    return () => window.clearTimeout(timer)
+  }, [activeIndex, images.length, lastIndex])
 
   const showPreviousImage = () => {
     setActiveIndex((currentIndex) =>
