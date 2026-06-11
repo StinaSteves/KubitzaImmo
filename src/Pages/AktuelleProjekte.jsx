@@ -66,6 +66,9 @@ function AktuelleProjekte() {
               />
 
               {activeHouse.closingText && <p>{activeHouse.closingText}</p>}
+              {activeHouse.priceNote && (
+                <p className='housePriceNote'>{activeHouse.priceNote}</p>
+              )}
 
               {activeHouse.apartments?.length > 0 && (
                 <div className='apartmentsTableWrap'>

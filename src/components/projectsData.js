@@ -125,7 +125,8 @@ const recklinghausenHouses = [
       exposeUrl: haus1StreetImage,
     })),
     closingText:
-      '8 Seniorengerechte Wohnungen mit Aufzug und Tiefgarage, an der Prof.- Schulte- Straße. Zufahrt Tiefgarage, vom Westerholter Weg. Das Projekt wird ein Klimafreundlicher Neubau und im KFW 40 Standard errichtet. Sichern Sie sich bis zu 150.000,- € zinsverbilligte Kredite von der KFW.',
+      '8 Seniorengerechte Wohnungen mit Aufzug und Tiefgarage, an der Prof.- Schulte- Straße. Zufahrt Tiefgarage, vom Westerholter Weg. Das Projekt wird ein Klimafreundlicher Neubau und im KFW 40 Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KFW.',
+    priceNote: 'Kaufpreise ab 4.490 € pro qm',
     exposeUrl: haus1StreetImage,
     lageplanUrl: recklinghausenLageplan,
   },
@@ -146,7 +147,7 @@ const recklinghausenHouses = [
       exposeUrl: haus2StreetImage,
     })),
     closingText:
-      '8 Exklusive Seniorengerechte Wohnungen mit Aufzug und Tiefgarage, an der Prof.- Schulte- Straße. Zufahrt Tiefgarage, vom Westerholter Weg. Das Projekt wird ein Klimafreundlicher Neubau und im KFW 40 Standard errichtet. Sichern Sie sich bis zu 150.000,- € zinsverbilligte Kredite von der KFW.',
+      '8 Exklusive Seniorengerechte Wohnungen mit Aufzug und Tiefgarage, an der Prof.- Schulte- Straße. Zufahrt Tiefgarage, vom Westerholter Weg. Das Projekt wird ein Klimafreundlicher Neubau und im KFW 40 Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KFW.',
     exposeUrl: haus2StreetImage,
     lageplanUrl: recklinghausenLageplan,
   },
@@ -172,8 +173,8 @@ const projectsData = [
     ],
     title: 'Recklinghausen',
     description: [
-      'Quartiersentwicklung St. Markus mit einer Wohnbebauung an der Prof.- Schulte-Straße',
-      '2 Demenz-WG und eine Intensivpflege am Westerholter-Weg Kirche/Kita',
+      'Quartiersentwicklung St. Markus mit einer Wohnbebauung und Intensivpflege an der Prof.- Schulte-Straße',
+      '2 Demenz-WG am Westerholter weg sowie Kirche und Kita',
     ],
     houses: recklinghausenHouses,
   },
