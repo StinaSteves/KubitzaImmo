@@ -73,17 +73,7 @@ function AktuelleProjekte() {
                     <tbody>
                       {activeHouse.apartments.map((apartment) => (
                         <tr key={`${activeHouse.id}-${apartment.number}`}>
-                          <td
-                            className={`apartmentIdentityCell ${
-                              apartment.status ? 'hasStatus' : ''
-                            }`}
-                            colSpan='2'
-                          >
-                            {apartment.status && (
-                              <span className={`apartmentStatus ${apartment.status}`}>
-                                {apartment.status}
-                              </span>
-                            )}
+                          <td className='apartmentIdentityCell' colSpan='2'>
                             <span className='apartmentIdentity'>
                               <span>{apartment.type}</span>
                               <span>{apartment.number}</span>
@@ -93,7 +83,7 @@ function AktuelleProjekte() {
                           <td>{apartment.rooms}</td>
                           <td>{apartment.area}</td>
                           <td>{apartment.price}</td>
-                          <td>
+                          <td className='tableDownloadCell'>
                             <div className='tableDownloadButtons'>
                               <a
                                 className='tableDownloadButton'

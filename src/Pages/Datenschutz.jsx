@@ -42,8 +42,8 @@ function Datenschutz() {
               Telefon: <a href='tel:+492041765517'>02041 765517</a>
               <br />
               E-Mail:{' '}
-              <a href='mailto:info@kubitza-immobilien.de'>
-                info@kubitza-immobilien.de
+              <a href='mailto:office@kubitza-immobilien.de'>
+                Office@kubitza-immobilien.de
               </a>
             </p>
           </section>

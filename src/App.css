@@ -112,6 +112,101 @@
   overflow: hidden;
 }
 
+.projectGallery {
+  position: relative;
+  width: 72vw;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #fff;
+}
+
+.projectGallery:focus-visible {
+  outline: 2px solid #00c2ff;
+  outline-offset: 4px;
+}
+
+.projectGalleryImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.projectGalleryArrow {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  background: rgba(17, 17, 17, 0.58);
+  color: #fff;
+  font-size: 1.35rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.projectGalleryArrow:hover,
+.projectGalleryArrow:focus-visible {
+  background: #fff;
+  color: #111;
+  outline: none;
+}
+
+.projectGalleryArrowPrevious {
+  left: 20px;
+}
+
+.projectGalleryArrowNext {
+  right: 20px;
+}
+
+.projectGalleryDots {
+  position: absolute;
+  right: 0;
+  bottom: 18px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.projectGalleryDot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: rgba(17, 17, 17, 0.55);
+  box-shadow: 0 1px 5px rgba(17, 17, 17, 0.35);
+  cursor: pointer;
+}
+
+.projectGalleryDot.active {
+  background: #fff;
+}
+
+.projectGalleryDot:focus-visible {
+  outline: 2px solid #00c2ff;
+  outline-offset: 3px;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .currentProjectImage,
 .currentProjectHoverImage {
   display: block;
@@ -307,10 +402,6 @@
   min-width: 170px;
 }
 
-.apartmentIdentityCell.hasStatus {
-  padding-top: 58px;
-}
-
 .apartmentIdentity {
   display: grid;
   grid-template-columns: minmax(100px, max-content) 32px;
@@ -318,40 +409,8 @@
   letter-spacing: 0.08em;
 }
 
-.apartmentStatus {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 118px;
-  padding: 9px 16px 16px;
-  color: #fff;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-align: center;
-  text-transform: uppercase;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), 50% 100%, 0 calc(100% - 8px));
-  filter: drop-shadow(0 6px 8px rgba(17, 17, 17, 0.16));
-}
-
-.apartmentStatus::before {
-  content: '';
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  bottom: 12px;
-  left: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.38);
-  clip-path: inherit;
-}
-
-.apartmentStatus.reserviert {
-  background: linear-gradient(135deg, #777, #a5a5a5);
-}
-
-.apartmentStatus.verkauft {
-  background: linear-gradient(135deg, #9d1111, #d93232);
+.tableDownloadCell {
+  display: none;
 }
 
 .tableDownloadButtons {
@@ -493,6 +552,23 @@
 
   .currentProjectDivider {
     margin-left: -20px;
+  }
+
+  .projectGalleryArrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .projectGalleryArrowPrevious {
+    left: 10px;
+  }
+
+  .projectGalleryArrowNext {
+    right: 10px;
+  }
+
+  .projectGalleryDots {
+    bottom: 10px;
   }
 
   .legalPage {

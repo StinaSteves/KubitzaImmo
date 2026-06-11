@@ -20,8 +20,11 @@ function Footer() {
         <div className='footerColumn'>
           <p className='footerLabel'>Kontakt</p>
           <a href='tel:+492041765517'>02041 765517</a>
-          <a href='mailto:info@kubitza-immobilien.de'>
-            info@kubitza-immobilien.de
+          <a href='mailto:office@kubitza-immobilien.de'>
+            Office@kubitza-immobilien.de <br />
+          </a>
+          <a href='mailto:info@wpwohnbau.de'>
+            Info@WPWohnbau.de <br />
           </a>
         </div>
 

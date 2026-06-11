@@ -1,5 +1,6 @@
-const recklinghausenImage = `${import.meta.env.BASE_URL}recklinghausen/recklinghausen_luftbild.jpg`
+const recklinghausenImage = `${import.meta.env.BASE_URL}recklinghausen/Luftbild_Hinten_Web.jpg`
 const recklinghausenLageplan = `${import.meta.env.BASE_URL}recklinghausen/recklinghausen_lageplan.png`
+const recklinghausenFrontImage = `${import.meta.env.BASE_URL}recklinghausen/Luftbild_Vorne_Web.jpg`
 const haus1StreetImage = `${import.meta.env.BASE_URL}recklinghausen/1_Strasse_Web.jpg`
 const haus1GardenImage = `${import.meta.env.BASE_URL}recklinghausen/1_Garten_V2.jpg`
 const haus2StreetImage = `${import.meta.env.BASE_URL}recklinghausen/2_Strasse_Web.jpg`
@@ -14,7 +15,7 @@ const apartmentRows = [
     location: 'EG mit Terrasse u. Garten',
     rooms: '3,5 Raum',
     area: '96,68 qm',
-    price: 'KP 443.761,- €',
+    price: 'Preis auf Anfrage',
   },
   {
     type: 'WOHNUNG',
@@ -22,8 +23,7 @@ const apartmentRows = [
     location: 'EG mit Terrasse u. Garten',
     rooms: '3,5 Raum',
     area: '94,36 qm',
-    price: 'KP 433.112,- €',
-    status: 'reserviert',
+    price: 'Preis auf Anfrage',
   },
   {
     type: 'WOHNUNG',
@@ -31,7 +31,7 @@ const apartmentRows = [
     location: 'EG mit Terrasse u. Garten',
     rooms: '3,5 Raum',
     area: '82,29 qm',
-    price: 'KP 377.711,- €',
+    price: 'Preis auf Anfrage',
   },
   {
     type: 'WOHNUNG',
@@ -39,7 +39,7 @@ const apartmentRows = [
     location: 'EG mit Terrasse u. Garten',
     rooms: '3,5 Raum',
     area: '106,60 qm',
-    price: 'KP 489.294,- €',
+    price: 'Preis auf Anfrage',
   },
   {
     type: 'WOHNUNG',
@@ -47,8 +47,7 @@ const apartmentRows = [
     location: 'OG mit Balkon',
     rooms: '3,5 Raum',
     area: '96,92 qm',
-    price: 'KP 484.503,- €',
-    status: 'verkauft',
+    price: 'Preis auf Anfrage',
   },
   {
     type: 'WOHNUNG',
@@ -56,7 +55,7 @@ const apartmentRows = [
     location: 'OG mit Balkon',
     rooms: '3,5 Raum',
     area: '94,54 qm',
-    price: 'KP 472.605,- €',
+    price: 'Preis auf Anfrage',
   },
   {
     type: 'WOHNUNG',
@@ -64,7 +63,7 @@ const apartmentRows = [
     location: 'OG mit Balkon',
     rooms: '3,5 Raum',
     area: '81,83 qm',
-    price: 'KP 409.068,- €',
+    price: 'Preis auf Anfrage',
   },
   {
     type: 'WOHNUNG',
@@ -72,7 +71,7 @@ const apartmentRows = [
     location: 'OG mit Balkon',
     rooms: '3,5 Raum',
     area: '106,26 qm',
-    price: 'KP 478.063,- €',
+    price: 'Preis auf Anfrage',
   },
   {
     type: 'WOHNUNG',
@@ -80,8 +79,7 @@ const apartmentRows = [
     location: 'Penthouse mit Dachterrasse',
     rooms: '2,5 Raum',
     area: '88,20 qm',
-    price: 'KP 449.820,- €',
-    status: 'reserviert',
+    price: 'Preis auf Anfrage',
   },
   {
     type: 'WOHNUNG',
@@ -89,7 +87,7 @@ const apartmentRows = [
     location: 'Penthouse mit Dachterrasse',
     rooms: '3,5 Raum',
     area: '91,58 qm',
-    price: 'KP 467.058,- €',
+    price: 'Preis auf Anfrage',
   },
   {
     type: 'WOHNUNG',
@@ -97,7 +95,7 @@ const apartmentRows = [
     location: 'Penthouse mit Dachterrasse',
     rooms: '2,5 Raum',
     area: '68,72 qm',
-    price: 'KP 350.472,- €',
+    price: 'Preis auf Anfrage',
   },
   {
     type: 'WOHNUNG',
@@ -105,7 +103,7 @@ const apartmentRows = [
     location: 'Penthouse mit Dachterrasse',
     rooms: '2,5 Raum',
     area: '89,55 qm',
-    price: 'KP 456.705,- €',
+    price: 'Preis auf Anfrage',
   },
 ]
 
@@ -122,7 +120,7 @@ const recklinghausenHouses = [
       ['Grundstueck', 'ca. 320 m2'],
       ['Status', 'in Planung'],
     ],
-    apartments: apartmentRows.map((apartment) => ({
+    apartments: apartmentRows.slice(0, 8).map((apartment) => ({
       ...apartment,
       exposeUrl: haus1StreetImage,
     })),
@@ -143,7 +141,7 @@ const recklinghausenHouses = [
       ['Grundstueck', 'ca. 285 m2'],
       ['Status', 'verfuegbar'],
     ],
-    apartments: apartmentRows.map((apartment) => ({
+    apartments: apartmentRows.slice(0, 11).map((apartment) => ({
       ...apartment,
       exposeUrl: haus2StreetImage,
     })),
@@ -158,7 +156,20 @@ const projectsData = [
   {
     slug: 'recklinghausen',
     image: recklinghausenImage,
-    hoverImage: recklinghausenLageplan,
+    galleryImages: [
+      {
+        src: recklinghausenImage,
+        alt: 'Luftbild des Projekts Recklinghausen von hinten',
+      },
+      {
+        src: recklinghausenLageplan,
+        alt: 'Lageplan der Quartiersentwicklung St. Markus',
+      },
+      {
+        src: recklinghausenFrontImage,
+        alt: 'Luftbild des Projekts Recklinghausen von vorne',
+      },
+    ],
     title: 'Recklinghausen',
     description: [
       'Quartiersentwicklung St. Markus mit einer Wohnbebauung an der Prof.- Schulte-Straße',

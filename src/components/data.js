@@ -19,15 +19,15 @@ const projectsData = [
   {
     image: `${referenceBasePath}neustrasse.jpg`,
     title: 'Neustraße',
-    text: '14 EXKLUSIVE EIGENTUMSWOHNUNGEN, NEUSTRASSE 17A',
+    text: '14 EXKLUSIVE EIGENTUMSWOHNUNGEN IN BOTTROP MITTE, NEUSTRASSE 17A',
   },
   {
     image: `${referenceBasePath}osterfelderstrasse.jpg`,
     title: 'Osterfelderstraße',
-    text: '7 EXKLUSIVE EIGENTUMSWOHNUNGEN, OSTERFELDERSTRASSE 68',
+    text: '7 EXKLUSIVE EIGENTUMSWOHNUNGEN IN BOTTROP MITTE, OSTERFELDERSTRASSE 68',
   },
   {
-    image: `${referenceBasePath}kirchhellen-grafenwald.jpg`,
+    image: `${referenceBasePath}hegestrasse-69.jpg`,
     title: 'Kirchhellen-Mitte',
     text: '24 EIGENTUMSWOHNUNGEN PLUS 3 LAGERHALLEN IN KIRCHHELLEN-GRAFENWALD GIESENHEIDE 2 - 8',
   },
@@ -49,7 +49,7 @@ const projectsData = [
   {
     image: `${referenceBasePath}sandgrube.jpg`,
     title: 'Sandgrube',
-    text: 'EXKLUSIVE EIGENTUMSWOHNUNGEN, AN DER SANDGRUBE 19 IN BOTTROP-KIRCHHELLEN',
+    text: '4 EXKLUSIVE EIGENTUMSWOHNUNGEN, AN DER SANDGRUBE 19 IN BOTTROP-KIRCHHELLEN',
   },
   {
     image: `${referenceBasePath}max-schwarze-weg.jpg`,
@@ -64,27 +64,47 @@ const projectsData = [
   {
     image: `${referenceBasePath}scharnhoelzstrasse.jpg`,
     title: 'Scharnhölzstraße',
-    text: '9 ÖFFENTLICH GEFÖRDERTE WOHNEINHEITEN IN BOTTROP',
+    text: '9 ÖFFENTLICH GEFÖRDERTE WOHNEINHEITEN IN BOTTROP, SCHARNHÖLSSTRAßE 244',
   },
   {
     image: `${referenceBasePath}gladbecker-strasse.jpg`,
     title: 'Gladbecker Straße',
-    text: '10 SENIORENGERECHTE MIETWOHNUNGEN',
+    text: '10 SENIORENGERECHTE MIETWOHNUNGEN IN BOTTROP MITTE, GLADBECKERSTRAßE 57',
   },
   {
     image: `${referenceBasePath}liebrechtstrasse.jpg`,
     title: 'Liebrechtstraße',
-    text: '2 DOPPELHAUSHÄLFTEN',
+    text: '2 DOPPELHAUSHÄLFTEN IN BOTTROP, LIEBRECHTSTR. 1 UND 1A',
   },
   {
     image: `${referenceBasePath}vitusstrasse.jpg`,
     title: 'Vitusstraße',
-    text: '15 ÖFFENTLICH GEFÖRDERTE MIETWOHNUNGEN IN BOTTROP',
+    text: '15 ÖFFENTLICH GEFÖRDERTE MIETWOHNUNGEN IN HERTEN, VITUSSTR. 15',
   },
   {
     image: `${referenceBasePath}verwaltungsgebaeude.jpg`,
     title: 'Verwaltungsgebäude',
-    text: 'VERWALTUNGSGEBÄUDE AM WIESENBUSCH IN GLADBECK-RENTFORT',
+    text: 'VERWALTUNGSGEBÄUDE AM WIESENBUSCH 3 IN GLADBECK-RENTFORT',
+  },
+  {
+    image: `${referenceBasePath}sechs-doppelhaushaelften-taunusstrasse.jpg`,
+    title: 'Taunusstraße',
+    text: '6 DOPPELHAUSHÄLFTEN IN GLADBECK, TAUNUSSTRASSE 114A–F',
+  },
+  {
+    image: `${referenceBasePath}rheinstahlstrasse-23.jpg`,
+    title: 'Rheinstahlstraße',
+    text: '7 EXKLUSIVE EIGENTUMSWOHNUNGEN IN BOTTROP-MITTE, RHEINSTAHLSTR. 23',
+  },
+  {
+    image: `${referenceBasePath}kirchhellener-strasse-142.jpg`,
+    title: 'Kirchhellener Straße',
+    text: '3 KETTENHÄUSER IN BOTTROP-MITTE, KIRCHHELLENER STRASSE 142A-C',
+  },
+  {
+    image: `${referenceBasePath}einfamilienhaus-mit-schwimmbad.jpg`,
+    title: 'Einfamilienhaus mit Schwimmbad',
+    text: 'EXKLUSIVES EINFAMILIENHAUS MIT SCHWIMMBAD IN BOTTROP-KIRCHHELLEN',
   },
 ]
 
