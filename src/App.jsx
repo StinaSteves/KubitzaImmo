@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HeroVideo from '../public/video/230719_Bottrop-KUB.mp4'
+import Business from './components/Business.jsx'
 import Reverenzen from './components/Reverenzen.jsx'
 import Projects from './components/Projects.jsx'
 import Footer from './components/Footer.jsx'
@@ -27,6 +28,7 @@ function Home() {
 
 <Projects />
 <Reverenzen />
+<Business />
 <Footer />
 
 </div>

@@ -60,7 +60,9 @@ function ProjectGallery({ images, title }) {
       onKeyDown={handleKeyDown}
     >
       <img
-        className='projectGalleryImage'
+        className={`projectGalleryImage ${
+          images[activeIndex].cropEdges ? 'cropEdges' : ''
+        }`}
         src={images[activeIndex].src}
         alt={images[activeIndex].alt}
       />

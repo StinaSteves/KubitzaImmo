@@ -8,6 +8,68 @@ const haus2GardenImage = `${import.meta.env.BASE_URL}recklinghausen/2_Garten_V2.
 const altenessenImage = `${import.meta.env.BASE_URL}altenessen/PerspektiveAltenessen.jpg`
 const altenessenLageplan = `${import.meta.env.BASE_URL}altenessen/LageplanAltenessen.jpg`
 
+const house1ApartmentRows = [
+  {
+    type: 'WOHNUNG',
+    number: '1',
+    location: 'EG mit Terrasse u. Garten',
+    rooms: '3,5 Raum',
+    area: '101,28 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '2',
+    location: 'EG mit Terrasse u. Garten',
+    rooms: '2,5 Raum',
+    area: '71,03 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '3',
+    location: 'EG mit Terrasse u. Garten',
+    rooms: '3,5 Raum',
+    area: '99,04 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '4',
+    location: 'OG mit Balkon',
+    rooms: '3,5 Raum',
+    area: '101,91 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '5',
+    location: 'OG mit Balkon',
+    rooms: '2,5 Raum',
+    area: '70,76 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '6',
+    location: 'OG mit Balkon',
+    rooms: '3,5 Raum',
+    area: '99,15 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '7',
+    location: 'Penthouse mit Dachterrasse',
+    rooms: '3,5 Raum',
+    area: '102,54 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '8',
+    location: 'Penthouse mit Dachterrasse',
+    rooms: '3,5 Raum',
+    area: '108,74 qm',
+  },
+].map((apartment) => ({
+  ...apartment,
+  price: 'Preis auf Anfrage',
+}))
+
 const apartmentRows = [
   {
     type: 'WOHNUNG',
@@ -77,8 +139,8 @@ const apartmentRows = [
     type: 'WOHNUNG',
     number: '9',
     location: 'Penthouse mit Dachterrasse',
-    rooms: '2,5 Raum',
-    area: '88,20 qm',
+    rooms: '3,5 Raum',
+    area: '89,08 qm',
     price: 'Preis auf Anfrage',
   },
   {
@@ -86,23 +148,15 @@ const apartmentRows = [
     number: '10',
     location: 'Penthouse mit Dachterrasse',
     rooms: '3,5 Raum',
-    area: '91,58 qm',
+    area: '95,15 qm',
     price: 'Preis auf Anfrage',
   },
   {
     type: 'WOHNUNG',
     number: '11',
     location: 'Penthouse mit Dachterrasse',
-    rooms: '2,5 Raum',
-    area: '68,72 qm',
-    price: 'Preis auf Anfrage',
-  },
-  {
-    type: 'WOHNUNG',
-    number: '12',
-    location: 'Penthouse mit Dachterrasse',
-    rooms: '2,5 Raum',
-    area: '89,55 qm',
+    rooms: '3,5 Raum',
+    area: '163,94 qm',
     price: 'Preis auf Anfrage',
   },
 ]
@@ -120,10 +174,11 @@ const recklinghausenHouses = [
       ['Grundstueck', 'ca. 320 m2'],
       ['Status', 'in Planung'],
     ],
-    apartments: apartmentRows.slice(0, 8).map((apartment) => ({
+    apartments: house1ApartmentRows.map((apartment) => ({
       ...apartment,
       exposeUrl: haus1StreetImage,
     })),
+    parkingPrice: 'Preis auf Anfrage',
     closingText:
       '8 Seniorengerechte Wohnungen mit Aufzug und Tiefgarage, an der Prof.- Schulte- Straße. Zufahrt Tiefgarage, vom Westerholter Weg. Das Projekt wird ein Klimafreundlicher Neubau und im KFW 40 Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KFW.',
     priceNote: 'Kaufpreise ab 4.490 € pro qm',
@@ -134,7 +189,7 @@ const recklinghausenHouses = [
     id: 'haus-2',
     label: 'Haus 2',
     introImage: haus2StreetImage,
-    introText: 'Exklusive Stadtvilla mit 8 Wohneinheiten',
+    introText: 'Exklusive Stadtvilla mit 11 Wohneinheiten',
     tableImage: haus2GardenImage,
     facts: [
       ['Wohnflaeche', 'ca. 128 m2'],
@@ -142,14 +197,64 @@ const recklinghausenHouses = [
       ['Grundstueck', 'ca. 285 m2'],
       ['Status', 'verfuegbar'],
     ],
-    apartments: apartmentRows.slice(0, 11).map((apartment) => ({
+    apartments: apartmentRows.map((apartment) => ({
       ...apartment,
       exposeUrl: haus2StreetImage,
     })),
+    parkingPrice: 'Preis auf Anfrage',
     closingText:
-      '8 Exklusive Seniorengerechte Wohnungen mit Aufzug und Tiefgarage, an der Prof.- Schulte- Straße. Zufahrt Tiefgarage, vom Westerholter Weg. Das Projekt wird ein Klimafreundlicher Neubau und im KFW 40 Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KFW.',
+      '11 exklusive seniorengerechte Wohnungen mit Aufzug und Tiefgarage, an der Prof.- Schulte- Straße. Zufahrt Tiefgarage, vom Westerholter Weg. Das Projekt wird ein Klimafreundlicher Neubau und im KFW 40 Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KFW.',
+    priceNote: 'Kaufpreise ab 4.490 € pro qm',
     exposeUrl: haus2StreetImage,
     lageplanUrl: recklinghausenLageplan,
+  },
+  {
+    id: 'haus-3',
+    label: 'Haus 3',
+    introImage: haus1StreetImage,
+    introText: 'Exklusive Stadtvilla mit 8 Wohneinheiten',
+    tableImage: haus1GardenImage,
+    facts: [
+      ['Wohnflaeche', 'ca. 142 m2'],
+      ['Zimmer', '5'],
+      ['Grundstueck', 'ca. 320 m2'],
+      ['Status', 'in Planung'],
+    ],
+    apartments: house1ApartmentRows.map((apartment) => ({
+      ...apartment,
+      exposeUrl: haus1StreetImage,
+    })),
+    parkingPrice: 'Preis auf Anfrage',
+    closingText:
+      '8 Seniorengerechte Wohnungen mit Aufzug und Tiefgarage, an der Prof.- Schulte- Straße. Zufahrt Tiefgarage, vom Westerholter Weg. Das Projekt wird ein Klimafreundlicher Neubau und im KFW 40 Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KFW.',
+    priceNote: 'Kaufpreise ab 4.490 € pro qm',
+    exposeUrl: haus1StreetImage,
+    lageplanUrl: recklinghausenLageplan,
+  },
+  {
+    id: 'haus-4',
+    label: 'Haus 4',
+    introImage: haus2StreetImage,
+    tableImage: haus2GardenImage,
+    contentSections: [
+      {
+        text: [
+          '2 Demenz-WGs mit 24 Wohn- bzw. Pflegeplätzen. Betreiber: Diakonisches Werk in Recklinghausen e. V.',
+          '1 Intensivpflege mit 8 Pflegeplätzen. Betreiber: 360 Grad.',
+        ],
+      },
+      {
+        heading: 'Kirche/Kita',
+        text: [
+          'In die Kirche St. Markus bauen wir eine 4-zügige Kita für 85 Kinder.',
+          'Eine 115 qm große 3,5-Raum-Wohnung mit separatem Eingang inklusive Balkon. Komplett neu saniert mit Oberböden und Tapezierarbeiten. Vermietung: 13 € pro qm, Garage: 90 €.',
+        ],
+      },
+      {
+        text: ['Wir bauen eine neue Tagespflege mit 9 Betreuungsplätzen.'],
+      },
+    ],
+    apartments: [],
   },
 ]
 
@@ -161,6 +266,7 @@ const projectsData = [
       {
         src: recklinghausenImage,
         alt: 'Luftbild des Projekts Recklinghausen von hinten',
+        cropEdges: true,
       },
       {
         src: recklinghausenLageplan,

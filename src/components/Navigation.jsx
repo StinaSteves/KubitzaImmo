@@ -31,6 +31,9 @@ function Navigation() {
           <Link to='/#referenzen' onClick={() => scrollToSection('referenzen')}>
             Referenzen
           </Link>
+          <Link to='/#business' onClick={() => scrollToSection('business')}>
+            Business
+          </Link>
         </nav>
       </div>
     </header>

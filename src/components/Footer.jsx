@@ -32,6 +32,7 @@ function Footer() {
           <p className='footerLabel'>Navigation</p>
           <Link to='/#projekte'>Aktuelle Projekte</Link>
           <Link to='/#referenzen'>Referenzen</Link>
+          <Link to='/#business'>Business</Link>
         </nav>
 
         <nav className='footerColumn' aria-label='Rechtliche Links'>

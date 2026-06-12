@@ -133,6 +133,10 @@
   object-position: center;
 }
 
+.projectGalleryImage.cropEdges {
+  transform: scale(1.01);
+}
+
 .projectGalleryArrow {
   position: absolute;
   top: 50%;
@@ -314,6 +318,115 @@
   margin-top: 0;
 }
 
+.businessSection {
+  padding: 112px 40px 128px;
+  color: #111;
+  overflow: hidden;
+  border-top: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.businessInner {
+  width: min(100%, 1320px);
+  margin: 0 auto;
+}
+
+.businessHeading {
+  margin-bottom: 56px;
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.businessSection.visible .businessHeading {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.businessHeading p {
+  margin: 0 0 14px;
+  color: #777;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.businessHeading h1 {
+  margin: 0;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 200;
+}
+
+.businessLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: clamp(48px, 7vw, 104px);
+  align-items: center;
+}
+
+.businessImageWrap,
+.businessContent {
+  opacity: 0;
+  transform: translateY(44px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.businessContent {
+  transition-delay: 0.14s;
+}
+
+.businessSection.visible .businessImageWrap,
+.businessSection.visible .businessContent {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.businessImage {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.businessContent {
+  display: grid;
+  gap: 30px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.businessContent p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.businessContent .businessIntro {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: clamp(1.45rem, 2.5vw, 2.25rem);
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+.businessTextBlock {
+  padding-top: 24px;
+  border-top: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.businessTextBlock h2 {
+  margin: 0 0 12px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.businessContent .businessClosing {
+  font-weight: 500;
+}
+
 .projectDetailPage {
   min-height: 100vh;
   color: #111;
@@ -331,13 +444,17 @@
 }
 
 .houseSwitch {
-  display: inline-grid;
-  grid-template-columns: repeat(2, minmax(110px, 1fr));
-  gap: 42px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  max-width: 100%;
   margin-bottom: 56px;
+  overflow-x: auto;
 }
 
 .houseSwitchButton {
+  flex: 0 0 auto;
+  min-width: 110px;
   padding: 10px 14px;
   border: 1px solid currentColor;
   border-radius: 0;
@@ -372,6 +489,24 @@
 
 .houseDetails .housePriceNote {
   font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+}
+
+.houseDetails .houseParkingNote {
+  margin-top: 12px;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+}
+
+.houseContentSection {
+  display: grid;
+  gap: 12px;
+}
+
+.houseContentSection h2 {
+  margin: 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
   font-weight: 600;
 }
 
@@ -544,6 +679,14 @@
   .projectsGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .businessLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .businessImageWrap {
+    max-width: 760px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -557,6 +700,18 @@
 
   .currentProjectDivider {
     margin-left: -20px;
+  }
+
+  .businessSection {
+    padding: 80px 20px 88px;
+  }
+
+  .businessHeading {
+    margin-bottom: 40px;
+  }
+
+  .businessLayout {
+    gap: 40px;
   }
 
   .projectGalleryArrow {
@@ -782,6 +937,28 @@
 }
 
 @media (max-width: 600px) {
+  .logoWrapper {
+    padding-right: 20px;
+  }
+
+  .logoFlip {
+    left: 20px;
+    width: 72px;
+  }
+
+  .logo {
+    width: 72px;
+  }
+
+  .menuItems {
+    gap: 10px;
+  }
+
+  .menuItems a {
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+  }
+
   .siteFooterInner {
     grid-template-columns: 1fr;
     gap: 36px;

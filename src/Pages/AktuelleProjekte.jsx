@@ -66,6 +66,17 @@ function AktuelleProjekte() {
               />
 
               {activeHouse.closingText && <p>{activeHouse.closingText}</p>}
+              {activeHouse.contentSections?.map((section, sectionIndex) => (
+                <div
+                  className='houseContentSection'
+                  key={`${activeHouse.id}-section-${sectionIndex}`}
+                >
+                  {section.heading && <h2>{section.heading}</h2>}
+                  {section.text.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              ))}
               {activeHouse.priceNote && (
                 <p className='housePriceNote'>{activeHouse.priceNote}</p>
               )}
@@ -111,6 +122,11 @@ function AktuelleProjekte() {
                     </tbody>
                   </table>
                 </div>
+              )}
+              {activeHouse.parkingPrice && (
+                <p className='houseParkingNote'>
+                  Tiefgaragenstellplatz: {activeHouse.parkingPrice}
+                </p>
               )}
             </section>
           )}
