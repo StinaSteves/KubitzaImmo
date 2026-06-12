@@ -244,13 +244,13 @@ const recklinghausenHouses = [
     id: 'haus-4',
     label: 'Haus 4',
     introImage: haus2StreetImage,
-    introText: '9 barrierefreie (rollstuhlgerechte) Seniorenwohnungen.',
+    introText: 'Demenz-WGs und 9 barrierefreie Mietwohnungen.',
     tableImage: haus2GardenImage,
     contentSections: [
       {
         text: [
           '2 Demenz-WGs mit 24 Wohn- bzw. Pflegeplätzen. Betreiber: Diakonisches Werk in Recklinghausen e. V.',
-          '1 Intensivpflege mit 8 Pflegeplätzen. Betreiber: 360 Grad.',
+          '9 barrierefreie und rollstuhlgerechte Mietwohnungen.',
         ],
       },
     ],
