@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
 import projectsData from './projectsData'
@@ -7,14 +7,33 @@ import useScrollReveal from './useScrollReveal'
 
 function ProjectGallery({ images, title }) {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isInView, setIsInView] = useState(false)
+  const galleryRef = useRef(null)
   const lastIndex = images.length - 1
+
+  useEffect(() => {
+    const gallery = galleryRef.current
+
+    if (!gallery) {
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { rootMargin: '200px 0px', threshold: 0.01 },
+    )
+
+    observer.observe(gallery)
+
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)',
     ).matches
 
-    if (prefersReducedMotion || images.length < 2) {
+    if (!isInView || prefersReducedMotion || images.length < 2) {
       return undefined
     }
 
@@ -25,7 +44,7 @@ function ProjectGallery({ images, title }) {
     }, 5000)
 
     return () => window.clearTimeout(timer)
-  }, [activeIndex, images.length, lastIndex])
+  }, [activeIndex, images.length, isInView, lastIndex])
 
   const showPreviousImage = () => {
     setActiveIndex((currentIndex) =>
@@ -54,6 +73,7 @@ function ProjectGallery({ images, title }) {
   return (
     <div
       className='projectGallery'
+      ref={galleryRef}
       role='region'
       aria-label={`Bildergalerie ${title}`}
       tabIndex='0'
@@ -65,6 +85,8 @@ function ProjectGallery({ images, title }) {
         }`}
         src={images[activeIndex].src}
         alt={images[activeIndex].alt}
+        loading='lazy'
+        decoding='async'
       />
 
       <button
@@ -117,7 +139,12 @@ function Projects({ projects = projectsData }) {
       className={`projects ${isVisible ? 'visible' : ''}`}
       ref={sectionRef}
     >
-      <h1 className='projectsTitle'>Aktuelle Projekte</h1>
+      <h2 className='projectsTitle'>Aktuelle Eigentumswohnungen und Projekte</h2>
+      <p className='projectsIntro'>
+        Unser aktueller Schwerpunkt ist die Quartiersentwicklung St. Markus in
+        Recklinghausen. Hier entstehen seniorengerechte Eigentumswohnungen mit
+        Aufzug und Tiefgarage in unterschiedlichen Größen.
+      </p>
 
       <div className='currentProjectsList'>
         {projects.map((project, index) => {
@@ -130,7 +157,7 @@ function Projects({ projects = projectsData }) {
                 style={{ transitionDelay: isVisible ? `${0.35 + index * 0.16}s` : '0s' }}
               >
                 <div className='currentProjectContent'>
-                  {title && <h2>{title}</h2>}
+                  {title && <h3>{title}</h3>}
                   {project.description && (
                     <p>
                       {project.description.map((line, lineIndex) => (
@@ -151,6 +178,8 @@ function Projects({ projects = projectsData }) {
                       className='currentProjectImage'
                       src={project.image}
                       alt={project.alt || title || 'Projektbild'}
+                      loading='lazy'
+                      decoding='async'
                     />
                     {project.hoverImage && (
                       <img
@@ -158,6 +187,8 @@ function Projects({ projects = projectsData }) {
                         src={project.hoverImage}
                         alt=''
                         aria-hidden='true'
+                        loading='lazy'
+                        decoding='async'
                       />
                     )}
                   </div>

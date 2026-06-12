@@ -29,7 +29,7 @@ function Reverenzen({ projects = reverenzData }) {
       className={`projects ${isVisible ? 'visible' : ''}`}
       ref={sectionRef}
     >
-      <h1 className='projectsTitle'>Referenzen</h1>
+      <h2 className='projectsTitle'>Referenzen</h2>
 
       <div className='projectsGrid' id='referencesGrid'>
         {visibleProjects.map((project, index) => {
@@ -46,11 +46,13 @@ function Reverenzen({ projects = reverenzData }) {
                   className='projectImage'
                   src={project.image}
                   alt={project.alt || title || 'Projektbild'}
+                  loading='lazy'
+                  decoding='async'
                 />
               )}
 
               <div className='projectContent'>
-                {title && <h2>{title}</h2>}
+                {title && <h3>{title}</h3>}
                 {project.text && <p>{project.text}</p>}
               </div>
             </article>

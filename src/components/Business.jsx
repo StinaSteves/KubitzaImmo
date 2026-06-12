@@ -15,7 +15,7 @@ function Business() {
       <div className='businessInner'>
         <div className='businessHeading'>
           <p>Planen. Bauen. Vertrauen.</p>
-          <h1>Business</h1>
+          <h2>Business</h2>
         </div>
 
         <div className='businessLayout'>
@@ -24,6 +24,8 @@ function Business() {
               className='businessImage'
               src={officeImage}
               alt='Besprechungsbereich im Büro von Kubitza Immobilien'
+              loading='lazy'
+              decoding='async'
             />
           </div>
 
@@ -34,7 +36,7 @@ function Business() {
             </p>
 
             <div className='businessTextBlock'>
-              <h2>Erfahrung, die verbindet</h2>
+              <h3>Erfahrung, die verbindet</h3>
               <p>
                 Seit über 20 Jahren vertrauen wir auf die Zusammenarbeit mit
                 denselben Handwerkern. Eingespielte Abläufe, kurze Wege und ein
@@ -44,7 +46,7 @@ function Business() {
             </div>
 
             <div className='businessTextBlock'>
-              <h2>Verlässlich und menschlich</h2>
+              <h3>Verlässlich und menschlich</h3>
               <p>
                 Für uns zählen nicht nur Verbindlichkeit und Verlässlichkeit,
                 sondern auch die Menschen hinter einem Projekt. Wir setzen auf

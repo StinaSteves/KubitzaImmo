@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
+import Seo from '../components/Seo'
 
 function Datenschutz() {
   return (
     <>
+      <Seo
+        title='Datenschutz | Kubitza Immobilien'
+        description='Datenschutzerklärung der Kubitza Immobilien GmbH.'
+        path='/datenschutz'
+      />
       <main className='legalPage'>
         <div className='legalPageInner'>
           <p className='legalEyebrow'>Rechtliche Informationen</p>

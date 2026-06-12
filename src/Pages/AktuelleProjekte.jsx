@@ -3,20 +3,31 @@ import { Link, useParams } from 'react-router-dom'
 import '../App.css'
 import Footer from '../components/Footer'
 import projectsData from '../components/projectsData'
+import Seo from '../components/Seo'
+import siteUrl from '../components/seoConfig'
 
 function AktuelleProjekte() {
   const { projectSlug } = useParams()
-  const project = projectsData.find((item) => item.slug === projectSlug)
+  const project = projectsData.find(
+    (item) => item.slug === projectSlug || item.aliases?.includes(projectSlug),
+  )
   const [activeHouseIndex, setActiveHouseIndex] = useState(0)
 
   if (!project) {
     return (
-      <main className='projectDetailPage'>
-        <Link className='projectBackLink' to='/'>
-          zurück
-        </Link>
-        <h1>Projekt nicht gefunden</h1>
-      </main>
+      <>
+        <Seo
+          title='Projekt nicht gefunden | Kubitza Immobilien'
+          description='Das gesuchte Immobilienprojekt wurde nicht gefunden.'
+          robots='noindex, follow'
+        />
+        <main className='projectDetailPage'>
+          <Link className='projectBackLink' to='/'>
+            zurück
+          </Link>
+          <h1>Projekt nicht gefunden</h1>
+        </main>
+      </>
     )
   }
 
@@ -24,16 +35,39 @@ function AktuelleProjekte() {
 
   return (
     <>
+      <Seo
+        title={project.seoTitle || `${project.title} | Kubitza Immobilien`}
+        description={project.seoDescription || project.description.join(' ')}
+        path={`/aktuelle-projekte/${encodeURIComponent(project.slug)}`}
+        image={project.seoImage || project.image}
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'ApartmentComplex',
+          name: project.detailTitle || project.title,
+          description: project.seoDescription,
+          url: `${siteUrl}/aktuelle-projekte/${encodeURIComponent(project.slug)}`,
+          image: new URL(project.seoImage || project.image, siteUrl).toString(),
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality:
+              project.slug === 'recklinghausen'
+                ? 'Recklinghausen'
+                : 'Essen-Altenessen',
+            addressCountry: 'DE',
+          },
+        }}
+      />
       <main className='projectDetailPage'>
         {project.image && (
           <img
             className='projectDetailImage'
             src={project.image}
             alt={project.alt || project.title}
+            decoding='async'
           />
         )}
         <div className='projectDetailContent'>
-          <h1>{project.title}</h1>
+          <h1>{project.detailTitle || project.title}</h1>
 
           {project.houses?.length > 1 && (
             <div className='houseSwitch' aria-label='Haus auswaehlen'>
@@ -56,6 +90,8 @@ function AktuelleProjekte() {
                 className='houseDetailImage'
                 src={activeHouse.introImage}
                 alt={`${activeHouse.label} Ansicht`}
+                loading='lazy'
+                decoding='async'
               />
               {activeHouse.introText && <p>{activeHouse.introText}</p>}
 
@@ -63,6 +99,8 @@ function AktuelleProjekte() {
                 className='houseDetailImage'
                 src={activeHouse.tableImage}
                 alt={`${activeHouse.label} Lage`}
+                loading='lazy'
+                decoding='async'
               />
 
               {activeHouse.closingText && <p>{activeHouse.closingText}</p>}

@@ -2,10 +2,10 @@ const recklinghausenImage = `${import.meta.env.BASE_URL}recklinghausen/Luftbild_
 const recklinghausenLageplan = `${import.meta.env.BASE_URL}recklinghausen/recklinghausen_lageplan.png`
 const recklinghausenFrontImage = `${import.meta.env.BASE_URL}recklinghausen/Luftbild_Vorne_Web.jpg`
 const haus1StreetImage = `${import.meta.env.BASE_URL}recklinghausen/1_Strasse_Web.jpg`
-const haus1GardenImage = `${import.meta.env.BASE_URL}recklinghausen/1_Garten_V2.jpg`
+const haus1GardenImage = `${import.meta.env.BASE_URL}recklinghausen/1_Garten_Web.jpg`
 const haus2StreetImage = `${import.meta.env.BASE_URL}recklinghausen/2_Strasse_Web.jpg`
-const haus2GardenImage = `${import.meta.env.BASE_URL}recklinghausen/2_Garten_V2.jpg`
-const altenessenImage = `${import.meta.env.BASE_URL}altenessen/PerspektiveAltenessen.jpg`
+const haus2GardenImage = `${import.meta.env.BASE_URL}recklinghausen/2_Garten_Web.jpg`
+const altenessenImage = `${import.meta.env.BASE_URL}altenessen/PerspektiveAltenessen_Web.jpg`
 const altenessenLageplan = `${import.meta.env.BASE_URL}altenessen/LageplanAltenessen.jpg`
 
 const house1ApartmentRows = [
@@ -278,14 +278,20 @@ const projectsData = [
       },
     ],
     title: 'Recklinghausen',
+    detailTitle: 'Eigentumswohnungen in Recklinghausen',
+    seoTitle: 'Eigentumswohnungen in Recklinghausen | Kubitza Immobilien',
+    seoDescription:
+      'Seniorengerechte Eigentumswohnungen in Recklinghausen kaufen: Quartiersentwicklung St. Markus mit Aufzug, Tiefgarage und KfW-40-Standard.',
+    seoImage: '/recklinghausen/Luftbild_Hinten_Web.jpg',
     description: [
-      'Quartiersentwicklung St. Markus mit einer Wohnbebauung und Intensivpflege an der Prof.- Schulte-Straße',
-      '2 Demenz-WG am Westerholter weg sowie Kirche und Kita',
+      'Seniorengerechte Eigentumswohnungen in Recklinghausen an der Prof.-Schulte-Straße',
+      'Quartiersentwicklung St. Markus mit Aufzug, Tiefgarage, Kirche, Kita und Pflegeangeboten',
     ],
     houses: recklinghausenHouses,
   },
   {
-    slug: 'EINGANGSTOR ZUM STADTKERN ALTENESSEN-MITTE',
+    slug: 'altenessen-mitte',
+    aliases: ['EINGANGSTOR ZUM STADTKERN ALTENESSEN-MITTE'],
     image: altenessenImage,
     galleryImages: [
       {
@@ -298,6 +304,11 @@ const projectsData = [
       },
     ],
     title: 'EINGANGSTOR ZUM STADTKERN ALTENESSEN-MITTE',
+    detailTitle: 'Neubauprojekt Altenessen-Mitte',
+    seoTitle: 'Wohnungen in Altenessen-Mitte | Kubitza Immobilien',
+    seoDescription:
+      'Neubauprojekt in Essen-Altenessen mit Edeka-Markt, Tiefgarage sowie sozial geförderten und frei finanzierten Wohnungen.',
+    seoImage: '/altenessen/PerspektiveAltenessen_Web.jpg',
     description: [
       'Edeka-Markt mit 90 Stellplätzen und 38 sozialgeförderte sowie 10 freifinanzierte Wohnungen inkl. Tiefgarage',
       'Neubauprojekt an der Wilhelm-Nieswandt-Allee',

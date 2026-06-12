@@ -19,6 +19,46 @@
   object-fit: cover;
 }
 
+.heroContent {
+  position: absolute;
+  right: 40px;
+  bottom: clamp(48px, 9vh, 96px);
+  left: 40px;
+  z-index: 2;
+  max-width: 850px;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.42);
+}
+
+.heroContent p {
+  margin: 0 0 14px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroContent h1 {
+  margin: 0;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: clamp(2.35rem, 6vw, 5.75rem);
+  font-weight: 200;
+  line-height: 1.05;
+}
+
+.heroContent a {
+  display: inline-block;
+  margin-top: 28px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid currentColor;
+  color: #fff;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .projects {
   min-height: 100vh;
   padding: 96px 40px;
@@ -40,6 +80,15 @@
 .projects.visible .projectsTitle {
   opacity: 1;
   transform: translateX(0);
+}
+
+.projectsIntro {
+  max-width: 760px;
+  margin: -16px 0 56px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 300;
+  line-height: 1.75;
 }
 
 .projectsGrid {
@@ -241,7 +290,7 @@
   margin-top: 24px;
 }
 
-.currentProjectContent h2 {
+.currentProjectContent h3 {
   margin: 0 0 14px;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   font-size: clamp(1.4rem, 2vw, 2rem);
@@ -268,7 +317,7 @@
   padding: 24px;
 }
 
-.projectContent h2 {
+.projectContent h3 {
   margin: 0 0 12px;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   font-size: clamp(1.4rem, 2vw, 2rem);
@@ -351,7 +400,7 @@
   text-transform: uppercase;
 }
 
-.businessHeading h1 {
+.businessHeading h2 {
   margin: 0;
   font-family: 'Trebuchet MS', Arial, sans-serif;
   font-size: clamp(2rem, 4vw, 4rem);
@@ -414,7 +463,7 @@
   border-top: 1px solid rgba(17, 17, 17, 0.18);
 }
 
-.businessTextBlock h2 {
+.businessTextBlock h3 {
   margin: 0 0 12px;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.82rem;
@@ -694,6 +743,12 @@
     padding: 72px 20px;
   }
 
+  .heroContent {
+    right: 20px;
+    bottom: 48px;
+    left: 20px;
+  }
+
   .projectsGrid {
     grid-template-columns: 1fr;
   }
@@ -962,15 +1017,22 @@
   .siteFooterInner {
     grid-template-columns: 1fr;
     gap: 36px;
+    justify-items: center;
     padding: 48px 20px 40px;
+    text-align: center;
   }
 
   .footerBrand {
-    justify-self: start;
+    justify-self: center;
     width: 96px;
+  }
+
+  .footerColumn {
+    justify-items: center;
   }
 
   .footerBottom {
     padding: 18px 20px;
+    text-align: center;
   }
 }
