@@ -261,6 +261,98 @@ const recklinghausenHouses = [
     exposeUrl: haus2StreetImage,
     lageplanUrl: recklinghausenLageplan,
   },
+  {
+    id: 'kirche',
+    label: 'Kirche',
+    introImage: haus1StreetImage,
+    introText:
+      'Intensivpflegeeinrichtung mit 12 Plätzen und zwei Wohneinheiten.',
+    tableImage: haus1GardenImage,
+    facts: [
+      ['Wohnflaeche', 'ca. 142 m2'],
+      ['Zimmer', '5'],
+      ['Grundstueck', 'ca. 320 m2'],
+      ['Status', 'in Planung'],
+    ],
+    apartments: house1ApartmentRows.slice(6, 8).map((apartment) => ({
+      ...apartment,
+      exposeUrl: haus1StreetImage,
+    })),
+    parkingPrice: 'Preis auf Anfrage',
+    closingText:
+      '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
+    exposeUrl: haus1StreetImage,
+    lageplanUrl: recklinghausenLageplan,
+  },
+  {
+    id: 'kita',
+    label: 'Kita',
+    introImage: haus1StreetImage,
+    introText:
+      'Intensivpflegeeinrichtung mit 12 Plätzen und zwei Wohneinheiten.',
+    tableImage: haus1GardenImage,
+    facts: [
+      ['Wohnflaeche', 'ca. 142 m2'],
+      ['Zimmer', '5'],
+      ['Grundstueck', 'ca. 320 m2'],
+      ['Status', 'in Planung'],
+    ],
+    apartments: house1ApartmentRows.slice(6, 8).map((apartment) => ({
+      ...apartment,
+      exposeUrl: haus1StreetImage,
+    })),
+    parkingPrice: 'Preis auf Anfrage',
+    closingText:
+      '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
+    exposeUrl: haus1StreetImage,
+    lageplanUrl: recklinghausenLageplan,
+  },
+  {
+    id: 'gross-tagespflege',
+    label: 'Großtagespflege',
+    introImage: haus1StreetImage,
+    introText:
+      'Intensivpflegeeinrichtung mit 12 Plätzen und zwei Wohneinheiten.',
+    tableImage: haus1GardenImage,
+    facts: [
+      ['Wohnflaeche', 'ca. 142 m2'],
+      ['Zimmer', '5'],
+      ['Grundstueck', 'ca. 320 m2'],
+      ['Status', 'in Planung'],
+    ],
+    apartments: house1ApartmentRows.slice(6, 8).map((apartment) => ({
+      ...apartment,
+      exposeUrl: haus1StreetImage,
+    })),
+    parkingPrice: 'Preis auf Anfrage',
+    closingText:
+      '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
+    exposeUrl: haus1StreetImage,
+    lageplanUrl: recklinghausenLageplan,
+  },
+  {
+    id: 'mietwohnung',
+    label: 'Mietwohnung',
+    introImage: haus1StreetImage,
+    introText:
+      'Intensivpflegeeinrichtung mit 12 Plätzen und zwei Wohneinheiten.',
+    tableImage: haus1GardenImage,
+    facts: [
+      ['Wohnflaeche', 'ca. 142 m2'],
+      ['Zimmer', '5'],
+      ['Grundstueck', 'ca. 320 m2'],
+      ['Status', 'in Planung'],
+    ],
+    apartments: house1ApartmentRows.slice(6, 8).map((apartment) => ({
+      ...apartment,
+      exposeUrl: haus1StreetImage,
+    })),
+    parkingPrice: 'Preis auf Anfrage',
+    closingText:
+      '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
+    exposeUrl: haus1StreetImage,
+    lageplanUrl: recklinghausenLageplan,
+  },
 ]
 
 const projectsData = [
