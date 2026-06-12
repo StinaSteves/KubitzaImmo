@@ -73,11 +73,6 @@ function Home() {
         />
         <source src={heroVideo} type='video/mp4' />
       </video>
-      <div className='heroContent'>
-        <p>Quartiersentwicklung St. Markus</p>
-        <h1>Eigentumswohnungen in Recklinghausen</h1>
-        <a href='#projekte'>Aktuelle Wohnungen entdecken</a>
-      </div>
     </div>
   </div>
 </div>

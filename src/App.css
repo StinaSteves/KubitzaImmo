@@ -19,46 +19,6 @@
   object-fit: cover;
 }
 
-.heroContent {
-  position: absolute;
-  right: 40px;
-  bottom: clamp(48px, 9vh, 96px);
-  left: 40px;
-  z-index: 2;
-  max-width: 850px;
-  color: #fff;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.42);
-}
-
-.heroContent p {
-  margin: 0 0 14px;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.heroContent h1 {
-  margin: 0;
-  font-family: 'Trebuchet MS', Arial, sans-serif;
-  font-size: clamp(2.35rem, 6vw, 5.75rem);
-  font-weight: 200;
-  line-height: 1.05;
-}
-
-.heroContent a {
-  display: inline-block;
-  margin-top: 28px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid currentColor;
-  color: #fff;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
 .projects {
   min-height: 100vh;
   padding: 96px 40px;
@@ -789,12 +749,6 @@
 @media (max-width: 600px) {
   .projects {
     padding: 72px 20px;
-  }
-
-  .heroContent {
-    right: 20px;
-    bottom: 48px;
-    left: 20px;
   }
 
   .projectsGrid {

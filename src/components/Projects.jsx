@@ -139,7 +139,7 @@ function Projects({ projects = projectsData }) {
       className={`projects ${isVisible ? 'visible' : ''}`}
       ref={sectionRef}
     >
-      <h2 className='projectsTitle'>Aktuelle Eigentumswohnungen und Projekte</h2>
+      <h2 className='projectsTitle'>Aktuelle Projekte</h2>
       <p className='projectsIntro'>
         Unser aktueller Schwerpunkt ist die Quartiersentwicklung St. Markus in
         Recklinghausen. Hier entstehen seniorengerechte Eigentumswohnungen mit

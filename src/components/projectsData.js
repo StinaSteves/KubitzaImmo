@@ -161,6 +161,15 @@ const apartmentRows = [
   },
 ]
 
+const house4ApartmentRows = Array.from({ length: 9 }, (_, index) => ({
+  type: 'WOHNUNG',
+  number: String(index + 1),
+  location: 'Auf Anfrage',
+  rooms: 'Auf Anfrage',
+  area: 'Auf Anfrage',
+  price: 'Preis auf Anfrage',
+}))
+
 const recklinghausenHouses = [
   {
     id: 'haus-1',
@@ -212,7 +221,8 @@ const recklinghausenHouses = [
     id: 'haus-3',
     label: 'Haus 3',
     introImage: haus1StreetImage,
-    introText: 'Exklusive Stadtvilla mit 8 Wohneinheiten',
+    introText:
+      'Intensivpflegeeinrichtung mit 12 Plätzen und zwei Wohneinheiten.',
     tableImage: haus1GardenImage,
     facts: [
       ['Wohnflaeche', 'ca. 142 m2'],
@@ -220,14 +230,13 @@ const recklinghausenHouses = [
       ['Grundstueck', 'ca. 320 m2'],
       ['Status', 'in Planung'],
     ],
-    apartments: house1ApartmentRows.map((apartment) => ({
+    apartments: house1ApartmentRows.slice(6, 8).map((apartment) => ({
       ...apartment,
       exposeUrl: haus1StreetImage,
     })),
     parkingPrice: 'Preis auf Anfrage',
     closingText:
-      '8 Seniorengerechte Wohnungen mit Aufzug und Tiefgarage, an der Prof.- Schulte- Straße. Zufahrt Tiefgarage, vom Westerholter Weg. Das Projekt wird ein Klimafreundlicher Neubau und im KFW 40 Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KFW.',
-    priceNote: 'Kaufpreise ab 4.490 € pro qm',
+      '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
     exposeUrl: haus1StreetImage,
     lageplanUrl: recklinghausenLageplan,
   },
@@ -235,6 +244,7 @@ const recklinghausenHouses = [
     id: 'haus-4',
     label: 'Haus 4',
     introImage: haus2StreetImage,
+    introText: '9 barrierefreie (rollstuhlgerechte) Seniorenwohnungen.',
     tableImage: haus2GardenImage,
     contentSections: [
       {
@@ -243,18 +253,13 @@ const recklinghausenHouses = [
           '1 Intensivpflege mit 8 Pflegeplätzen. Betreiber: 360 Grad.',
         ],
       },
-      {
-        heading: 'Kirche/Kita',
-        text: [
-          'In die Kirche St. Markus bauen wir eine 4-zügige Kita für 85 Kinder.',
-          'Eine 115 qm große 3,5-Raum-Wohnung mit separatem Eingang inklusive Balkon. Komplett neu saniert mit Oberböden und Tapezierarbeiten. Vermietung: 13 € pro qm, Garage: 90 €.',
-        ],
-      },
-      {
-        text: ['Wir bauen eine neue Tagespflege mit 9 Betreuungsplätzen.'],
-      },
     ],
-    apartments: [],
+    apartments: house4ApartmentRows.map((apartment) => ({
+      ...apartment,
+      exposeUrl: haus2StreetImage,
+    })),
+    exposeUrl: haus2StreetImage,
+    lageplanUrl: recklinghausenLageplan,
   },
 ]
 

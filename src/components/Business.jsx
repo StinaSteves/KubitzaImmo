@@ -62,7 +62,7 @@ function Business() {
       setActiveIndex((currentIndex) =>
         currentIndex === lastIndex ? 0 : currentIndex + 1,
       )
-    }, 6000)
+    }, 12000)
 
     return () => window.clearTimeout(timer)
   }, [activeIndex, isInView, lastIndex])
