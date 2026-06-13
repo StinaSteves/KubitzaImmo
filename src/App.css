@@ -796,6 +796,15 @@
     width: 100%;
   }
 
+  .projectGallery {
+    aspect-ratio: 4 / 3;
+    background: #f2f2f2;
+  }
+
+  .projectGalleryImage {
+    object-fit: cover;
+  }
+
   .currentProjectContent h3,
   .projectContent h3 {
     font-size: clamp(1.25rem, 6.5vw, 1.7rem);
