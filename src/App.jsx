@@ -14,7 +14,7 @@ import './App.css'
 
 const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '')
 const heroVideo = `${import.meta.env.BASE_URL}video/230719_Bottrop-KUB-web.mp4`
-const heroVideoMobile = `${import.meta.env.BASE_URL}video/230719_Bottrop-KUB-mobile.mp4`
+const heroVideoMobile = `${import.meta.env.BASE_URL}video/230719_Bottrop-KUB-mobile.mp4?v=2`
 const heroPoster = `${import.meta.env.BASE_URL}video/230719_Bottrop-KUB-poster.jpg`
 
 function Home() {

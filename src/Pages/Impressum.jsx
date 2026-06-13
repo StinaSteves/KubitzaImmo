@@ -19,7 +19,7 @@ function Impressum() {
             <h2>Kubitza Immobilien GmbH</h2>
             <p>Inhaber: Michael Kubitza</p>
             <address>
-              Am Scheidgensbach 8
+              <span className='noWrap'>Am Scheidgensbach 8</span>
               <br />
               46240 Bottrop
             </address>
@@ -54,7 +54,7 @@ function Impressum() {
           <section className='legalSection'>
             <h2>WP Wohnbau und Projektsteuerung GmbH</h2>
             <address>
-              Am Scheidgensbach 8
+              <span className='noWrap'>Am Scheidgensbach 8</span>
               <br />
               46240 Bottrop
             </address>
@@ -85,7 +85,7 @@ function Impressum() {
             <address>
               Stadt Bottrop
               <br />
-              Kirchhellener Straße 21
+              <span className='noWrap'>Kirchhellener Straße 21</span>
               <br />
               46236 Bottrop
             </address>

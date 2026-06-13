@@ -220,6 +220,10 @@
   border: 0;
 }
 
+.noWrap {
+  white-space: nowrap;
+}
+
 .currentProjectImage,
 .currentProjectHoverImage {
   display: block;
@@ -757,39 +761,93 @@
 
 @media (max-width: 600px) {
   .projects {
-    padding: 72px 20px;
+    min-height: auto;
+    padding: 64px 18px;
+  }
+
+  .projectsTitle {
+    margin-bottom: 28px;
+    font-size: clamp(1.9rem, 10vw, 2.75rem);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .projectsIntro {
+    margin: -8px 0 40px;
+    font-size: 0.98rem;
+    line-height: 1.65;
   }
 
   .projectsGrid {
     grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .currentProjectsList,
+  .currentProjectItem {
+    gap: 48px;
+  }
+
+  .currentProjectCard,
+  .currentProjectMedia,
+  .projectGallery,
+  .currentProjectImage,
+  .currentProjectHoverImage {
+    width: 100%;
+  }
+
+  .currentProjectContent h3,
+  .projectContent h3 {
+    font-size: clamp(1.25rem, 6.5vw, 1.7rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  .currentProjectContent p,
+  .projectContent p {
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+
+  .projectContent {
+    padding: 20px 16px;
   }
 
   .currentProjectDivider {
+    width: 72vw;
     margin-left: -20px;
   }
 
   .businessSection {
-    min-height: 82vh;
+    min-height: 76vh;
   }
 
   .businessStage {
-    min-height: 82vh;
-    padding: 52px 20px 26px;
+    min-height: 76vh;
+    padding: 46px 18px 24px;
   }
 
   .businessHeading h2 {
-    font-size: clamp(2.25rem, 12vw, 3.5rem);
+    font-size: clamp(2rem, 11vw, 3rem);
   }
 
   .businessGlassCard {
     align-self: end;
     margin: 24px 0 20px;
-    padding: 24px 22px;
+    padding: 22px 18px;
     background: rgba(18, 24, 30, 0.46);
   }
 
   .businessGlassCard h3 {
-    font-size: clamp(1.65rem, 8vw, 2.4rem);
+    font-size: clamp(1.45rem, 7.5vw, 2rem);
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  .businessSlideText {
+    font-size: 0.96rem;
+    line-height: 1.65;
   }
 
   .businessControls {
@@ -813,14 +871,115 @@
     bottom: 10px;
   }
 
+  .projectDetailImage {
+    height: clamp(260px, 48vh, 420px);
+  }
+
+  .projectDetailContent {
+    padding: 32px 18px 56px;
+  }
+
+  .projectDetailContent h1 {
+    margin: 28px 0 32px;
+    font-size: clamp(1.75rem, 9vw, 2.65rem);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  .houseSwitch {
+    gap: 10px;
+    margin: 0 -18px 40px;
+    padding: 0 18px 8px;
+    scrollbar-width: thin;
+  }
+
+  .houseSwitchButton {
+    min-width: 92px;
+    padding: 9px 11px;
+    font-size: 0.68rem;
+  }
+
+  .houseDetails {
+    gap: 22px;
+  }
+
+  .houseDetails p,
+  .houseDetails .housePriceNote,
+  .houseDetails .houseParkingNote {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  .houseDetailImage {
+    width: 100%;
+    max-height: 360px;
+  }
+
+  .apartmentsTableWrap {
+    width: calc(100% + 18px);
+    padding-bottom: 8px;
+  }
+
+  .apartmentsTable {
+    font-size: 0.78rem;
+  }
+
+  .apartmentsTable td {
+    padding: 16px 20px 16px 0;
+  }
+
+  .apartmentIdentityCell {
+    min-width: 138px;
+  }
+
+  .apartmentIdentity {
+    grid-template-columns: minmax(82px, max-content) 24px;
+    gap: 10px;
+  }
+
+  .tableDownloadButtons {
+    grid-template-columns: repeat(2, 96px);
+    gap: 6px;
+  }
+
+  .tableDownloadButton {
+    min-height: 44px;
+    padding: 7px 6px;
+    font-size: 0.58rem;
+  }
+
+  .projectBackLink {
+    margin-top: 52px;
+  }
+
   .legalPage {
-    padding: 150px 20px 72px;
+    padding: 132px 18px 64px;
   }
 
   .legalPage h1 {
-    margin-bottom: 52px;
+    margin-bottom: 44px;
+    font-size: clamp(2.2rem, 12vw, 3.4rem);
+    line-height: 1.05;
+    overflow-wrap: anywhere;
   }
 
+  .legalSection {
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+  }
+
+  .legalSection h2 {
+    font-size: clamp(1.2rem, 6vw, 1.55rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .legalSection p,
+  .legalSection address {
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1029,26 +1188,38 @@
 }
 
 @media (max-width: 600px) {
+  .siteNavigation {
+    top: 24px;
+    height: 56px;
+  }
+
   .logoWrapper {
-    padding-right: 20px;
+    justify-content: flex-start;
+    padding: 0 14px 0 84px;
   }
 
   .logoFlip {
-    left: 20px;
-    width: 72px;
+    top: -14px;
+    left: 14px;
+    width: 58px;
   }
 
   .logo {
-    width: 72px;
+    width: 58px;
   }
 
   .menuItems {
-    gap: 10px;
+    width: 100%;
+    min-width: 0;
+    gap: clamp(5px, 1.8vw, 9px);
+    justify-content: flex-end;
   }
 
   .menuItems a {
-    font-size: 0.72rem;
-    letter-spacing: 0.03em;
+    font-size: clamp(0.58rem, 2.7vw, 0.72rem);
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    text-align: center;
   }
 
   .siteFooterInner {
@@ -1071,5 +1242,38 @@
   .footerBottom {
     padding: 18px 20px;
     text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .logoWrapper {
+    padding-right: 10px;
+    padding-left: 68px;
+  }
+
+  .logoFlip {
+    left: 10px;
+    width: 48px;
+  }
+
+  .logo {
+    width: 48px;
+  }
+
+  .menuItems {
+    gap: 5px;
+  }
+
+  .menuItems a {
+    font-size: 0.56rem;
+    letter-spacing: 0;
+  }
+
+  .projectDetailContent h1 {
+    font-size: 1.7rem;
+  }
+
+  .projectsTitle {
+    font-size: 1.85rem;
   }
 }

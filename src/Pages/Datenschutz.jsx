@@ -40,7 +40,7 @@ function Datenschutz() {
               <br />
               Geschäftsführer: Michael Kubitza
               <br />
-              Am Scheidgensbach 8
+              <span className='noWrap'>Am Scheidgensbach 8</span>
               <br />
               46240 Bottrop
             </address>
@@ -57,7 +57,8 @@ function Datenschutz() {
           <section className='legalSection'>
             <h2>3. Hosting durch IONOS</h2>
             <p>
-              Diese Website wird bei IONOS SE, Elgendorfer Straße 57, 56410
+              Diese Website wird bei IONOS SE,{' '}
+              <span className='noWrap'>Elgendorfer Straße 57</span>, 56410
               Montabaur, gehostet. Beim Aufruf der Website verarbeitet IONOS
               technische Zugriffsdaten. Dazu können die aufgerufene Seite oder
               Datei, Referrer, Browsertyp und Browserversion, Betriebssystem,
@@ -150,7 +151,7 @@ function Datenschutz() {
               Landesbeauftragte für Datenschutz und Informationsfreiheit
               Nordrhein-Westfalen
               <br />
-              Kavalleriestraße 2–4
+              <span className='noWrap'>Kavalleriestraße 2–4</span>
               <br />
               40213 Düsseldorf
             </address>
