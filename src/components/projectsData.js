@@ -5,6 +5,11 @@ const haus1StreetImage = `${import.meta.env.BASE_URL}recklinghausen/1_Strasse_We
 const haus1GardenImage = `${import.meta.env.BASE_URL}recklinghausen/1_Garten_Web.jpg`
 const haus2StreetImage = `${import.meta.env.BASE_URL}recklinghausen/2_Strasse_Web.jpg`
 const haus2GardenImage = `${import.meta.env.BASE_URL}recklinghausen/2_Garten_Web.jpg`
+const haus4FrontImage = `${import.meta.env.BASE_URL}recklinghausen/Haus4_vorne.jpg`
+const haus4BackImage = `${import.meta.env.BASE_URL}recklinghausen/Haus4_hinten.jpg`
+const kitaFrontImage = `${import.meta.env.BASE_URL}recklinghausen/Kita_ohne_Mauer.jpg`
+const kitaBackImage = `${import.meta.env.BASE_URL}recklinghausen/Kita_hinten.jpg`
+const grossTagespflegeImage = `${import.meta.env.BASE_URL}recklinghausen/gross-tagespflege.jpeg`
 const altenessenImage = `${import.meta.env.BASE_URL}altenessen/PerspektiveAltenessen_Web.jpg`
 const altenessenLageplan = `${import.meta.env.BASE_URL}altenessen/LageplanAltenessen.jpg`
 
@@ -14,56 +19,56 @@ const house1ApartmentRows = [
     number: '1',
     location: 'EG mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '101,28 qm',
+    area: '101,54 qm',
   },
   {
     type: 'WOHNUNG',
     number: '2',
     location: 'EG mit Terrasse u. Garten',
     rooms: '2,5 Raum',
-    area: '71,03 qm',
+    area: '70,57 qm',
   },
   {
     type: 'WOHNUNG',
     number: '3',
     location: 'EG mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '99,04 qm',
+    area: '98,99 qm',
   },
   {
     type: 'WOHNUNG',
     number: '4',
     location: 'OG mit Balkon',
     rooms: '3,5 Raum',
-    area: '101,91 qm',
+    area: '101,12 qm',
   },
   {
     type: 'WOHNUNG',
     number: '5',
     location: 'OG mit Balkon',
     rooms: '2,5 Raum',
-    area: '70,76 qm',
+    area: '70,44 qm',
   },
   {
     type: 'WOHNUNG',
     number: '6',
     location: 'OG mit Balkon',
     rooms: '3,5 Raum',
-    area: '99,15 qm',
+    area: '98,74 qm',
   },
   {
     type: 'WOHNUNG',
     number: '7',
     location: 'Penthouse mit Dachterrasse',
     rooms: '3,5 Raum',
-    area: '102,54 qm',
+    area: '102,22 qm',
   },
   {
     type: 'WOHNUNG',
     number: '8',
     location: 'Penthouse mit Dachterrasse',
     rooms: '3,5 Raum',
-    area: '108,74 qm',
+    area: '109,62 qm',
   },
 ].map((apartment) => ({
   ...apartment,
@@ -76,7 +81,7 @@ const apartmentRows = [
     number: '1',
     location: 'EG mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '96,68 qm',
+    area: '96,81 qm',
     price: 'Preis auf Anfrage',
   },
   {
@@ -84,7 +89,7 @@ const apartmentRows = [
     number: '2',
     location: 'EG mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '94,36 qm',
+    area: '91,32 qm',
     price: 'Preis auf Anfrage',
   },
   {
@@ -92,7 +97,7 @@ const apartmentRows = [
     number: '3',
     location: 'EG mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '82,29 qm',
+    area: '82,23 qm',
     price: 'Preis auf Anfrage',
   },
   {
@@ -100,7 +105,7 @@ const apartmentRows = [
     number: '4',
     location: 'EG mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '106,60 qm',
+    area: '106,16 qm',
     price: 'Preis auf Anfrage',
   },
   {
@@ -108,7 +113,7 @@ const apartmentRows = [
     number: '5',
     location: 'OG mit Balkon',
     rooms: '3,5 Raum',
-    area: '96,92 qm',
+    area: '96,54 qm',
     price: 'Preis auf Anfrage',
   },
   {
@@ -116,7 +121,7 @@ const apartmentRows = [
     number: '6',
     location: 'OG mit Balkon',
     rooms: '3,5 Raum',
-    area: '94,54 qm',
+    area: '91,30 qm',
     price: 'Preis auf Anfrage',
   },
   {
@@ -124,7 +129,7 @@ const apartmentRows = [
     number: '7',
     location: 'OG mit Balkon',
     rooms: '3,5 Raum',
-    area: '81,83 qm',
+    area: '106,18 qm',
     price: 'Preis auf Anfrage',
   },
   {
@@ -132,7 +137,7 @@ const apartmentRows = [
     number: '8',
     location: 'OG mit Balkon',
     rooms: '3,5 Raum',
-    area: '106,26 qm',
+    area: '82,30 qm',
     price: 'Preis auf Anfrage',
   },
   {
@@ -161,14 +166,81 @@ const apartmentRows = [
   },
 ]
 
-const house4ApartmentRows = Array.from({ length: 9 }, (_, index) => ({
-  type: 'WOHNUNG',
-  number: String(index + 1),
-  location: 'Auf Anfrage',
-  rooms: 'Auf Anfrage',
-  area: 'Auf Anfrage',
+const house4ApartmentRows = [
+  {
+    type: 'WOHNUNG',
+    number: '1',
+    location: '2. OG mit Loggia',
+    rooms: '2,5 Raum',
+    area: '66,74 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '2',
+    location: '2. OG mit Loggia',
+    rooms: '2,5 Raum',
+    area: '64,64 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '3',
+    location: '2. OG mit Loggia',
+    rooms: '2,5 Raum',
+    area: '69,35 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '4',
+    location: '2. OG mit Balkon',
+    rooms: '2,5 Raum',
+    area: '65,43 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '5',
+    location: '2. OG mit Loggia',
+    rooms: '2,5 Raum',
+    area: '66,39 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '6',
+    location: '2. OG mit Loggia',
+    rooms: '3,5 Raum',
+    area: '81,33 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '7',
+    location: 'Penthouse mit Dachterrasse',
+    rooms: '2,5 Raum',
+    area: '62,57 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '8',
+    location: 'Penthouse mit Dachterrasse',
+    rooms: '3,5 Raum',
+    area: '77,89 qm',
+  },
+  {
+    type: 'WOHNUNG',
+    number: '9',
+    location: 'Penthouse mit Dachterrasse',
+    rooms: '2,5 Raum',
+    area: '63,79 qm',
+  },
+].map((apartment) => ({
+  ...apartment,
   price: 'Preis auf Anfrage',
 }))
+
+const house3ApartmentRows = house1ApartmentRows.slice(6, 8).map(
+  (apartment, index) => ({
+    ...apartment,
+    area: index === 0 ? '102,22 qm' : '109,62 qm',
+  }),
+)
 
 const recklinghausenHouses = [
   {
@@ -230,35 +302,36 @@ const recklinghausenHouses = [
       ['Grundstueck', 'ca. 320 m2'],
       ['Status', 'in Planung'],
     ],
-    apartments: house1ApartmentRows.slice(6, 8).map((apartment) => ({
+    apartments: house3ApartmentRows.map((apartment) => ({
       ...apartment,
       exposeUrl: haus1StreetImage,
     })),
     parkingPrice: 'Preis auf Anfrage',
     closingText:
-      '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
+      '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich für die beiden Penthauswohnungen bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
     exposeUrl: haus1StreetImage,
     lageplanUrl: recklinghausenLageplan,
   },
   {
     id: 'haus-4',
     label: 'Haus 4',
-    introImage: haus2StreetImage,
-    introText: 'Demenz-WGs und 9 barrierefreie Mietwohnungen.',
-    tableImage: haus2GardenImage,
+    introImage: haus4FrontImage,
+    introText: '24 Demenzwohnungen und 9 barrierefreie Mietwohnungen.',
+    tableImage: haus4BackImage,
+    tableImagePosition: 'center bottom',
     contentSections: [
       {
         text: [
-          '2 Demenz-WGs mit 24 Wohn- bzw. Pflegeplätzen. Betreiber: Diakonisches Werk in Recklinghausen e. V.',
+          '24 Demenzwohnungen. Betreiber: Diakonisches Werk in Recklinghausen e. V.',
           '9 barrierefreie und rollstuhlgerechte Mietwohnungen.',
         ],
       },
     ],
     apartments: house4ApartmentRows.map((apartment) => ({
       ...apartment,
-      exposeUrl: haus2StreetImage,
+      exposeUrl: haus4FrontImage,
     })),
-    exposeUrl: haus2StreetImage,
+    exposeUrl: haus4FrontImage,
     lageplanUrl: recklinghausenLageplan,
   },
   {
@@ -287,10 +360,10 @@ const recklinghausenHouses = [
   {
     id: 'kita',
     label: 'Kita',
-    introImage: haus1StreetImage,
+    introImage: kitaFrontImage,
     introText:
       'Intensivpflegeeinrichtung mit 12 Plätzen und zwei Wohneinheiten.',
-    tableImage: haus1GardenImage,
+    tableImage: kitaBackImage,
     facts: [
       ['Wohnflaeche', 'ca. 142 m2'],
       ['Zimmer', '5'],
@@ -299,21 +372,20 @@ const recklinghausenHouses = [
     ],
     apartments: house1ApartmentRows.slice(6, 8).map((apartment) => ({
       ...apartment,
-      exposeUrl: haus1StreetImage,
+      exposeUrl: kitaFrontImage,
     })),
     parkingPrice: 'Preis auf Anfrage',
     closingText:
       '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
-    exposeUrl: haus1StreetImage,
+    exposeUrl: kitaFrontImage,
     lageplanUrl: recklinghausenLageplan,
   },
   {
     id: 'gross-tagespflege',
     label: 'Großtagespflege',
-    introImage: haus1StreetImage,
-    introText:
-      'Intensivpflegeeinrichtung mit 12 Plätzen und zwei Wohneinheiten.',
-    tableImage: haus1GardenImage,
+    introImage: grossTagespflegeImage,
+    introText: '9 Betreuungsplätze U3',
+    tableImage: kitaBackImage,
     facts: [
       ['Wohnflaeche', 'ca. 142 m2'],
       ['Zimmer', '5'],
@@ -322,12 +394,12 @@ const recklinghausenHouses = [
     ],
     apartments: house1ApartmentRows.slice(6, 8).map((apartment) => ({
       ...apartment,
-      exposeUrl: haus1StreetImage,
+      exposeUrl: grossTagespflegeImage,
     })),
     parkingPrice: 'Preis auf Anfrage',
     closingText:
       '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
-    exposeUrl: haus1StreetImage,
+    exposeUrl: grossTagespflegeImage,
     lageplanUrl: recklinghausenLageplan,
   },
   {

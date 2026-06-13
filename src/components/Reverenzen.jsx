@@ -30,6 +30,7 @@ function Reverenzen({ projects = reverenzData }) {
       ref={sectionRef}
     >
       <h2 className='projectsTitle'>Referenzen</h2>
+      <p className='projectsIntro'>Auszug aus unseren Projekten der letzten Zehn Jahre</p>
 
       <div className='projectsGrid' id='referencesGrid'>
         {visibleProjects.map((project, index) => {

@@ -101,6 +101,11 @@ function AktuelleProjekte() {
                 alt={`${activeHouse.label} Lage`}
                 loading='lazy'
                 decoding='async'
+                style={
+                  activeHouse.tableImagePosition
+                    ? { objectPosition: activeHouse.tableImagePosition }
+                    : undefined
+                }
               />
 
               {activeHouse.closingText && <p>{activeHouse.closingText}</p>}

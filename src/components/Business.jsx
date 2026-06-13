@@ -7,7 +7,7 @@ const businessSlides = [
   {
     eyebrow: 'Unser Anspruch',
     title: 'Projekte für Menschen und ihren Alltag',
-    text: 'Wir entwickeln und realisieren Immobilien, die sich an den Bedürfnissen der Menschen orientieren und langfristig funktionieren.',
+    text: 'Wir entwickeln und realisieren Immobilien, die sich an den Bedürfnissen der Menschen orientieren und nachhaltig Werte schaffen.',
   },
   {
     eyebrow: 'Erfahrung',
