@@ -149,14 +149,15 @@ function AktuelleProjekte() {
                                 <span>Expose</span>
                                 <span>herunterladen</span>
                               </span>
-                              <a
-                                className='tableDownloadButton'
-                                href={activeHouse.lageplanUrl}
-                                download
-                              >
-                                <span>Baubeschreibung</span>
-                                <span>herunterladen</span>
-                              </a>
+                              {activeHouse.id !== 'haus-4' && (
+                                <span
+                                  className='tableDownloadButton tableDownloadButtonDisabled'
+                                  aria-disabled='true'
+                                >
+                                  <span>Baubeschreibung</span>
+                                  <span>herunterladen</span>
+                                </span>
+                              )}
                             </div>
                           </td>
                         </tr>

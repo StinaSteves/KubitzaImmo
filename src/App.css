@@ -644,6 +644,7 @@
 }
 
 .tableDownloadButtonDisabled {
+  opacity: 0.45;
   cursor: default;
 }
 
