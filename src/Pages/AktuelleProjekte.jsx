@@ -70,7 +70,7 @@ function AktuelleProjekte() {
           <h1>{project.detailTitle || project.title}</h1>
 
           {project.houses?.length > 1 && (
-            <div className='houseSwitch' aria-label='Haus auswaehlen'>
+            <div className='houseSwitch' aria-label='Haus auswählen'>
               {project.houses.map((house, index) => (
                 <button
                   className={`houseSwitchButton ${index === activeHouseIndex ? 'active' : ''}`}
@@ -146,7 +146,7 @@ function AktuelleProjekte() {
                                 className='tableDownloadButton tableDownloadButtonDisabled'
                                 aria-disabled='true'
                               >
-                                <span>Expose</span>
+                                <span>Exposé</span>
                                 <span>herunterladen</span>
                               </span>
                               {activeHouse.id !== 'haus-4' && (

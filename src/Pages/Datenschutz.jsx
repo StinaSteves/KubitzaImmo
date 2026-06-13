@@ -26,7 +26,7 @@ function Datenschutz() {
               Personenbezogene Daten sind alle Daten, mit denen Sie persönlich
               identifiziert werden können. Diese Website verwendet kein
               Kontaktformular und bindet derzeit keine Analyse-, Karten-, Video-,
-              Social-Media- oder externen Schrift-Dienste ein.
+              Social-Media- oder externen Schriftdienste ein.
             </p>
           </section>
 

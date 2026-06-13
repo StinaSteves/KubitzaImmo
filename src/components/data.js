@@ -9,7 +9,7 @@ const projectsData = [
   {
     image: `${referenceBasePath}recklinghausen-mitte.jpg`,
     title: 'Recklinghausen-Mitte',
-    text: '9 EXKLUSIVE EIGENTUMSWOHNUNGEN IN RECKLINGHAUSEN-MITTE RHEINLANDSTR. 5',
+    text: '9 EXKLUSIVE EIGENTUMSWOHNUNGEN IN RECKLINGHAUSEN-MITTE, RHEINLANDSTR. 5',
   },
   {
     image: `${referenceBasePath}hackfurthstrasse-51-53.jpg`,
@@ -19,17 +19,17 @@ const projectsData = [
   {
     image: `${referenceBasePath}neustrasse.jpg`,
     title: 'Neustraße',
-    text: '14 EXKLUSIVE EIGENTUMSWOHNUNGEN IN BOTTROP MITTE, NEUSTRASSE 17A',
+    text: '14 EXKLUSIVE EIGENTUMSWOHNUNGEN IN BOTTROP-MITTE, NEUSTRASSE 17A',
   },
   {
     image: `${referenceBasePath}osterfelderstrasse.jpg`,
     title: 'Osterfelderstraße',
-    text: '7 EXKLUSIVE EIGENTUMSWOHNUNGEN IN BOTTROP MITTE, OSTERFELDERSTRASSE 68',
+    text: '7 EXKLUSIVE EIGENTUMSWOHNUNGEN IN BOTTROP-MITTE, OSTERFELDERSTRASSE 68',
   },
   {
     image: `${referenceBasePath}hegestrasse-69.jpg`,
     title: 'KIRCHHELLEN-GRAFENWALD',
-    text: '24 EIGENTUMSWOHNUNGEN PLUS 3 LAGERHALLEN IN KIRCHHELLEN-GRAFENWALD GIESENHEIDE 2 - 8',
+    text: '24 EIGENTUMSWOHNUNGEN PLUS 3 LAGERHALLEN IN KIRCHHELLEN-GRAFENWALD, GIESENHEIDE 2–8',
   },
     {
     image: `${referenceBasePath}vitusstrasse.jpg`,
@@ -64,12 +64,12 @@ const projectsData = [
   {
     image: `${referenceBasePath}scharnhoelzstrasse.jpg`,
     title: 'Scharnhölzstraße',
-    text: '9 ÖFFENTLICH GEFÖRDERTE WOHNEINHEITEN IN BOTTROP, SCHARNHÖLSSTRAßE 244',
+    text: '9 ÖFFENTLICH GEFÖRDERTE WOHNEINHEITEN IN BOTTROP, SCHARNHÖLZSTRAßE 244',
   },
   {
     image: `${referenceBasePath}gladbecker-strasse.jpg`,
     title: 'Gladbecker Straße',
-    text: '10 SENIORENGERECHTE MIETWOHNUNGEN IN BOTTROP MITTE, GLADBECKERSTRAßE 57',
+    text: '10 SENIORENGERECHTE MIETWOHNUNGEN IN BOTTROP-MITTE, GLADBECKER STRAßE 57',
   },
   {
     image: `${referenceBasePath}liebrechtstrasse.jpg`,
@@ -79,7 +79,7 @@ const projectsData = [
   {
     image: `${referenceBasePath}bottrop-ostring.jpg`,
     title: 'Bottrop-Ostring',
-    text: '4 EIGENTUMSWOHNUNGEN, 3 MODERNE REIHENHÄUSER UND ZWEI DOPPELHAUSHÄLFTEN OSTRING 82 IN BOTTROP',
+    text: '4 EIGENTUMSWOHNUNGEN, 3 MODERNE REIHENHÄUSER UND ZWEI DOPPELHAUSHÄLFTEN, OSTRING 82 IN BOTTROP',
   },
   {
     image: `${referenceBasePath}verwaltungsgebaeude.jpg`,
@@ -89,7 +89,7 @@ const projectsData = [
   {
     image: `${referenceBasePath}sechs-doppelhaushaelften-taunusstrasse.jpg`,
     title: 'Taunusstraße',
-    text: '6 DOPPELHAUSHÄLFTEN IN GLADBECK, TAUNUSSTRASSE 114A–F',
+    text: '6 DOPPELHAUSHÄLFTEN IN GLADBECK, TAUNUSSTRAßE 114A–F',
   },
   {
     image: `${referenceBasePath}tappenhof.jpg`,
@@ -99,7 +99,7 @@ const projectsData = [
   {
     image: `${referenceBasePath}kirchhellener-strasse-142.jpg`,
     title: 'Kirchhellener Straße',
-    text: '3 KETTENHÄUSER IN BOTTROP-MITTE, KIRCHHELLENER STRASSE 142A-C',
+    text: '3 KETTENHÄUSER IN BOTTROP-MITTE, KIRCHHELLENER STRAßE 142A–C',
   },
   {
     image: `${referenceBasePath}einfamilienhaus-mit-schwimmbad.jpg`,
