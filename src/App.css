@@ -611,7 +611,7 @@
 }
 
 .tableDownloadCell {
-  display: none;
+  display: table-cell;
 }
 
 .tableDownloadButtons {
@@ -641,6 +641,14 @@
 
 .tableDownloadButton:hover {
   color: #00c2ff;
+}
+
+.tableDownloadButtonDisabled {
+  cursor: default;
+}
+
+.tableDownloadButtonDisabled:hover {
+  color: #111;
 }
 
 .projectBackLink {

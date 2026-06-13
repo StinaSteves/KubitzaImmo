@@ -142,20 +142,19 @@ function AktuelleProjekte() {
                           <td>{apartment.price}</td>
                           <td className='tableDownloadCell'>
                             <div className='tableDownloadButtons'>
-                              <a
-                                className='tableDownloadButton'
-                                href={apartment.exposeUrl}
-                                download
+                              <span
+                                className='tableDownloadButton tableDownloadButtonDisabled'
+                                aria-disabled='true'
                               >
                                 <span>Expose</span>
                                 <span>herunterladen</span>
-                              </a>
+                              </span>
                               <a
                                 className='tableDownloadButton'
                                 href={activeHouse.lageplanUrl}
                                 download
                               >
-                                <span>Lageplan</span>
+                                <span>Baubeschreibung</span>
                                 <span>herunterladen</span>
                               </a>
                             </div>

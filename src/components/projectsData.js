@@ -7,9 +7,13 @@ const haus2StreetImage = `${import.meta.env.BASE_URL}recklinghausen/2_Strasse_We
 const haus2GardenImage = `${import.meta.env.BASE_URL}recklinghausen/2_Garten_Web.jpg`
 const haus4FrontImage = `${import.meta.env.BASE_URL}recklinghausen/Haus4_vorne.jpg`
 const haus4BackImage = `${import.meta.env.BASE_URL}recklinghausen/Haus4_hinten.jpg`
+const kircheAerialImage = `${import.meta.env.BASE_URL}recklinghausen/Kita_Luftbild.jpg`
+const kircheSitePlanImage = `${import.meta.env.BASE_URL}recklinghausen/Kita_Lageplan.jpg`
 const kitaFrontImage = `${import.meta.env.BASE_URL}recklinghausen/Kita_ohne_Mauer.jpg`
 const kitaBackImage = `${import.meta.env.BASE_URL}recklinghausen/Kita_hinten.jpg`
 const grossTagespflegeImage = `${import.meta.env.BASE_URL}recklinghausen/gross-tagespflege.jpeg`
+const apartmentAerialImage = `${import.meta.env.BASE_URL}recklinghausen/Luft_Wohnung.jpg`
+const apartmentFloorPlanImage = `${import.meta.env.BASE_URL}recklinghausen/Wohnung_grundriss.jpg`
 const altenessenImage = `${import.meta.env.BASE_URL}altenessen/PerspektiveAltenessen_Web.jpg`
 const altenessenLageplan = `${import.meta.env.BASE_URL}altenessen/LageplanAltenessen.jpg`
 
@@ -337,32 +341,19 @@ const recklinghausenHouses = [
   {
     id: 'kirche',
     label: 'Kirche',
-    introImage: haus1StreetImage,
+    introImage: kircheAerialImage,
     introText:
-      'Intensivpflegeeinrichtung mit 12 Plätzen und zwei Wohneinheiten.',
-    tableImage: haus1GardenImage,
-    facts: [
-      ['Wohnflaeche', 'ca. 142 m2'],
-      ['Zimmer', '5'],
-      ['Grundstueck', 'ca. 320 m2'],
-      ['Status', 'in Planung'],
-    ],
-    apartments: house1ApartmentRows.slice(6, 8).map((apartment) => ({
-      ...apartment,
-      exposeUrl: haus1StreetImage,
-    })),
-    parkingPrice: 'Preis auf Anfrage',
-    closingText:
-      '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
-    exposeUrl: haus1StreetImage,
-    lageplanUrl: recklinghausenLageplan,
+      'Katholische Filialkirche mit ca. 290 qm Nutzfläche und 80 Sitzplätzen.',
+    tableImage: kircheSitePlanImage,
+    exposeUrl: kircheAerialImage,
+    lageplanUrl: kircheSitePlanImage,
   },
   {
     id: 'kita',
     label: 'Kita',
     introImage: kitaFrontImage,
     introText:
-      'Intensivpflegeeinrichtung mit 12 Plätzen und zwei Wohneinheiten.',
+      '4-zügige Kita für 85 Kitaplätze mit ca. 900 qm Nutzfläche und ca. 1.500 qm Garten. Betreiber ist die Katholische Kirchengemeinde St. Markus Recklinghausen.',
     tableImage: kitaBackImage,
     facts: [
       ['Wohnflaeche', 'ca. 142 m2'],
@@ -370,13 +361,6 @@ const recklinghausenHouses = [
       ['Grundstueck', 'ca. 320 m2'],
       ['Status', 'in Planung'],
     ],
-    apartments: house1ApartmentRows.slice(6, 8).map((apartment) => ({
-      ...apartment,
-      exposeUrl: kitaFrontImage,
-    })),
-    parkingPrice: 'Preis auf Anfrage',
-    closingText:
-      '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
     exposeUrl: kitaFrontImage,
     lageplanUrl: recklinghausenLageplan,
   },
@@ -392,37 +376,25 @@ const recklinghausenHouses = [
       ['Grundstueck', 'ca. 320 m2'],
       ['Status', 'in Planung'],
     ],
-    apartments: house1ApartmentRows.slice(6, 8).map((apartment) => ({
-      ...apartment,
-      exposeUrl: grossTagespflegeImage,
-    })),
-    parkingPrice: 'Preis auf Anfrage',
-    closingText:
-      '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
     exposeUrl: grossTagespflegeImage,
     lageplanUrl: recklinghausenLageplan,
   },
   {
     id: 'mietwohnung',
     label: 'Mietwohnung',
-    introImage: haus1StreetImage,
+    introImage: apartmentAerialImage,
     introText:
-      'Intensivpflegeeinrichtung mit 12 Plätzen und zwei Wohneinheiten.',
-    tableImage: haus1GardenImage,
+      'Diese vollständig sanierte 4,5-Zimmer-Wohnung im 1. Obergeschoss bietet auf ca. 110 m² Wohnfläche ein modernes und komfortables Zuhause. Neben einer großzügigen Loggia überzeugt die Wohnung durch hochwertige Vinylböden sowie ein helles Tageslichtbad mit Fenster, Dusche und Badewanne. Zu der Wohnung gehören zwei kellerräume und eine Garage.',
+    tableImage: apartmentFloorPlanImage,
     facts: [
       ['Wohnflaeche', 'ca. 142 m2'],
       ['Zimmer', '5'],
       ['Grundstueck', 'ca. 320 m2'],
       ['Status', 'in Planung'],
     ],
-    apartments: house1ApartmentRows.slice(6, 8).map((apartment) => ({
-      ...apartment,
-      exposeUrl: haus1StreetImage,
-    })),
-    parkingPrice: 'Preis auf Anfrage',
     closingText:
-      '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Zufahrt zur Tiefgarage vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
-    exposeUrl: haus1StreetImage,
+      'Mietpreis 13,00 € pro qm zzgl. Nebenkosten. DIe garage kann für 100 € pro Monat angemietet werden.',
+    exposeUrl: apartmentAerialImage,
     lageplanUrl: recklinghausenLageplan,
   },
 ]
