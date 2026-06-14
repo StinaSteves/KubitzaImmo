@@ -123,6 +123,13 @@ function Datenschutz() {
               einwilligungspflichtigen Tracking- oder Marketingdienste und keine
               Inhalte externer Anbieter eingebunden.
             </p>
+            <p>
+              Wenn Sie den Datenschutzhinweis mit „Verstanden“ schließen, wird
+              diese Auswahl ausschließlich lokal in Ihrem Browser gespeichert.
+              Dadurch wird der Hinweis bei späteren Besuchen nicht erneut
+              angezeigt. Die Speicherung dient keiner Analyse oder Verfolgung
+              Ihres Nutzungsverhaltens.
+            </p>
           </section>
 
           <section className='legalSection'>

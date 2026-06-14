@@ -4,6 +4,7 @@ import Reverenzen from './components/Reverenzen.jsx'
 import Projects from './components/Projects.jsx'
 import Footer from './components/Footer.jsx'
 import Navigation from './components/Navigation.jsx'
+import PrivacyNotice from './components/PrivacyNotice.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import Seo from './components/Seo.jsx'
 import siteUrl from './components/seoConfig.js'
@@ -98,6 +99,7 @@ function App() {
         <Route path='/datenschutz' element={<Datenschutz />} />
         <Route path='/impressum' element={<Impressum />} />
       </Routes>
+      <PrivacyNotice />
     </BrowserRouter>
   )
 }
