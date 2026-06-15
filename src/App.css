@@ -538,6 +538,10 @@
   color: #00c2ff;
 }
 
+.houseSwitchButton.preserveCase {
+  text-transform: none;
+}
+
 .houseDetails {
   display: grid;
   gap: 32px;

@@ -73,7 +73,9 @@ function AktuelleProjekte() {
             <div className='houseSwitch' aria-label='Haus auswählen'>
               {project.houses.map((house, index) => (
                 <button
-                  className={`houseSwitchButton ${index === activeHouseIndex ? 'active' : ''}`}
+                  className={`houseSwitchButton ${
+                    house.id === 'gross-tagespflege' ? 'preserveCase' : ''
+                  } ${index === activeHouseIndex ? 'active' : ''}`}
                   type='button'
                   key={house.id}
                   onClick={() => setActiveHouseIndex(index)}
