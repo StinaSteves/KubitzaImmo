@@ -142,8 +142,8 @@ function Projects({ projects = projectsData }) {
       <h2 className='projectsTitle'>Aktuelle Projekte</h2>
       <p className='projectsIntro'>
         Unser aktueller Schwerpunkt ist die Quartiersentwicklung St. Markus in
-        Recklinghausen. Hier entstehen unter anderem exklusive seniorengerechte Eigentumswohnungen mit
-        Kirche, Kita und Pflegeangebote &#40;Demenz-WG sowie Intensivpflege&#41; in unterschiedlichen Größen.
+        Recklinghausen. Hier entstehen unter anderem exklusive seniorengerechte
+        Eigentumswohnungen.
       </p>
 
       <div className='currentProjectsList'>

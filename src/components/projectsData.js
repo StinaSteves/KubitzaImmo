@@ -21,56 +21,56 @@ const house1ApartmentRows = [
   {
     type: 'WOHNUNG',
     number: '1',
-    location: 'EG mit Terrasse u. Garten',
+    location: 'EG Rechts mit Terrasse u. Garten',
     rooms: '3,5 Zimmer',
     area: '101,54 m²',
   },
   {
     type: 'WOHNUNG',
     number: '2',
-    location: 'EG mit Terrasse u. Garten',
+    location: 'EG Mitte mit Terrasse u. Garten',
     rooms: '2,5 Zimmer',
     area: '70,57 m²',
   },
   {
     type: 'WOHNUNG',
     number: '3',
-    location: 'EG mit Terrasse u. Garten',
+    location: 'EG Links mit Terrasse u. Garten',
     rooms: '3,5 Zimmer',
     area: '98,99 m²',
   },
   {
     type: 'WOHNUNG',
     number: '4',
-    location: 'OG mit Balkon',
+    location: 'OG Rechts mit Balkon',
     rooms: '3,5 Zimmer',
     area: '101,12 m²',
   },
   {
     type: 'WOHNUNG',
     number: '5',
-    location: 'OG mit Balkon',
+    location: 'OG Mitte mit Balkon',
     rooms: '2,5 Zimmer',
     area: '70,44 m²',
   },
   {
     type: 'WOHNUNG',
     number: '6',
-    location: 'OG mit Balkon',
+    location: 'OG Links mit Balkon',
     rooms: '3,5 Zimmer',
     area: '98,74 m²',
   },
   {
     type: 'WOHNUNG',
     number: '7',
-    location: 'Penthouse mit Dachterrasse',
+    location: 'Penthouse Rechts mit Dachterrasse',
     rooms: '3,5 Zimmer',
     area: '102,22 m²',
   },
   {
     type: 'WOHNUNG',
     number: '8',
-    location: 'Penthouse mit Dachterrasse',
+    location: 'Penthouse Links mit Dachterrasse',
     rooms: '3,5 Zimmer',
     area: '109,62 m²',
   },
@@ -83,7 +83,7 @@ const apartmentRows = [
   {
     type: 'WOHNUNG',
     number: '1',
-    location: 'EG mit Terrasse u. Garten',
+    location: 'EG Links mit Terrasse u. Garten',
     rooms: '3,5 Zimmer',
     area: '96,81 m²',
     price: 'Preis auf Anfrage',
@@ -91,7 +91,7 @@ const apartmentRows = [
   {
     type: 'WOHNUNG',
     number: '2',
-    location: 'EG mit Terrasse u. Garten',
+    location: 'EG Mitte mit Terrasse u. Garten',
     rooms: '3,5 Zimmer',
     area: '91,32 m²',
     price: 'Preis auf Anfrage',
@@ -99,7 +99,7 @@ const apartmentRows = [
   {
     type: 'WOHNUNG',
     number: '3',
-    location: 'EG mit Terrasse u. Garten',
+    location: 'EG Rechts mit Terrasse u. Garten',
     rooms: '3,5 Zimmer',
     area: '82,23 m²',
     price: 'Preis auf Anfrage',
@@ -107,7 +107,7 @@ const apartmentRows = [
   {
     type: 'WOHNUNG',
     number: '4',
-    location: 'EG mit Terrasse u. Garten',
+    location: 'EG Hinten mit Terrasse u. Garten',
     rooms: '3,5 Zimmer',
     area: '106,16 m²',
     price: 'Preis auf Anfrage',
@@ -115,7 +115,7 @@ const apartmentRows = [
   {
     type: 'WOHNUNG',
     number: '5',
-    location: 'OG mit Balkon',
+    location: 'OG Links mit Balkon',
     rooms: '3,5 Zimmer',
     area: '96,54 m²',
     price: 'Preis auf Anfrage',
@@ -123,7 +123,7 @@ const apartmentRows = [
   {
     type: 'WOHNUNG',
     number: '6',
-    location: 'OG mit Balkon',
+    location: 'OG Mitte mit Balkon',
     rooms: '3,5 Zimmer',
     area: '91,30 m²',
     price: 'Preis auf Anfrage',
@@ -131,7 +131,7 @@ const apartmentRows = [
   {
     type: 'WOHNUNG',
     number: '7',
-    location: 'OG mit Balkon',
+    location: 'OG Rechts mit Balkon',
     rooms: '3,5 Zimmer',
     area: '106,18 m²',
     price: 'Preis auf Anfrage',
@@ -139,7 +139,7 @@ const apartmentRows = [
   {
     type: 'WOHNUNG',
     number: '8',
-    location: 'OG mit Balkon',
+    location: 'OG Hinten mit Balkon',
     rooms: '3,5 Zimmer',
     area: '82,30 m²',
     price: 'Preis auf Anfrage',
@@ -147,7 +147,7 @@ const apartmentRows = [
   {
     type: 'WOHNUNG',
     number: '9',
-    location: 'Penthouse mit Dachterrasse',
+    location: 'Penthouse Links mit Dachterrasse',
     rooms: '3,5 Zimmer',
     area: '89,08 m²',
     price: 'Preis auf Anfrage',
@@ -155,7 +155,7 @@ const apartmentRows = [
   {
     type: 'WOHNUNG',
     number: '10',
-    location: 'Penthouse mit Dachterrasse',
+    location: 'Penthouse Mitte mit Dachterrasse',
     rooms: '3,5 Zimmer',
     area: '95,15 m²',
     price: 'Preis auf Anfrage',
@@ -163,7 +163,7 @@ const apartmentRows = [
   {
     type: 'WOHNUNG',
     number: '11',
-    location: 'Penthouse mit Dachterrasse',
+    location: 'Penthouse Rechts mit Dachterrasse',
     rooms: '3,5 Zimmer',
     area: '163,94 m²',
     price: 'Preis auf Anfrage',
@@ -243,6 +243,7 @@ const house3ApartmentRows = house1ApartmentRows.slice(6, 8).map(
   (apartment, index) => ({
     ...apartment,
     area: index === 0 ? '102,22 m²' : '109,62 m²',
+    location: index === 0 ? 'Penthouse rechts' : 'Penthouse links',
   }),
 )
 
@@ -265,7 +266,7 @@ const recklinghausenHouses = [
     })),
     parkingPrice: 'Preis auf Anfrage',
     closingText:
-      '8 seniorengerechte Wohnungen mit Aufzug und Tiefgarage an der Prof.-Schulte-Straße. Die Zufahrt zur Tiefgarage erfolgt vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
+      '8 exklusive Seniorengerechte Wohnungen mit Aufzug und Tiefgarage an der Prof.-Schulte-Straße. Die Zufahrt zur Tiefgarage erfolgt vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
     priceNote: 'Baubeginn voraussichtlich 2027, Kaufpreise ab 4.490 € pro m²',
     exposeUrl: haus1StreetImage,
     lageplanUrl: recklinghausenLageplan,
@@ -426,7 +427,7 @@ const projectsData = [
     seoImage: '/recklinghausen/Luftbild_Hinten_Web.jpg',
     description: [
       'Seniorengerechte Eigentumswohnungen in Recklinghausen an der Prof.-Schulte-Straße',
-      'Quartiersentwicklung St. Markus mit Aufzug, Tiefgarage, Kirche, Kita und Pflegeangeboten',
+      'Quartiersentwicklung St. Markus mit Kirche, Kita und Pflegeangeboten (Demenz-WGs sowie Intensivpflege) in unterschiedlichen Größen',
     ],
     houses: recklinghausenHouses,
   },
