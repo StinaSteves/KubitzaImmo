@@ -624,7 +624,7 @@
 
 .tableDownloadButtons {
   display: grid;
-  grid-template-columns: repeat(2, 112px);
+  grid-template-columns: 112px 148px;
   gap: 8px;
 }
 
@@ -952,7 +952,7 @@
   }
 
   .tableDownloadButtons {
-    grid-template-columns: repeat(2, 96px);
+    grid-template-columns: 96px 132px;
     gap: 6px;
   }
 
