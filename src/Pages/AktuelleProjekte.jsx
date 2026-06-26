@@ -144,21 +144,43 @@ function AktuelleProjekte() {
                           <td>{apartment.price}</td>
                           <td className='tableDownloadCell'>
                             <div className='tableDownloadButtons'>
-                              <span
-                                className='tableDownloadButton tableDownloadButtonDisabled'
-                                aria-disabled='true'
-                              >
-                                <span>Exposé</span>
-                                <span>herunterladen</span>
-                              </span>
-                              {activeHouse.id !== 'haus-4' && (
+                              {apartment.exposeUrl ? (
+                                <a
+                                  className='tableDownloadButton'
+                                  href={apartment.exposeUrl}
+                                  download
+                                >
+                                  <span>Exposé</span>
+                                  <span>herunterladen</span>
+                                </a>
+                              ) : (
                                 <span
                                   className='tableDownloadButton tableDownloadButtonDisabled'
                                   aria-disabled='true'
                                 >
-                                  <span>Baubeschreibung</span>
+                                  <span>Exposé</span>
                                   <span>herunterladen</span>
                                 </span>
+                              )}
+                              {activeHouse.id !== 'haus-4' && (
+                                apartment.baubeschreibungUrl ? (
+                                  <a
+                                    className='tableDownloadButton'
+                                    href={apartment.baubeschreibungUrl}
+                                    download
+                                  >
+                                    <span>Baubeschreibung</span>
+                                    <span>herunterladen</span>
+                                  </a>
+                                ) : (
+                                  <span
+                                    className='tableDownloadButton tableDownloadButtonDisabled'
+                                    aria-disabled='true'
+                                  >
+                                    <span>Baubeschreibung</span>
+                                    <span>herunterladen</span>
+                                  </span>
+                                )
                               )}
                             </div>
                           </td>

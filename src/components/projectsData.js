@@ -16,6 +16,11 @@ const apartmentAerialImage = `${import.meta.env.BASE_URL}recklinghausen/Luft_Woh
 const apartmentFloorPlanImage = `${import.meta.env.BASE_URL}recklinghausen/Wohnung_grundriss.jpg`
 const altenessenImage = `${import.meta.env.BASE_URL}altenessen/PerspektiveAltenessen_Web.jpg`
 const altenessenLageplan = `${import.meta.env.BASE_URL}altenessen/LageplanAltenessen.jpg`
+const recklinghausenBaubeschreibungUrl = `${import.meta.env.BASE_URL}recklinghausen/BAUBESCHREIBUNG_P%20a.pdf`
+const house1ExposeUrl = (number) =>
+  `${import.meta.env.BASE_URL}recklinghausen/ExposeHaus1/Haus1Wohnung${number}.pdf`
+const house2ExposeUrl = (number) =>
+  `${import.meta.env.BASE_URL}recklinghausen/ExposeHaus2/Haus2Wohnung${number}.pdf`
 
 const house1ApartmentRows = [
   {
@@ -262,7 +267,8 @@ const recklinghausenHouses = [
     ],
     apartments: house1ApartmentRows.map((apartment) => ({
       ...apartment,
-      exposeUrl: haus1StreetImage,
+      exposeUrl: house1ExposeUrl(apartment.number),
+      baubeschreibungUrl: recklinghausenBaubeschreibungUrl,
     })),
     parkingPrice: 'Preis auf Anfrage',
     closingText:
@@ -285,11 +291,12 @@ const recklinghausenHouses = [
     ],
     apartments: apartmentRows.map((apartment) => ({
       ...apartment,
-      exposeUrl: haus2StreetImage,
+      exposeUrl: house2ExposeUrl(apartment.number),
+      baubeschreibungUrl: recklinghausenBaubeschreibungUrl,
     })),
     parkingPrice: 'Preis auf Anfrage',
     closingText:
-      '11 exklusive seniorengerechte Wohnungen mit Aufzug und Tiefgarage an der Prof.-Schulte-Straße. Die Zufahrt zur Tiefgarage erfolgt vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
+      '11 exklusive Seniorengerechte Wohnungen mit Aufzug und Tiefgarage an der Prof.-Schulte-Straße. Die Zufahrt zur Tiefgarage erfolgt vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
     priceNote: 'Baubeginn voraussichtlich 2027, Kaufpreise ab 4.490 € pro m²',
     exposeUrl: haus2StreetImage,
     lageplanUrl: recklinghausenLageplan,
@@ -310,6 +317,7 @@ const recklinghausenHouses = [
     apartments: house3ApartmentRows.map((apartment) => ({
       ...apartment,
       exposeUrl: haus1StreetImage,
+      baubeschreibungUrl: recklinghausenBaubeschreibungUrl,
     })),
     parkingPrice: 'Preis auf Anfrage',
     closingText:

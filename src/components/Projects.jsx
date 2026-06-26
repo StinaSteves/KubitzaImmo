@@ -194,12 +194,14 @@ function Projects({ projects = projectsData }) {
                   </div>
                 ) : null}
 
-                <Link
-                  className='projectButton projectButtonLink'
-                  to={`/aktuelle-projekte/${project.slug}`}
-                >
-                  zum Projekt
-                </Link>
+                {project.slug && (
+                  <Link
+                    className='projectButton projectButtonLink'
+                    to={`/aktuelle-projekte/${project.slug}`}
+                  >
+                    zum Projekt
+                  </Link>
+                )}
               </article>
               {index < projects.length - 1 && (
                 <div
