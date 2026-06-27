@@ -6,6 +6,19 @@ import projectsData from '../components/projectsData'
 import Seo from '../components/Seo'
 import siteUrl from '../components/seoConfig'
 
+const emphasizedFundingPattern = /(KfW-40-Standard)/g
+const emphasizedFundingExactPattern = /^(KfW-40-Standard)$/
+
+function renderTextWithFundingEmphasis(text) {
+  return text.split(emphasizedFundingPattern).map((part, index) =>
+    emphasizedFundingExactPattern.test(part) ? (
+      <strong key={`${part}-${index}`}>{part}</strong>
+    ) : (
+      part
+    ),
+  )
+}
+
 function AktuelleProjekte() {
   const { projectSlug } = useParams()
   const project = projectsData.find(
@@ -110,7 +123,9 @@ function AktuelleProjekte() {
                 }
               />
 
-              {activeHouse.closingText && <p>{activeHouse.closingText}</p>}
+              {activeHouse.closingText && (
+                <p>{renderTextWithFundingEmphasis(activeHouse.closingText)}</p>
+              )}
               {activeHouse.contentSections?.map((section, sectionIndex) => (
                 <div
                   className='houseContentSection'
