@@ -13,7 +13,7 @@ const kitaFrontImage = `${import.meta.env.BASE_URL}recklinghausen/Kita_ohne_Maue
 const kitaBackImage = `${import.meta.env.BASE_URL}recklinghausen/Kita_hinten.jpg`
 const grossTagespflegeImage = `${import.meta.env.BASE_URL}recklinghausen/gross-tagespflege.jpeg`
 const apartmentAerialImage = `${import.meta.env.BASE_URL}recklinghausen/Luft_Wohnung.jpg`
-const apartmentFloorPlanImage = `${import.meta.env.BASE_URL}recklinghausen/Wohnung_grundriss.jpg`
+const apartmentChurchImage = `${import.meta.env.BASE_URL}recklinghausen/Mietwohnung_Kirche.jpg`
 const altenessenImage = `${import.meta.env.BASE_URL}altenessen/PerspektiveAltenessen_Web.jpg`
 const altenessenLageplan = `${import.meta.env.BASE_URL}altenessen/LageplanAltenessen.jpg`
 const recklinghausenBaubeschreibungUrl = `${import.meta.env.BASE_URL}recklinghausen/BAUBESCHREIBUNG_P%20a.pdf`
@@ -321,10 +321,10 @@ const recklinghausenHouses = [
     ],
     apartments: house3ApartmentRows.map((apartment) => ({
       ...apartment,
-      exposeUrl: haus1StreetImage,
+      exposeUrl: house1ExposeUrl(apartment.number),
       baubeschreibungUrl: recklinghausenBaubeschreibungUrl,
     })),
-    parkingPrice: 'Preis auf Anfrage',
+    parkingPrice: '24.900 €',
     closingText:
       '12 Pflegeplätze und zwei Penthouse-Wohnungen an der Prof.-Schulte-Straße. Die Zufahrt zur Tiefgarage erfolgt vom Westerholter Weg. Das Projekt wird als klimafreundlicher Neubau im KfW-40-Standard errichtet. Sichern Sie sich für die beiden Penthouse-Wohnungen bis zu 100.000,- € zinsverbilligte Kredite von der KfW.',
     exposeUrl: haus1StreetImage,
@@ -399,7 +399,7 @@ const recklinghausenHouses = [
     introImage: apartmentAerialImage,
     introText:
       'Diese vollständig sanierte 4,5-Zimmer-Wohnung im 1. Obergeschoss bietet auf ca. 110 m² Wohnfläche ein modernes und komfortables Zuhause. Neben einer großzügigen Loggia überzeugt die Wohnung durch hochwertige Vinylböden sowie ein helles Tageslichtbad mit Fenster, Dusche und Badewanne. Zu der Wohnung gehören zwei Kellerräume und eine Garage.',
-    tableImage: apartmentFloorPlanImage,
+    tableImage: apartmentChurchImage,
     facts: [
       ['Wohnfläche', 'ca. 142 m²'],
       ['Zimmer', '5'],
