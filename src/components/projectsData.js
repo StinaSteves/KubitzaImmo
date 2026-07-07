@@ -1,6 +1,7 @@
 const recklinghausenImage = `${import.meta.env.BASE_URL}recklinghausen/Luftbild_Hinten_Web.jpg`
 const recklinghausenLageplan = `${import.meta.env.BASE_URL}recklinghausen/recklinghausen_lageplan.png`
 const recklinghausenFrontImage = `${import.meta.env.BASE_URL}recklinghausen/Luftbild_Vorne_Web.jpg`
+const recklinghausenCameraFlightVideo = `${import.meta.env.BASE_URL}video/St.Markus_Kameraflug_2.mp4`
 const haus1StreetImage = `${import.meta.env.BASE_URL}recklinghausen/1_Strasse_Web.jpg`
 const haus1GardenImage = `${import.meta.env.BASE_URL}recklinghausen/1_Garten_Web.jpg`
 const haus2StreetImage = `${import.meta.env.BASE_URL}recklinghausen/2_Strasse_Web.jpg`
@@ -16,7 +17,7 @@ const apartmentAerialImage = `${import.meta.env.BASE_URL}recklinghausen/Luft_Woh
 const apartmentChurchImage = `${import.meta.env.BASE_URL}recklinghausen/Mietwohnung_Kirche.jpg`
 const altenessenImage = `${import.meta.env.BASE_URL}altenessen/PerspektiveAltenessen_Web.jpg`
 const altenessenLageplan = `${import.meta.env.BASE_URL}altenessen/LageplanAltenessen.jpg`
-const recklinghausenBaubeschreibungUrl = `${import.meta.env.BASE_URL}recklinghausen/BAUBESCHREIBUNG_P%20a.pdf`
+const recklinghausenBaubeschreibungUrl = `${import.meta.env.BASE_URL}recklinghausen/BAUBESCHREIBUNG_P%20a-2.pdf`
 const house1ExposeUrl = (number) =>
   `${import.meta.env.BASE_URL}recklinghausen/ExposeHaus1/Haus1Wohnung${number}.pdf`
 const house2ExposeUrl = (number) =>
@@ -422,6 +423,11 @@ const projectsData = [
         src: recklinghausenImage,
         alt: 'Luftbild des Projekts Recklinghausen von hinten',
         cropEdges: true,
+      },
+      {
+        type: 'video',
+        src: recklinghausenCameraFlightVideo,
+        alt: 'Kameraflug durch das Projekt St. Markus in Recklinghausen',
       },
       {
         src: recklinghausenLageplan,

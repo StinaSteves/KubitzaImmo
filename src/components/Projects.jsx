@@ -10,6 +10,7 @@ function ProjectGallery({ images, title }) {
   const [isInView, setIsInView] = useState(false)
   const galleryRef = useRef(null)
   const lastIndex = images.length - 1
+  const activeItem = images[activeIndex]
 
   useEffect(() => {
     const gallery = galleryRef.current
@@ -33,7 +34,12 @@ function ProjectGallery({ images, title }) {
       '(prefers-reduced-motion: reduce)',
     ).matches
 
-    if (!isInView || prefersReducedMotion || images.length < 2) {
+    if (
+      !isInView ||
+      prefersReducedMotion ||
+      images.length < 2 ||
+      activeItem.type === 'video'
+    ) {
       return undefined
     }
 
@@ -44,7 +50,7 @@ function ProjectGallery({ images, title }) {
     }, 5000)
 
     return () => window.clearTimeout(timer)
-  }, [activeIndex, images.length, isInView, lastIndex])
+  }, [activeIndex, activeItem.type, images.length, isInView, lastIndex])
 
   const showPreviousImage = () => {
     setActiveIndex((currentIndex) =>
@@ -79,15 +85,28 @@ function ProjectGallery({ images, title }) {
       tabIndex='0'
       onKeyDown={handleKeyDown}
     >
-      <img
-        className={`projectGalleryImage ${
-          images[activeIndex].cropEdges ? 'cropEdges' : ''
-        }`}
-        src={images[activeIndex].src}
-        alt={images[activeIndex].alt}
-        loading='lazy'
-        decoding='async'
-      />
+      {activeItem.type === 'video' ? (
+        <video
+          className='projectGalleryImage'
+          src={activeItem.src}
+          aria-label={activeItem.alt}
+          muted
+          autoPlay
+          loop
+          playsInline
+          preload='metadata'
+        />
+      ) : (
+        <img
+          className={`projectGalleryImage ${
+            activeItem.cropEdges ? 'cropEdges' : ''
+          }`}
+          src={activeItem.src}
+          alt={activeItem.alt}
+          loading='lazy'
+          decoding='async'
+        />
+      )}
 
       <button
         className='projectGalleryArrow projectGalleryArrowPrevious'
