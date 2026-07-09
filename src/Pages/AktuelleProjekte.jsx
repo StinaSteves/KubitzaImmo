@@ -101,13 +101,26 @@ function AktuelleProjekte() {
 
           {activeHouse && (
             <section className='houseDetails'>
-              <img
-                className='houseDetailImage'
-                src={activeHouse.introImage}
-                alt={`${activeHouse.label} Ansicht`}
-                loading='lazy'
-                decoding='async'
-              />
+              {activeHouse.detailVideo ? (
+                <video
+                  className='houseDetailImage houseDetailVideo'
+                  src={activeHouse.detailVideo}
+                  aria-label={`${activeHouse.label} Kameraflug`}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                  preload='metadata'
+                />
+              ) : (
+                <img
+                  className='houseDetailImage'
+                  src={activeHouse.introImage}
+                  alt={`${activeHouse.label} Ansicht`}
+                  loading='lazy'
+                  decoding='async'
+                />
+              )}
               {activeHouse.introText && <p>{activeHouse.introText}</p>}
 
               <img
@@ -142,15 +155,12 @@ function AktuelleProjekte() {
               )}
 
               {activeHouse.detailVideo && (
-                <video
-                  className='houseDetailImage houseDetailVideo'
-                  src={activeHouse.detailVideo}
-                  aria-label={`${activeHouse.label} Kameraflug`}
-                  muted
-                  autoPlay
-                  loop
-                  playsInline
-                  preload='metadata'
+                <img
+                  className='houseDetailImage'
+                  src={activeHouse.introImage}
+                  alt={`${activeHouse.label} Ansicht`}
+                  loading='lazy'
+                  decoding='async'
                 />
               )}
 

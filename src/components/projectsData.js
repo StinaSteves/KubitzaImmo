@@ -483,6 +483,7 @@ const projectsData = [
         introText:
           'In Abstimmung mit der Stadt Essen erstellen wir aktuell einen Bebauungsplan für dieses Projekt.',
         tableImage: altenessenLageplan,
+        detailVideo: null,
         closingText: '',
         apartments: [],
         priceNote: null,
