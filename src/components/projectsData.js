@@ -1,7 +1,8 @@
 const recklinghausenImage = `${import.meta.env.BASE_URL}recklinghausen/Luftbild_Hinten_Web.jpg`
 const recklinghausenLageplan = `${import.meta.env.BASE_URL}recklinghausen/recklinghausen_lageplan.png`
 const recklinghausenFrontImage = `${import.meta.env.BASE_URL}recklinghausen/Luftbild_Vorne_Web.jpg`
-const recklinghausenCameraFlightVideo = `${import.meta.env.BASE_URL}video/St.Markus_Kameraflug_2.mp4`
+const haus1CameraFlightVideo = `${import.meta.env.BASE_URL}video/St.Markus_Kameraflug.mp4`
+const haus2CameraFlightVideo = `${import.meta.env.BASE_URL}video/St.Markus_Kameraflug_2.mp4`
 const haus1StreetImage = `${import.meta.env.BASE_URL}recklinghausen/1_Strasse_Web.jpg`
 const haus1GardenImage = `${import.meta.env.BASE_URL}recklinghausen/1_Garten_Web.jpg`
 const haus2StreetImage = `${import.meta.env.BASE_URL}recklinghausen/2_Strasse_Web.jpg`
@@ -22,6 +23,8 @@ const house1ExposeUrl = (number) =>
   `${import.meta.env.BASE_URL}recklinghausen/ExposeHaus1/Haus1Wohnung${number}.pdf`
 const house2ExposeUrl = (number) =>
   `${import.meta.env.BASE_URL}recklinghausen/ExposeHaus2/Haus2Wohnung${number}.pdf`
+const house4ExposeUrl = (number) =>
+  `${import.meta.env.BASE_URL}recklinghausen/ExposeHaus4/Haus4Wohnung${number}.pdf`
 
 const house1ApartmentRows = [
   {
@@ -29,64 +32,64 @@ const house1ApartmentRows = [
     number: '1',
     location: 'EG Rechts mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '101,28 m²',
-    price: 'KP 464.875,- €',
+    area: '101,54 m²',
+    price: 'KP 466.068,- €',
   },
   {
     type: 'WOHNUNG',
     number: '2',
     location: 'EG Mitte mit Terrasse u. Garten',
     rooms: '2,5 Raum',
-    area: '71,03 m²',
-    price: 'KP 326.027,- €',
+    area: '70,57 m²',
+    price: 'KP 323.916,- €',
   },
   {
     type: 'WOHNUNG',
     number: '3',
     location: 'EG Links mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '99,04 m²',
-    price: 'KP 454.593,- €',
+    area: '98,99 m²',
+    price: 'KP 454.364,- €',
   },
   {
     type: 'WOHNUNG',
     number: '4',
     location: 'OG Rechts mit Balkon',
     rooms: '3,5 Raum',
-    area: '101,91 m²',
-    price: 'KP 458.493,- €',
+    area: '101,12 m²',
+    price: 'KP 454.028,- €',
   },
   {
     type: 'WOHNUNG',
     number: '5',
     location: 'OG Mitte mit Balkon',
     rooms: '2,5 Raum',
-    area: '70,76 m²',
-    price: 'KP 318.349,- €',
+    area: '70,44 m²',
+    price: 'KP 316.275,- €',
   },
   {
     type: 'WOHNUNG',
     number: '6',
     location: 'OG Links mit Balkon',
     rooms: '3,5 Raum',
-    area: '99,15 m²',
-    price: 'KP 446.075,- €',
+    area: '98,74 m²',
+    price: 'KP 443.342,- €',
   },
   {
     type: 'WOHNUNG',
     number: '7',
     location: 'Penthouse Rechts mit Dachterrasse',
     rooms: '3,5 Raum',
-    area: '102,54 m²',
-    price: 'KP 511.674,- €',
+    area: '102,22 m²',
+    price: 'KP 510.077,- €',
   },
   {
     type: 'WOHNUNG',
     number: '8',
     location: 'Penthouse Links mit Dachterrasse',
     rooms: '3,5 Raum',
-    area: '108,74 m²',
-    price: 'KP 552.612,- €',
+    area: '109,62 m²',
+    price: 'KP 547.003,- €',
   },
 ]
 
@@ -96,7 +99,7 @@ const apartmentRows = [
     number: '1',
     location: 'EG Links mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '96,68 m²',
+    area: '96,63 m²',
     price: 'KP 443.761,- €',
   },
   {
@@ -104,8 +107,8 @@ const apartmentRows = [
     number: '2',
     location: 'EG Mitte mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '94,36 m²',
-    price: 'KP 433.112,- €',
+    area: '91,56 m²',
+    price: 'KP 420.260,- €',
   },
   {
     type: 'WOHNUNG',
@@ -128,7 +131,7 @@ const apartmentRows = [
     number: '5',
     location: 'OG Links mit Balkon',
     rooms: '3,5 Raum',
-    area: '96,92 m²',
+    area: '96,93 m²',
     price: 'KP 435.170,- €',
   },
   {
@@ -136,8 +139,8 @@ const apartmentRows = [
     number: '6',
     location: 'OG Mitte mit Balkon',
     rooms: '3,5 Raum',
-    area: '94,54 m²',
-    price: 'KP 424.484,- €',
+    area: '91,74 m²',
+    price: 'KP 411.912,- €',
   },
   {
     type: 'WOHNUNG',
@@ -160,24 +163,24 @@ const apartmentRows = [
     number: '9',
     location: 'Penthouse Links mit Dachterrasse',
     rooms: '3,5 Raum',
-    area: '89,08 m²',
-    price: 'KP 444.509,- €',
+    area: '75,96 m²',
+    price: 'KP 379.040,- €',
   },
   {
     type: 'WOHNUNG',
     number: '10',
     location: 'Penthouse Mitte mit Dachterrasse',
     rooms: '3,5 Raum',
-    area: '95,15 m²',
-    price: 'KP 474.798,- €',
+    area: '94,31 m²',
+    price: 'KP 470.606,- €',
   },
   {
     type: 'WOHNUNG',
     number: '11',
     location: 'Penthouse Rechts mit Dachterrasse',
     rooms: '3,5 Raum',
-    area: '163,94 m²',
-    price: 'KP 818.060,- €',
+    area: '162,97 m²',
+    price: 'KP 813.220,- €',
   },
 ]
 
@@ -265,6 +268,7 @@ const recklinghausenHouses = [
     introImage: haus1StreetImage,
     introText: 'Exklusive Stadtvilla mit 8 Wohneinheiten',
     tableImage: haus1GardenImage,
+    detailVideo: haus1CameraFlightVideo,
     facts: [
       ['Wohnfläche', 'ca. 142 m²'],
       ['Zimmer', '5'],
@@ -289,6 +293,7 @@ const recklinghausenHouses = [
     introImage: haus2StreetImage,
     introText: 'Exklusive Stadtvilla mit 11 Wohneinheiten',
     tableImage: haus2GardenImage,
+    detailVideo: haus2CameraFlightVideo,
     facts: [
       ['Wohnfläche', 'ca. 128 m²'],
       ['Zimmer', '4'],
@@ -348,7 +353,7 @@ const recklinghausenHouses = [
     ],
     apartments: house4ApartmentRows.map((apartment) => ({
       ...apartment,
-      exposeUrl: haus4FrontImage,
+      exposeUrl: house4ExposeUrl(apartment.number),
     })),
     exposeUrl: haus4FrontImage,
     lageplanUrl: recklinghausenLageplan,
@@ -423,11 +428,6 @@ const projectsData = [
         src: recklinghausenImage,
         alt: 'Luftbild des Projekts Recklinghausen von hinten',
         cropEdges: true,
-      },
-      {
-        type: 'video',
-        src: recklinghausenCameraFlightVideo,
-        alt: 'Kameraflug durch das Projekt St. Markus in Recklinghausen',
       },
       {
         src: recklinghausenLageplan,

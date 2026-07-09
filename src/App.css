@@ -587,6 +587,11 @@
   object-position: center;
 }
 
+.houseDetailVideo {
+  aspect-ratio: 16 / 9;
+  background: #111;
+}
+
 .apartmentsTableWrap {
   width: min(100%, 1320px);
   overflow-x: auto;

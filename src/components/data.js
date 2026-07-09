@@ -28,7 +28,7 @@ const projectsData = [
   },
   {
     image: `${referenceBasePath}hegestrasse-69.jpg`,
-    title: 'KIRCHHELLEN-GRAFENWALD',
+    title: 'Kirchhellen-Grafenwald',
     text: '24 EIGENTUMSWOHNUNGEN PLUS 3 LAGERHALLEN IN KIRCHHELLEN-GRAFENWALD, GIESENHEIDE\u00A02–8',
   },
     {

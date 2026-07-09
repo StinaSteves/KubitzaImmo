@@ -6,7 +6,9 @@
     <title>Redirecting</title>
     <script>
       ;(() => {
-        const basePath = '/KubitzaImmo/'
+        const basePath = window.location.hostname.endsWith('github.io')
+          ? '/KubitzaImmo/'
+          : '/'
         const path = window.location.pathname
         const route = path.startsWith(basePath)
           ? path.slice(basePath.length - 1)

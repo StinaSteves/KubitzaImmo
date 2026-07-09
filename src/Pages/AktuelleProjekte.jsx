@@ -141,6 +141,19 @@ function AktuelleProjekte() {
                 <p className='housePriceNote'>{activeHouse.priceNote}</p>
               )}
 
+              {activeHouse.detailVideo && (
+                <video
+                  className='houseDetailImage houseDetailVideo'
+                  src={activeHouse.detailVideo}
+                  aria-label={`${activeHouse.label} Kameraflug`}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                  preload='metadata'
+                />
+              )}
+
               {activeHouse.apartments?.length > 0 && (
                 <div className='apartmentsTableWrap'>
                   <table className='apartmentsTable'>

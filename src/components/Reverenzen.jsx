@@ -1,23 +1,45 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../App.css'
 import reverenzData from './data'
 import useScrollReveal from './useScrollReveal'
 
+const twoColumnQuery = '(min-width: 601px) and (max-width: 900px)'
+
 function Reverenzen({ projects = reverenzData }) {
   const { sectionRef, isVisible } = useScrollReveal()
-  const [visibleCount, setVisibleCount] = useState(6)
+  const [isTwoColumnLayout, setIsTwoColumnLayout] = useState(() =>
+    window.matchMedia(twoColumnQuery).matches,
+  )
+  const initialVisibleCount = isTwoColumnLayout ? 4 : 6
+  const revealStep = isTwoColumnLayout ? 2 : 3
+  const [visibleCount, setVisibleCount] = useState(initialVisibleCount)
   const [isCollapsing, setIsCollapsing] = useState(false)
   const visibleProjects = projects.slice(0, visibleCount)
-  const hasMoreThanSixProjects = projects.length > 6
+  const hasHiddenProjects = projects.length > initialVisibleCount
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(twoColumnQuery)
+    const handleLayoutChange = (event) => {
+      const nextInitialCount = event.matches ? 4 : 6
+
+      setIsTwoColumnLayout(event.matches)
+      setVisibleCount(nextInitialCount)
+      setIsCollapsing(false)
+    }
+
+    mediaQuery.addEventListener('change', handleLayoutChange)
+
+    return () => mediaQuery.removeEventListener('change', handleLayoutChange)
+  }, [])
 
   const handleVisibleProjects = () => {
     if (isCollapsing) {
-      setVisibleCount(6)
+      setVisibleCount(initialVisibleCount)
       setIsCollapsing(false)
       return
     }
 
-    const nextCount = Math.min(projects.length, visibleCount + 3)
+    const nextCount = Math.min(projects.length, visibleCount + revealStep)
 
     setVisibleCount(nextCount)
     setIsCollapsing(nextCount === projects.length)
@@ -61,14 +83,14 @@ function Reverenzen({ projects = reverenzData }) {
         })}
       </div>
 
-      {hasMoreThanSixProjects && (
+      {hasHiddenProjects && (
         <div className='referencesActions'>
           <button
             className='projectButton referencesToggle'
             type='button'
             onClick={handleVisibleProjects}
             aria-controls='referencesGrid'
-            aria-expanded={visibleCount > 6}
+            aria-expanded={visibleCount > initialVisibleCount}
           >
             {isCollapsing ? 'Weniger anzeigen' : 'Mehr anzeigen'}
           </button>

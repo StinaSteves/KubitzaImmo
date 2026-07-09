@@ -34,6 +34,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_BASE_PATH: /KubitzaImmo/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
