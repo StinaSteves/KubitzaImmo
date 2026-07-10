@@ -23,6 +23,8 @@ const house1ExposeUrl = (number) =>
   `${import.meta.env.BASE_URL}recklinghausen/ExposeHaus1/Haus1Wohnung${number}.pdf`
 const house2ExposeUrl = (number) =>
   `${import.meta.env.BASE_URL}recklinghausen/ExposeHaus2/Haus2Wohnung${number}.pdf`
+const house3ExposeUrl = (number) =>
+  `${import.meta.env.BASE_URL}recklinghausen/ExposeHaus3/Haus3Wohnung${number}.pdf`
 const house4ExposeUrl = (number) =>
   `${import.meta.env.BASE_URL}recklinghausen/ExposeHaus4/Haus4Wohnung${number}.pdf`
 
@@ -327,7 +329,7 @@ const recklinghausenHouses = [
     ],
     apartments: house3ApartmentRows.map((apartment) => ({
       ...apartment,
-      exposeUrl: house1ExposeUrl(apartment.number),
+      exposeUrl: house3ExposeUrl(apartment.number),
       baubeschreibungUrl: recklinghausenBaubeschreibungUrl,
     })),
     parkingPrice: '24.900 €',
