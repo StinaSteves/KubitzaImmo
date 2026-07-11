@@ -349,7 +349,7 @@ const recklinghausenHouses = [
       {
         text: [
           '24 Demenzwohnungen. Betreiber: Diakonisches Werk in Recklinghausen e. V.',
-          '9 barrierefreie und rollstuhlgerechte Mietwohnungen.',
+          '9 barrierefreie und rollstuhlgerechte Mietwohnungen. (Nur mit Wohnberechtigungsschein erhältlich)',
         ],
       },
     ],
