@@ -165,8 +165,8 @@ const apartmentRows = [
     number: '9',
     location: 'Penthouse Links mit Dachterrasse',
     rooms: '3,5 Raum',
-    area: '75,96 m²',
-    price: 'KP 379.040,- €',
+    area: '89,08 m²',
+    price: 'KP 444.509,- €',
   },
   {
     type: 'WOHNUNG',
