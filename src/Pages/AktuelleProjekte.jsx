@@ -19,6 +19,18 @@ function renderTextWithFundingEmphasis(text) {
   )
 }
 
+function renderTextWithNonBreakingNotes(text) {
+  return text.split(/(\([^)]+\))/g).map((part, index) =>
+    part.startsWith('(') && part.endsWith(')') ? (
+      <span className='noWrapText' key={`${part}-${index}`}>
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  )
+}
+
 function AktuelleProjekte() {
   const { projectSlug } = useParams()
   const project = projectsData.find(
@@ -146,7 +158,9 @@ function AktuelleProjekte() {
                 >
                   {section.heading && <h2>{section.heading}</h2>}
                   {section.text.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
+                    <p key={paragraph}>
+                      {renderTextWithNonBreakingNotes(paragraph)}
+                    </p>
                   ))}
                 </div>
               ))}

@@ -375,7 +375,7 @@ const recklinghausenHouses = [
     label: 'Kita',
     introImage: kitaFrontImage,
     introText:
-      '4-zügige Kita für 85 Kita-Plätze mit ca. 900 m² Nutzfläche und ca. 1.500 m² Garten. Betreiber ist die Katholische Kirchengemeinde St. Markus Recklinghausen.',
+      '4-zügige Kita für 80 Kita-Plätze mit ca. 900 m² Nutzfläche und ca. 1.500 m² Garten. Betreiber ist die Katholische Kirchengemeinde St. Markus Recklinghausen.',
     tableImage: kitaBackImage,
     facts: [
       ['Wohnfläche', 'ca. 142 m²'],

@@ -556,6 +556,10 @@
   line-height: 1.7;
 }
 
+.noWrapText {
+  white-space: nowrap;
+}
+
 .houseDetails .housePriceNote {
   font-size: clamp(1rem, 1.4vw, 1.2rem);
   font-weight: 600;
