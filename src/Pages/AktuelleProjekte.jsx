@@ -133,7 +133,9 @@ function AktuelleProjekte() {
                   decoding='async'
                 />
               )}
-              {activeHouse.introText && <p>{activeHouse.introText}</p>}
+              {activeHouse.introText && (
+                <p>{renderTextWithNonBreakingNotes(activeHouse.introText)}</p>
+              )}
 
               <img
                 className='houseDetailImage'

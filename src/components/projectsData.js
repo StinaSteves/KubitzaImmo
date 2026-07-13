@@ -342,7 +342,8 @@ const recklinghausenHouses = [
     id: 'haus-4',
     label: 'Haus 4',
     introImage: haus4FrontImage,
-    introText: '24 Demenzwohnungen und 9 barrierefreie Mietwohnungen.',
+    introText:
+      '24 Demenzwohnungen und 9 barrierefreie Mietwohnungen. Öffentlich geförderter Wohnraum. (Nur mit Wohnberechtigungsschein erhältlich)',
     tableImage: haus4BackImage,
     tableImagePosition: 'center bottom',
     contentSections: [
@@ -406,7 +407,7 @@ const recklinghausenHouses = [
     label: 'Mietwohnung',
     introImage: apartmentAerialImage,
     introText:
-      'Diese vollständig sanierte 4,5-Zimmer-Wohnung im 1. Obergeschoss bietet auf ca. 110 m² Wohnfläche ein modernes und komfortables Zuhause. Neben einer großzügigen Loggia überzeugt die Wohnung durch hochwertige Vinylböden sowie ein helles Tageslichtbad mit Fenster, Dusche und Badewanne. Zu der Wohnung gehören zwei Kellerräume und eine Garage.',
+      'Diese vollständig sanierte 4,5-Zimmer-Wohnung im 1. Obergeschoss bietet auf ca. 118 m² Wohnfläche ein modernes und komfortables Zuhause. Neben einer großzügigen Loggia überzeugt die Wohnung durch hochwertige Vinylböden sowie ein helles Tageslichtbad mit Fenster, Dusche und Badewanne. Zu der Wohnung gehören zwei Kellerräume und eine Garage.',
     tableImage: apartmentChurchImage,
     facts: [
       ['Wohnfläche', 'ca. 142 m²'],
