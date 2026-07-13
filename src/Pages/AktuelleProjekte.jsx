@@ -8,6 +8,7 @@ import siteUrl from '../components/seoConfig'
 
 const emphasizedFundingPattern = /(KfW-40-Standard)/g
 const emphasizedFundingExactPattern = /^(KfW-40-Standard)$/
+const preserveCaseHouseIds = new Set(['gross-tagespflege', 'mietwohnung'])
 
 function renderTextWithFundingEmphasis(text) {
   return text.split(emphasizedFundingPattern).map((part, index) =>
@@ -99,7 +100,7 @@ function AktuelleProjekte() {
               {project.houses.map((house, index) => (
                 <button
                   className={`houseSwitchButton ${
-                    house.id === 'gross-tagespflege' ? 'preserveCase' : ''
+                    preserveCaseHouseIds.has(house.id) ? 'preserveCase' : ''
                   } ${index === activeHouseIndex ? 'active' : ''}`}
                   type='button'
                   key={house.id}
