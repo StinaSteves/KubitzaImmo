@@ -160,11 +160,19 @@ function AktuelleProjekte() {
                   key={`${activeHouse.id}-section-${sectionIndex}`}
                 >
                   {section.heading && <h2>{section.heading}</h2>}
-                  {section.text.map((paragraph) => (
-                    <p key={paragraph}>
-                      {renderTextWithNonBreakingNotes(paragraph)}
-                    </p>
-                  ))}
+                  {section.text.map((paragraph, paragraphIndex) =>
+                    paragraph ? (
+                      <p key={paragraph}>
+                        {renderTextWithNonBreakingNotes(paragraph)}
+                      </p>
+                    ) : (
+                      <span
+                        className='houseContentSpacer'
+                        key={`${activeHouse.id}-section-${sectionIndex}-spacer-${paragraphIndex}`}
+                        aria-hidden='true'
+                      />
+                    ),
+                  )}
                 </div>
               ))}
               {activeHouse.priceNote && (
