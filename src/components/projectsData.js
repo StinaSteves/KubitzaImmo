@@ -343,16 +343,17 @@ const recklinghausenHouses = [
     label: 'Haus 4',
     introImage: haus4FrontImage,
     introText:
-      '24 Demenzwohnungen und 9 barrierefreie Mietwohnungen. Öffentlich geförderter Wohnraum.',
+      '2 Wohngemeinschaften mit 24 Wohnplätzen und 9 barrierefreie Mietwohnungen. Öffentlich geförderter Wohnraum.',
     tableImage: haus4BackImage,
     tableImagePosition: 'center bottom',
     contentSections: [
       {
         text: [
-          '24 Demenzwohnungen. Betreiber: Diakonisches Werk in Recklinghausen e. V.',
+          '24 Wohnplätze. Betreiber: Diakonisches Werk in Recklinghausen e. V.',
           '"Nur mit Wohnberechtigungsschein erhältlich"',
           '',
           '9 barrierefreie und rollstuhlgerechte Mietwohnungen.',
+          '"Nur mit Wohnberechtigungsschein erhältlich"',
         ],
       },
     ],
