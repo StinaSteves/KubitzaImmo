@@ -437,16 +437,12 @@ const projectsData = [
         cropEdges: true,
       },
       {
-        src: recklinghausenLageplan,
-        alt: 'Lageplan der Quartiersentwicklung St. Markus',
+        src: recklinghausenFrontImage,
+        alt: 'Luftbild des Projekts Recklinghausen von vorne',
       },
       {
         src: recklinghausenBauschildImage,
         alt: 'Bauschild der Quartiersentwicklung St. Markus',
-      },
-      {
-        src: recklinghausenFrontImage,
-        alt: 'Luftbild des Projekts Recklinghausen von vorne',
       },
     ],
     title: 'Recklinghausen',
