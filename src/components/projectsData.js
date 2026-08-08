@@ -293,9 +293,9 @@ const recklinghausenHouses = [
   {
     id: 'haus-2',
     label: 'Haus 2',
-    introImage: haus2StreetImage,
+    introImage: haus2GardenImage,
     introText: 'Exklusive Stadtvilla mit 11 Wohneinheiten',
-    tableImage: haus2GardenImage,
+    tableImage: haus2StreetImage,
     detailVideo: haus2CameraFlightVideo,
     facts: [
       ['Wohnfläche', 'ca. 128 m²'],
