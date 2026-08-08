@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import siteUrl from './seoConfig'
 
-const defaultImage = `${siteUrl}/recklinghausen/Luftbild_Hinten_Web.jpg`
+const defaultImage = `${siteUrl}/recklinghausen/260804_Luftbild_Hinten_Web.jpg`
 
 function setMeta(selector, attributes) {
   let element = document.head.querySelector(selector)

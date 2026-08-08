@@ -1,12 +1,13 @@
-const recklinghausenImage = `${import.meta.env.BASE_URL}recklinghausen/Luftbild_Hinten_Web.jpg`
+const recklinghausenImage = `${import.meta.env.BASE_URL}recklinghausen/260804_Luftbild_Hinten_Web.jpg`
 const recklinghausenLageplan = `${import.meta.env.BASE_URL}recklinghausen/recklinghausen_lageplan.png`
-const recklinghausenFrontImage = `${import.meta.env.BASE_URL}recklinghausen/Luftbild_Vorne_Web.jpg`
+const recklinghausenFrontImage = `${import.meta.env.BASE_URL}recklinghausen/260804_Luftbild_Vorne_Web.jpg`
+const recklinghausenBauschildImage = `${import.meta.env.BASE_URL}recklinghausen/Bauschild_Web.jpg`
 const haus1CameraFlightVideo = `${import.meta.env.BASE_URL}video/St.Markus_Kameraflug.mp4`
-const haus2CameraFlightVideo = `${import.meta.env.BASE_URL}video/St.Markus_Kameraflug_2.mp4`
+const haus2CameraFlightVideo = `${import.meta.env.BASE_URL}video/260804_Videorundflug_faststart.mp4`
 const haus1StreetImage = `${import.meta.env.BASE_URL}recklinghausen/1_Strasse_Web.jpg`
 const haus1GardenImage = `${import.meta.env.BASE_URL}recklinghausen/1_Garten_Web.jpg`
-const haus2StreetImage = `${import.meta.env.BASE_URL}recklinghausen/2_Strasse_Web.jpg`
-const haus2GardenImage = `${import.meta.env.BASE_URL}recklinghausen/2_Garten_Web.jpg`
+const haus2StreetImage = `${import.meta.env.BASE_URL}recklinghausen/260804_Straße_Web.jpg`
+const haus2GardenImage = `${import.meta.env.BASE_URL}recklinghausen/260804_Garten_Web.jpg`
 const haus4FrontImage = `${import.meta.env.BASE_URL}recklinghausen/Haus4_vorne.jpg`
 const haus4BackImage = `${import.meta.env.BASE_URL}recklinghausen/Haus4_hinten.jpg`
 const kircheAerialImage = `${import.meta.env.BASE_URL}recklinghausen/Kita_Luftbild.jpg`
@@ -109,31 +110,31 @@ const apartmentRows = [
     number: '2',
     location: 'EG Mitte mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '91,56 m²',
-    price: 'KP 420.260,- €',
+    area: '94,36 m²',
+    price: 'KP 433.112,- €',
   },
   {
     type: 'WOHNUNG',
     number: '3',
     location: 'EG Rechts mit Terrasse u. Garten',
-    rooms: '3,5 Raum',
-    area: '82,29 m²',
-    price: 'KP 377.711,- €',
+    rooms: '2,5 Raum',
+    area: '76,44 m²',
+    price: 'KP 350.859,- €',
   },
   {
     type: 'WOHNUNG',
     number: '4',
     location: 'EG Hinten mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '106,60 m²',
-    price: 'KP 489.294,- €',
+    area: '101,08 m²',
+    price: 'KP 463.957,- €',
   },
   {
     type: 'WOHNUNG',
     number: '5',
     location: 'OG Links mit Balkon',
     rooms: '3,5 Raum',
-    area: '96,93 m²',
+    area: '96,92 m²',
     price: 'KP 435.170,- €',
   },
   {
@@ -141,24 +142,24 @@ const apartmentRows = [
     number: '6',
     location: 'OG Mitte mit Balkon',
     rooms: '3,5 Raum',
-    area: '91,74 m²',
-    price: 'KP 411.912,- €',
+    area: '94,54 m²',
+    price: 'KP 424.484,- €',
   },
   {
     type: 'WOHNUNG',
     number: '7',
     location: 'OG Rechts mit Balkon',
-    rooms: '3,5 Raum',
-    area: '81,83 m²',
-    price: 'KP 367.416,- €',
+    rooms: '2,5 Raum',
+    area: '76,19 m²',
+    price: 'KP 342.093,- €',
   },
   {
     type: 'WOHNUNG',
     number: '8',
     location: 'OG Hinten mit Balkon',
     rooms: '3,5 Raum',
-    area: '106,26 m²',
-    price: 'KP 477.107,- €',
+    area: '100,62 m²',
+    price: 'KP 451.783,- €',
   },
   {
     type: 'WOHNUNG',
@@ -173,16 +174,16 @@ const apartmentRows = [
     number: '10',
     location: 'Penthouse Mitte mit Dachterrasse',
     rooms: '3,5 Raum',
-    area: '94,31 m²',
-    price: 'KP 470.606,- €',
+    area: '95,16 m²',
+    price: 'KP 474.848,- €',
   },
   {
     type: 'WOHNUNG',
     number: '11',
     location: 'Penthouse Rechts mit Dachterrasse',
     rooms: '3,5 Raum',
-    area: '162,97 m²',
-    price: 'KP 813.220,- €',
+    area: '152,59 m²',
+    price: 'KP 761.424,- €',
   },
 ]
 
@@ -440,6 +441,10 @@ const projectsData = [
         alt: 'Lageplan der Quartiersentwicklung St. Markus',
       },
       {
+        src: recklinghausenBauschildImage,
+        alt: 'Bauschild der Quartiersentwicklung St. Markus',
+      },
+      {
         src: recklinghausenFrontImage,
         alt: 'Luftbild des Projekts Recklinghausen von vorne',
       },
@@ -449,10 +454,10 @@ const projectsData = [
     seoTitle: 'Eigentumswohnungen in Recklinghausen | Kubitza Immobilien',
     seoDescription:
       'Seniorengerechte Eigentumswohnungen in Recklinghausen kaufen: Quartiersentwicklung St. Markus mit Aufzug, Tiefgarage und KfW-40-Standard.',
-    seoImage: '/recklinghausen/Luftbild_Hinten_Web.jpg',
+    seoImage: '/recklinghausen/260804_Luftbild_Hinten_Web.jpg',
     description: [
       'Seniorengerechte Eigentumswohnungen in Recklinghausen an der Prof.-Schulte-Straße',
-      'Quartiersentwicklung St. Markus mit Kirche, Kita und Pflegeangeboten (Demenz-WGs sowie Intensivpflege) in unterschiedlichen Größen',
+      'Quartiersentwicklung St. Markus mit Kirche, Kita und Pflegeangeboten (2\u00A0Wohngemeinschaften sowie Intensivpflege) in unterschiedlichen Größen',
     ],
     houses: recklinghausenHouses,
   },
