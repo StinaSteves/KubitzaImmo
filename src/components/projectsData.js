@@ -446,7 +446,7 @@ const projectsData = [
       },
     ],
     title: 'Recklinghausen',
-    detailTitle: 'Eigentumswohnungen in Recklinghausen',
+    detailTitle: 'Exklusive Eigentumswohnungen in Recklinghausen',
     seoTitle: 'Eigentumswohnungen in Recklinghausen | Kubitza Immobilien',
     seoDescription:
       'Seniorengerechte Eigentumswohnungen in Recklinghausen kaufen: Quartiersentwicklung St. Markus mit Aufzug, Tiefgarage und KfW-40-Standard.',
