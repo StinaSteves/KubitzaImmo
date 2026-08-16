@@ -19,7 +19,7 @@ const apartmentAerialImage = `${import.meta.env.BASE_URL}recklinghausen/Luft_Woh
 const apartmentChurchImage = `${import.meta.env.BASE_URL}recklinghausen/Mietwohnung_Kirche.jpg`
 const altenessenImage = `${import.meta.env.BASE_URL}altenessen/PerspektiveAltenessen_Web.jpg`
 const altenessenLageplan = `${import.meta.env.BASE_URL}altenessen/LageplanAltenessen.jpg`
-const recklinghausenBaubeschreibungUrl = `${import.meta.env.BASE_URL}recklinghausen/BAUBESCHREIBUNG_P%20a-2.pdf`
+const recklinghausenBaubeschreibungUrl = `${import.meta.env.BASE_URL}recklinghausen/BAUBESCHREIBUNG_P%20a.pdf`
 const house1ExposeUrl = (number) =>
   `${import.meta.env.BASE_URL}recklinghausen/ExposeHaus1/Haus1Wohnung${number}.pdf`
 const house2ExposeUrl = (number) =>
@@ -126,8 +126,8 @@ const apartmentRows = [
     number: '4',
     location: 'EG Hinten mit Terrasse u. Garten',
     rooms: '3,5 Raum',
-    area: '101,08 m²',
-    price: 'KP 463.957,- €',
+    area: '103,78 m²',
+    price: 'KP 476.350,- €',
   },
   {
     type: 'WOHNUNG',
