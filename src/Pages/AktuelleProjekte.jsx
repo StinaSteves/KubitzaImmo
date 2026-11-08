@@ -200,6 +200,11 @@ function AktuelleProjekte() {
                               <span>{apartment.type}</span>
                               <span>{apartment.number}</span>
                             </span>
+                            {apartment.reserved && (
+                              <span className='apartmentReservedBadge'>
+                                reserviert
+                              </span>
+                            )}
                           </td>
                           <td>{apartment.location}</td>
                           <td>{apartment.rooms}</td>
