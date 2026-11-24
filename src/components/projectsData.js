@@ -332,6 +332,7 @@ const recklinghausenHouses = [
     ],
     apartments: house3ApartmentRows.map((apartment) => ({
       ...apartment,
+      reserved: apartment.number === '8',
       exposeUrl: house3ExposeUrl(apartment.number),
       baubeschreibungUrl: recklinghausenBaubeschreibungUrl,
     })),
