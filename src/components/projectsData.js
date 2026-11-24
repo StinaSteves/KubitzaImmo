@@ -306,7 +306,7 @@ const recklinghausenHouses = [
     ],
     apartments: apartmentRows.map((apartment) => ({
       ...apartment,
-      reserved: ['1', '3'].includes(apartment.number),
+      reserved: ['1', '3', '9'].includes(apartment.number),
       exposeUrl: house2ExposeUrl(apartment.number),
       baubeschreibungUrl: recklinghausenBaubeschreibungUrl,
     })),
